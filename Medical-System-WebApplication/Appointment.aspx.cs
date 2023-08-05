@@ -13,5 +13,20 @@ namespace Medical_System_WebApplication
         {
 
         }
+
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+
+        }
+
+        protected void MedicalConcernTextBo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
