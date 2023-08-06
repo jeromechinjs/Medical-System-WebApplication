@@ -9,8 +9,9 @@
     <title>Header Footer Template</title>
 
     <!-- Link to Bootstrap CSS library (and custom css) -->
-    <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="Style.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    
 </head>
 <body>
 <%--    <nav>
