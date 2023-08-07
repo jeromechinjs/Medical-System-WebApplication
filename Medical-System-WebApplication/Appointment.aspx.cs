@@ -11,7 +11,10 @@ namespace Medical_System_WebApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                Appointment_Calendar.Visible = false;
+            }
         }
 
         protected void TextBox1_TextChanged(object sender, EventArgs e)
@@ -19,14 +22,43 @@ namespace Medical_System_WebApplication
 
         }
 
-        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        protected void MedicalConcernTextBo_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        protected void MedicalConcernTextBo_TextChanged(object sender, EventArgs e)
+        protected void TextBox1_TextChanged1(object sender, EventArgs e)
         {
 
+        }
+
+        protected void img_appointment_Click(object sender, ImageClickEventArgs e)
+        {
+            if (Appointment_Calendar.Visible)
+            {
+                Appointment_Calendar.Visible = false;
+            }
+            else
+            {
+                Appointment_Calendar.Visible = true;
+            }
+            Appointment_Calendar.Attributes.Add("style", "position:absolute");
+        }
+
+        protected void Appointment_Calendar_SelectionChanged(object sender, EventArgs e)
+        {
+            txt_Appointment.Text = Appointment_Calendar.SelectedDate.ToString("dd/MM/yyyy");
+            Appointment_Calendar.Visible = false;
+
+        }
+
+        protected void Appointment_Calendar_DayRender(object sender, DayRenderEventArgs e)
+        {
+            if (e.Day.IsOtherMonth)
+            {
+                e.Day.IsSelectable = false;
+                e.Cell.BackColor = System.Drawing.Color.Azure;
+            }
         }
     }
 }
