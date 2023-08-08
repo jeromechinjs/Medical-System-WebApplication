@@ -50,6 +50,7 @@
 					</div>
 
 
+
 					<%-- Appointment's information--%>
 					<div class="col-sm-8">
 						<h2>Appointment Details</h2>
