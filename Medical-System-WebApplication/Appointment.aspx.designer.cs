@@ -213,6 +213,24 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.Calendar Appointment_Calendar;
 
         /// <summary>
+        /// Appointment_Time_Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Appointment_Time_Label;
+
+        /// <summary>
+        /// Appointment_Time_DropDown control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList Appointment_Time_DropDown;
+
+        /// <summary>
         /// MedicalConcern_Label control.
         /// </summary>
         /// <remarks>
