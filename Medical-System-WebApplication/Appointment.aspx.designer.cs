@@ -42,13 +42,13 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.Label PatientID_Label;
 
         /// <summary>
-        /// PatientID_Label_Content control.
+        /// txtPatientID_Content control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label PatientID_Label_Content;
+        protected global::System.Web.UI.WebControls.TextBox txtPatientID_Content;
 
         /// <summary>
         /// PatientName_Label control.
@@ -240,13 +240,13 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.Label MedicalConcern_Label;
 
         /// <summary>
-        /// MedicalConcernTextBo control.
+        /// MedicalConcernTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MedicalConcernTextBo;
+        protected global::System.Web.UI.WebControls.TextBox MedicalConcernTextBox;
 
         /// <summary>
         /// btn_Submit control.
