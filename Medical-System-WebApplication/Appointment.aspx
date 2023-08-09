@@ -115,8 +115,6 @@
 
 								<div class="mb-3">
 								<asp:DropDownList ID="FindADoctor_DropDown" runat="server" class="form-select" Width="250px" AutoPostBack="True">
-									<asp:ListItem Value="0">Find A Doctor</asp:ListItem>
-									<asp:ListItem Value="1">xx</asp:ListItem>
 									</asp:DropDownList>
 									</div>
 								<div class="mb-3">

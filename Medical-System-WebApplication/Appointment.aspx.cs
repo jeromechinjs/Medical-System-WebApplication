@@ -7,6 +7,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data;
+using System.Data.OleDb;
+using System.IO;
 
 namespace Medical_System_WebApplication
 {
@@ -27,6 +29,7 @@ namespace Medical_System_WebApplication
                 Appointment_Calendar.Visible = false;
 
                 GetSpecialty();
+                FindADoctor_DropDown.Items.Insert(0, " Find A Doctor");
             }
         }
         private void GetSpecialty()
@@ -109,7 +112,7 @@ namespace Medical_System_WebApplication
                      FindADoctor_DropDown.DataTextField = "DoctorName";
                      FindADoctor_DropDown.DataValueField = "DoctorID";
                      FindADoctor_DropDown.DataBind();
-                     FindADoctor_DropDown.Items.Insert(0, new ListItem("Choose " + get_SpecialtyName.ToString() + "Find A Doctor", "0" ));
+                     FindADoctor_DropDown.Items.Insert(0, new ListItem("Choose " + get_SpecialtyName.ToString()));
                      FindADoctor_DropDown.SelectedIndex = 0;
                  }
              }
