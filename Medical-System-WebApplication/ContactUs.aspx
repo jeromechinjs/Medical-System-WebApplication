@@ -2,9 +2,9 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="section1" runat="server">
     <form>
-        <div>Our Hours of Operation
+        <div>Our Hours of Operation</div>
             <table style="width: 100%;" border="1">
-                <tr border="1"> <%--header--%>
+                <tr> <%--header--%>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -44,7 +44,6 @@
                     <td class="text-center">Closed</td>
                 </tr>
             </table>
-        </div>
         <br />
         <div>
             If any questions, please call: <asp:HyperLink ID="ContectNumber" runat="server">+60 12-345 6789</asp:HyperLink>
