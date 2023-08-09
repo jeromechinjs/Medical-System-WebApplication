@@ -2,7 +2,49 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="section1" runat="server">
     <form>
-        <div>Our Hours of Operation</div>
+        <div>Our Hours of Operation
+            <table style="width: 100%;" border="1">
+                <tr border="1"> <%--header--%>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr> <%--monday--%>
+                    <td><strong>Monday</strong></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr> <%--tuesday--%>
+                    <td><strong>Tuesday</strong></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr> <%--wednesday--%>
+                    <td><strong>Wednesday</strong></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr> <%--thursday--%>
+                    <td><strong>Thurday</strong></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr> <%--friday--%>
+                    <td><strong>Friday</strong></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr> <%--saturday--%>
+                    <td><strong>Saturday</strong></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr> <%--sunday--%>
+                    <td><strong>Sunday</strong></td>
+                    <td class="text-center">Closed</td>
+                </tr>
+            </table>
+        </div>
         <br />
         <div>
             If any questions, please call: <asp:HyperLink ID="ContectNumber" runat="server">+60 12-345 6789</asp:HyperLink>
