@@ -276,6 +276,15 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.Button btn_searchDoctor;
 
         /// <summary>
+        /// Display control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Display;
+
+        /// <summary>
         /// btn_Submit control.
         /// </summary>
         /// <remarks>

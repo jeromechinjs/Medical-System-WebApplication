@@ -12,11 +12,11 @@ namespace Medical_System_WebApplication
 {
     public partial class WebForm2 : System.Web.UI.Page
     {
-        /*SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         SqlCommand cmd;
         SqlDataAdapter dataAdapter;
         DataSet ds = new DataSet();
-        string query;*/
+        string query;
         
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -26,10 +26,10 @@ namespace Medical_System_WebApplication
             {
                 Appointment_Calendar.Visible = false;
 
-                /*GetSpecialty();*/
+                GetSpecialty();
             }
         }
-        /*private void GetSpecialty()
+        private void GetSpecialty()
         {
             query = "Select * from Specialty";
             dataAdapter = new SqlDataAdapter(query, con);
@@ -45,7 +45,7 @@ namespace Medical_System_WebApplication
                 AnySpecialty_DropDown.Items.Insert(0, new ListItem("Any Specialty", "0"));
             }
 
-        }*/
+        }
 
         protected void TextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -93,7 +93,7 @@ namespace Medical_System_WebApplication
 
         protected void AnySpecialty_DropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /* string get_SpecialtyID, get_SpecialtyName;
+            string get_SpecialtyID, get_SpecialtyName;
 
              get_SpecialtyID = AnySpecialty_DropDown.SelectedValue.ToString();
              get_SpecialtyName = AnySpecialty_DropDown.SelectedItem.Text;
@@ -112,7 +112,14 @@ namespace Medical_System_WebApplication
                      FindADoctor_DropDown.Items.Insert(0, new ListItem("Choose " + get_SpecialtyName.ToString() + "Find A Doctor", "0" ));
                      FindADoctor_DropDown.SelectedIndex = 0;
                  }
-             }*/
+             }
+        }
+
+        protected void btn_searchDoctor_Click(object sender, EventArgs e)
+        {
+            string display;
+            display = "Your Specialty: " + AnySpecialty_DropDown.SelectedItem.Text + "Your Doctor: " + FindADoctor_DropDown.SelectedItem.Text + "";
+            Display.Text = display;
         }
     }
 }

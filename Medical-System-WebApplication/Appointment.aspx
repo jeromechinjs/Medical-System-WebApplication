@@ -120,7 +120,10 @@
 									</asp:DropDownList>
 									</div>
 								<div class="mb-3">
-									<asp:Button ID="btn_searchDoctor" class="btn btn-primary" runat="server" Text="Search" />
+									<asp:Button ID="btn_searchDoctor" class="btn btn-primary" runat="server" Text="Search" OnClick="btn_searchDoctor_Click" />
+
+
+									<asp:Label ID="Display" runat="server" Text="Label"></asp:Label>
 
 
 								</div>
