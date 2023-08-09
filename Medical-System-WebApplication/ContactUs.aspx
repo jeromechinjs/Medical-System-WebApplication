@@ -6,6 +6,8 @@
         <br />
         <div>
             If any questions, please call: <asp:HyperLink ID="ContectNumber" runat="server">+60 12-345 6789</asp:HyperLink>
+            <br />
+            or send a E-mail to us: <asp:HyperLink ID="email" runat="server">MedicalCentre@gmail.com</asp:HyperLink>
         </div>
         <br />
         <div>
@@ -14,14 +16,11 @@
     </form>
 </asp:Content>
 
-
-
-<asp:Content ID="Content2" ContentPlaceHolderID="section2" runat="server"> 
-    testing 2
-</asp:Content>
-
-
 <%-- Notes (Inside the Contact Us)
     - Location / map information
     - Contact information
     - Hours of operation--%>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="section2" runat="server"></asp:Content>
+
+
