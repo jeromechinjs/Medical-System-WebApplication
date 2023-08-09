@@ -109,7 +109,6 @@
 								<div class="mb-3">
 								<asp:DropDownList ID="AnySpecialty_DropDown" runat="server" class="form-select" Width="250px" AutoPostBack="True" OnSelectedIndexChanged="AnySpecialty_DropDown_SelectedIndexChanged">
 									<asp:ListItem Value ="0">Any Specialty</asp:ListItem>
-									<asp:ListItem Value ="1">xx</asp:ListItem>
 									</asp:DropDownList>
 									</div>
 

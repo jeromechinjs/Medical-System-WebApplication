@@ -120,9 +120,12 @@ namespace Medical_System_WebApplication
 
         protected void btn_searchDoctor_Click(object sender, EventArgs e)
         {
-            string display;
+            /*string display;
             display = "Your Specialty: " + AnySpecialty_DropDown.SelectedItem.Text + "Your Doctor: " + FindADoctor_DropDown.SelectedItem.Text + "";
-            Display.Text = display;
+            Display.Text = display;*/
+            
+            Response.Redirect(FindADoctor_DropDown.SelectedItem.Text.Trim() + ".aspx");
+            
         }
     }
 }
