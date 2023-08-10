@@ -144,6 +144,7 @@
     </Compile>
     <Compile Include="Appointment.aspx.cs">
       <DependentUpon>Appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Appointment.aspx.designer.cs">
       <DependentUpon>Appointment.aspx</DependentUpon>

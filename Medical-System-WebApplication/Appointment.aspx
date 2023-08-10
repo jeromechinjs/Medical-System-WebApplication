@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="section1" runat="server">
 
-	<div>
+	<div class="container">
 		<h2>Doctor Appointment</h2>
 		<asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
 		<p>&nbsp;</p>
@@ -118,9 +118,6 @@
 									</div>
 								<div class="mb-3">
 									<asp:Button ID="btn_searchDoctor" class="btn btn-primary" runat="server" Text="Search" OnClick="btn_searchDoctor_Click" />
-
-
-									<asp:Label ID="Display" runat="server" Text="Label"></asp:Label>
 
 
 								</div>
