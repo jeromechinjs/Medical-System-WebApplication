@@ -69,17 +69,8 @@
   <ItemGroup>
     <Content Include="Ahmad.aspx" />
     <Content Include="App_Data\Database.mdf" />
-    <Content Include="App_Data\Database1.mdf" />
-    <Content Include="App_Data\Database1_log.ldf">
-      <DependentUpon>Database1.mdf</DependentUpon>
-    </Content>
     <Content Include="App_Data\Database_log.ldf">
       <DependentUpon>Database.mdf</DependentUpon>
-    </Content>
-    <Content Include="App_Data\NORTHWND.MDF" />
-    <Content Include="App_Data\Testing_1.mdf" />
-    <Content Include="App_Data\Testing_1_log.ldf">
-      <DependentUpon>Testing_1.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -153,7 +144,6 @@
     </Compile>
     <Compile Include="Appointment.aspx.cs">
       <DependentUpon>Appointment.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Appointment.aspx.designer.cs">
       <DependentUpon>Appointment.aspx</DependentUpon>
