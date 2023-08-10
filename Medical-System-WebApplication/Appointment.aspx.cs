@@ -22,8 +22,6 @@ namespace Medical_System_WebApplication
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-
             if (!IsPostBack)
             {
                 Appointment_Calendar.Visible = false;
@@ -47,7 +45,6 @@ namespace Medical_System_WebApplication
                 AnySpecialty_DropDown.DataBind();
                 AnySpecialty_DropDown.Items.Insert(0, new ListItem("Any Specialty", "0"));
             }
-
         }
 
         protected void TextBox1_TextChanged(object sender, EventArgs e)
