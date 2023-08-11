@@ -16,6 +16,7 @@
 
 
 	<div class="container">
+		<br />
 		<h2>Doctor Appointment</h2>
 		<asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
 		<p>&nbsp;</p>
@@ -27,7 +28,7 @@
 					<div class="col p-0">
 						<h2>Patient&#39s Information</h2>
 						<div class="mb-3 mt-3">
-							<asp:Label for="txtPatientID_Content" ID="PatientID_Label" runat="server" Text="Patient ID: "></asp:Label>
+							<asp:Label for="txtPatientID_Content" ID="PatientID_Label" runat="server" Text="Patient ID"></asp:Label>
 							&nbsp;<asp:TextBox ID="txtPatientID_Content" class="form-control" runat="server" ReadOnly="True" Width="400px"></asp:TextBox>
 						</div>
 
@@ -144,9 +145,10 @@
 						</div>
 					</div>
 				</div>
+			</div>
 
-
-	</form>
+		</form>
+	</div>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="section2" runat="server">
