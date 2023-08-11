@@ -1,4 +1,8 @@
 ﻿* {
-    box-sizing: content-box;
+    box-sizing: border-box;
     font-family: Verdana;
+}
+
+body {
+
 }

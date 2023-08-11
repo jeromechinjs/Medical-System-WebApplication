@@ -95,6 +95,8 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="src\calendar_appointment.png" />
     <Content Include="src\doctor_appointment.png" />
+    <Content Include="src\leaves-icon.svg" />
+    <Content Include="src\profile-login.svg" />
     <Content Include="Style.css" />
     <Content Include="Web.config" />
     <Content Include="Homepage.aspx" />
