@@ -3,6 +3,10 @@
     font-family: Verdana;
 }
 
-body {
+#section1 {
+    padding: 50%;
+}
 
+.footer {
+    font-size: 12px;
 }

@@ -2,18 +2,16 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="section1" runat="server">
 
-	<div class="container">
+	<div class="container p-5">
 		<h2>Doctor Appointment</h2>
 		<asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
 		<p>&nbsp;</p>
-	</div>
-	<form id="form1" runat="server">
-		<div class="container">
-
+		<form id="form1" runat="server">
 			<%-- Patient's information--%>
-			<div class="container mt-3">
+			<div class="container mt-4">
 				<div class="row">
-					<div class="col">
+
+					<div class="col p-0">
 						<h2>Patient&#39s Information</h2>
 						<div class="mb-3 mt-3">
 							<asp:Label ID="PatientID_Label" runat="server" Text="Patient ID: "></asp:Label>
@@ -102,7 +100,8 @@
 							</div>
 						</div>
 					</div>
-						<div class="col">
+
+					<div class="col">
 						<h2>Find a doctor</h2>
 						<div class="container mt-3">
 							<div class="mb-3 mt-3">
@@ -118,21 +117,18 @@
 									</div>
 								<div class="mb-3">
 									<asp:Button ID="btn_searchDoctor" class="btn btn-primary" runat="server" Text="Search" OnClick="btn_searchDoctor_Click" />
-
-
 								</div>
 
-								</div>
 							</div>
-							</div>
+						</div>
+					</div>
 				</div>
+
+				<asp:Button class="btn btn-primary" ID="btn_Submit" runat="server" Text="Submit" />
 			</div>
-		</div>
-
-		<asp:Button class="btn btn-primary" ID="btn_Submit" runat="server" Text="Submit" />
-
-
-	</form>
+		</form>
+	</div>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="section2" runat="server">
 </asp:Content>

@@ -17,9 +17,9 @@
     
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top py-2">
+    <nav class="navbar navbar-expand-xl bg-body-tertiary sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand px-3" href="Homepage.aspx">
+            <a class="navbar-brand px-3 me-2" href="Homepage.aspx">
                 <img src="src/leaves-icon.svg" alt="Logo" width="40" height="44" />
             </a>
             <!-- mobile hamburger icon -->
@@ -27,29 +27,26 @@
                   <span class="navbar-toggler-icon"></span>
             </button>
             <div id="navbarSupportedContent" class="navbar-collapse collapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item px-1 active"><a class="nav-link" href="Homepage.aspx">Home</a></li>
-                    <li class="nav-item px-1"><a class="nav-link" href="#">Our Services</a></li>
-                    <li class="nav-item px-1"><a class="nav-link" href="#">Patient Care</a></li>
-                    <li class="nav-item px-1"><a class="nav-link" href="#">Health Hub</a></li>
-                    <li class="nav-item px-1"><a class="nav-link" href="Products.aspx">Products</a></li>
-                    <li class="nav-item px-1"><a class="nav-link" href="#">Promotion</a></li>
-                    <li class="nav-item px-1"><a class="nav-link" href="#">About Us</a></li>
-                    <li class="nav-item px-3"><a class="nav-link" href="ContactUs.aspx">Contact Us</a></li>
-                    <li class="nav-item ps-3"><a class="btn btn-primary" href="Appointment.aspx" role="button" data-bs-toggle="button">Make Appointment</a></li>
-<%--                    <li class="nav-item dropdown ps-3">
+                <ul class="navbar-nav me-auto mb-lg-0">
+                    <li class="nav-item mx-2 mt-1 active"><a class="nav-link" href="Homepage.aspx">Home</a></li>
+                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">Our Services</a></li>
+                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">Patient Care</a></li>
+                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">Health Hub</a></li>
+                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="Products.aspx">Products</a></li>
+                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">Promotion</a></li>
+                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="ContactUs.aspx">Contact Us</a></li>
+                    <li class="nav-item ms-5 mt-1"><a class="btn btn-primary" href="Appointment.aspx" role="button">Make Appointment</a></li>
+                    <li class="nav-item dropdown ms-2">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="src/profile-login.svg" alt="Logo" width="40" height="44" />
+                            <img src="src/profile-login.svg" alt="Logo" width="30" height="34" />
                         </a>
-
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Staff</a></li>s
-                            <li><a class="dropdown-item" href="#">Customer</a></li>
+                            <li><a class="dropdown-item" href="#">Staff</a></li>
                             <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Customer</a></li>
                         </ul>
-                    </li>--%>
-
-
+                    </li>
                 </ul>
             </div>
         </div>
@@ -65,7 +62,43 @@
 
     </main>
 
-    <footer>
+    <footer class="bg-secondary">
+        <div class="container footer mx-auto p-5">
+            <div class="row">
+                <div class="col">
+                    <p class="mb-2 mt-4 fw-bold">Our Services</p>
+                    <p>Centres of Excellence</p>
+                    <p>Accident & Emergency Department</p>
+                    <p>Stroke Centre</p>
+                </div>
+                <div class="col">
+                    <p class="mb-2 mt-4 fw-bold">Patient Care</p>
+                    <p>Patient Info</p>
+                    <p>International Patient</p>
+                    <p>Support & Privileges</p>
+
+                    <p class="mb-2 mt-4 fw-bold">Health Hub</p>
+                    <p>Blogpost</p>
+                    <p>Community Happenings</p>
+                    <p>QUIT Smoking</p>
+                </div>
+                <div class="col">
+                    <p class="mb-2 mt-4 fw-bold">Visiting Hours: General Ward</p>
+                    <p>Centres of Excellence</p>
+                    <p>Accident & Emergency Department</p>
+                    <p>Stroke Centre</p>
+
+                </div>
+                <div class="col">
+                    <p class="mb-2 mt-4 fw-bold">images to be placed</p>
+                    <p>Centres of Excellence</p>
+                    <p>Accident & Emergency Department</p>
+                    <p>Stroke Centre</p>
+
+                </div>
+
+            </div>
+        </div>
         <p>&copy; <%: DateTime.Now.Year %> - Medical Appointment System</p> 
     </footer>
 
