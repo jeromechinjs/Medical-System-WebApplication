@@ -1,4 +1,12 @@
 ﻿* {
-    box-sizing: content-box;
+    box-sizing: border-box;
     font-family: Verdana;
+}
+
+#section1 {
+    padding: 50%;
+}
+
+.footer {
+    font-size: 12px;
 }

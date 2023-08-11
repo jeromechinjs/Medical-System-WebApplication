@@ -11,37 +11,45 @@
     <!-- Link to Bootstrap CSS library (and custom css) -->
     <link href="Style.css" rel="stylesheet" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="src/leaves-icon.svg">
     
 </head>
 <body>
-<%--    <nav>
-        <asp:SiteMapDataSource ID="NavbarSiteMapDataSource" runat="server" />
-        <asp:Menu ID="Menu1" runat="server" DataSourceID="NavbarSiteMapDataSource">
-        </asp:Menu>
-    </nav>--%>
-
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-<%--        <a class="navbar-brand" href="#">Home</a>
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>--%>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active"><a class="nav-link" href="Homepage.aspx">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="/Products.aspx">Products</a></li>
-                <li class="nav-item"><a class="nav-link" href="ContactUs.aspx">Contact Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="Appointment.aspx">Appointment</a></li>
-<%--                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown04">Dropdown <span class="caret"></span></a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown04">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>--%>
-            </ul>
+    <nav class="navbar navbar-expand-xl bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand px-3 me-2" href="Homepage.aspx">
+                <img src="src/leaves-icon.svg" alt="Logo" width="40" height="44" />
+            </a>
+            <!-- mobile hamburger icon -->
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarSupportedContent" class="navbar-collapse collapse">
+                <ul class="navbar-nav me-auto mb-lg-0">
+                    <li class="nav-item mx-2 mt-1 active"><a class="nav-link" href="Homepage.aspx">Home</a></li>
+                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">Our Services</a></li>
+                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">Patient Care</a></li>
+                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">Health Hub</a></li>
+                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="Products.aspx">Products</a></li>
+                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">Promotion</a></li>
+                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="ContactUs.aspx">Contact Us</a></li>
+                    <li class="nav-item ms-5 mt-1"><a class="btn btn-primary" href="Appointment.aspx" role="button">Make Appointment</a></li>
+                    <li class="nav-item dropdown ms-2">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="src/profile-login.svg" alt="Logo" width="30" height="34" />
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Staff</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Customer</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <!–/.nav-collapse –>
     </nav>
 
 
@@ -54,7 +62,43 @@
 
     </main>
 
-    <footer>
+    <footer class="bg-secondary">
+        <div class="container footer mx-auto p-5">
+            <div class="row">
+                <div class="col">
+                    <p class="mb-2 mt-4 fw-bold">Our Services</p>
+                    <p>Centres of Excellence</p>
+                    <p>Accident & Emergency Department</p>
+                    <p>Stroke Centre</p>
+                </div>
+                <div class="col">
+                    <p class="mb-2 mt-4 fw-bold">Patient Care</p>
+                    <p>Patient Info</p>
+                    <p>International Patient</p>
+                    <p>Support & Privileges</p>
+
+                    <p class="mb-2 mt-4 fw-bold">Health Hub</p>
+                    <p>Blogpost</p>
+                    <p>Community Happenings</p>
+                    <p>QUIT Smoking</p>
+                </div>
+                <div class="col">
+                    <p class="mb-2 mt-4 fw-bold">Visiting Hours: General Ward</p>
+                    <p>Centres of Excellence</p>
+                    <p>Accident & Emergency Department</p>
+                    <p>Stroke Centre</p>
+
+                </div>
+                <div class="col">
+                    <p class="mb-2 mt-4 fw-bold">images to be placed</p>
+                    <p>Centres of Excellence</p>
+                    <p>Accident & Emergency Department</p>
+                    <p>Stroke Centre</p>
+
+                </div>
+
+            </div>
+        </div>
         <p>&copy; <%: DateTime.Now.Year %> - Medical Appointment System</p> 
     </footer>
 
@@ -66,23 +110,3 @@
 
  </body>
 </html>
-
-
-
-
-<%--Example--%>
-<%--<asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
-    <Items>
-        <asp:MenuItem Text="Home" ToolTip="Home">  </asp:MenuItem>
-        <asp:MenuItem Text="Music" ToolTip="Music">
-            <asp:MenuItem Text="Classical" ToolTip="Classical" />
-            <asp:MenuItem Text="Rock" ToolTip="Rock" />
-            <asp:MenuItem Text="Jazz" ToolTip="Jazz" />
-        </asp:MenuItem>
-        <asp:MenuItem Text="Movies" ToolTip="Movies">
-            <asp:MenuItem Text="Action" ToolTip="Action" />
-            <asp:MenuItem Text="Drama" ToolTip="Drama" />
-            <asp:MenuItem Text="Musical" ToolTip="Musical" />
-        </asp:MenuItem>                
-    </Items>
-</asp:Menu>--%>
