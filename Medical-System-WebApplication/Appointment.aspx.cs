@@ -43,7 +43,7 @@ namespace Medical_System_WebApplication
                 AnySpecialty_DropDown.DataTextField = "SpecialtyName";
                 AnySpecialty_DropDown.DataValueField = "SpecialtyID";
                 AnySpecialty_DropDown.DataBind();
-                AnySpecialty_DropDown.Items.Insert(0, new ListItem("Any Specialty", "0"));
+                AnySpecialty_DropDown.Items.Insert(0, new ListItem("Any Specialties", "0"));
             }
         }
 
