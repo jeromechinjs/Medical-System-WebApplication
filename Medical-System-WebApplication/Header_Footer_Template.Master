@@ -19,7 +19,7 @@
 <body>
     <nav class="navbar navbar-expand-xl bg-body-tertiary sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand px-3 me-2" href="Homepage.aspx">
+            <a class="navbar-brand px-3 ms-2" href="Homepage.aspx">
                 <img src="src/leaves-icon.svg" alt="Logo" width="40" height="44" />
             </a>
             <!-- mobile hamburger icon -->
@@ -28,8 +28,8 @@
             </button>
 
             <!-- collapsible contents -->
-            <div id="navbarContents" class="navbar-collapse collapse">
-                <ul class="navbar-nav me-auto mb-lg-0">
+            <div id="navbarContents" class="navbar-collapse collapse justify-content-center">
+                <ul class="navbar-nav mb-lg-0">
                     <li class="nav-item mx-2 mt-1 active"><a class="nav-link" href="Homepage.aspx">Home</a></li>
                     <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">Our Services</a></li>
                     <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">Patient Care</a></li>
@@ -39,7 +39,7 @@
                     <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">About Us</a></li>
                     <li class="nav-item mx-2 mt-1"><a class="nav-link" href="ContactUs.aspx">Contact Us</a></li>
                     <li class="nav-item ms-5 mt-1"><a class="btn btn-primary" href="Appointment.aspx" role="button">Make Appointment</a></li>
-                    <li class="nav-item dropdown ms-2">
+                    <li class="nav-item dropdown ms-3">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="src/profile-login.svg" alt="Logo" width="30" height="34" />
                         </a>

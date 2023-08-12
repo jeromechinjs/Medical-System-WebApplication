@@ -95,6 +95,7 @@
     <Content Include="src\doctor_appointment.png" />
     <Content Include="src\homepage-video.mp4" />
     <Content Include="src\leaves-icon.svg" />
+    <Content Include="src\our-mission.jpg" />
     <Content Include="src\profile-login.svg" />
     <Content Include="src\test.jpg" />
     <Content Include="Style.css" />
