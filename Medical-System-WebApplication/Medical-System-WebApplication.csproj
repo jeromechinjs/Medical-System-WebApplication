@@ -96,6 +96,7 @@
     <Content Include="src\homepage-video.mp4" />
     <Content Include="src\leaves-icon.svg" />
     <Content Include="src\profile-login.svg" />
+    <Content Include="src\test.jpg" />
     <Content Include="Style.css" />
     <Content Include="Web.config" />
     <Content Include="Homepage.aspx" />
