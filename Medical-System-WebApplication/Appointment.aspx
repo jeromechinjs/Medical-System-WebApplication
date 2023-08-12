@@ -15,17 +15,17 @@
 	</style>
 
 
-	<div class="container">
+	<div class="container my-4">
 		<br />
 		<h2>Doctor Appointment</h2>
 		<asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
 		<p>&nbsp;</p>
 		<form id="form1" runat="server">
 			<%-- Patient's information--%>
-			<div class="container mt-4">
+			<div class="container my-5">
 				<div class="row">
 
-					<div class="col p-0">
+					<div class="col p-0 my-2 my-lg-0">
 						<h2>Patient&#39s Information</h2>
 						<div class="mb-3 mt-3">
 							<asp:Label for="txtPatientID_Content" ID="PatientID_Label" runat="server" Text="Patient ID"></asp:Label>
@@ -64,7 +64,7 @@
 
 
 					<%-- Appointment's information--%>
-					<div class="col">
+					<div class="col my-5 my-lg-0">
 						<h2>Appointment Details</h2>
 						<div class="container mt-3">
 							<div class="mb-3 mt-3">
@@ -113,7 +113,7 @@
 								<asp:TextBox ID="MedicalConcernTextBox" runat="server" class="form-control" AutoPostBack="True" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Dotted" Columns="1" EnableTheming="True" ForeColor="#333333" Height="165px" MaxLength="1000" OnTextChanged="MedicalConcernTextBo_TextChanged" TextMode="MultiLine" Width="455px"></asp:TextBox>
 
 								<br />
-								<asp:Button class="btn btn-primary" ID="btn_Submit" runat="server" Text="Submit" Width="130px" OnClientClick="javascript:alert('Booked Successfully')" />
+								<asp:Button class="btn btn-sm btn-primary" ID="btn_Submit" runat="server" Text="Submit" Width="130px" OnClientClick="javascript:alert('Booked Successfully')" />
 
 
 							</div>
@@ -121,7 +121,7 @@
 					</div>
 
 					<div class="col">
-						<div class="card">
+						<div class="card my-4">
 							<h2 class="card-body">Find a doctor</h2>
 							<div class="container mt-3">
 								<div class="mb-3 mt-3">

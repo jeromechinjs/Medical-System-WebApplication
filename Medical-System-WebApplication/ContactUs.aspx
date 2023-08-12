@@ -1,8 +1,6 @@
 ﻿<%@ Page Title="Contact Us" Language="C#" MasterPageFile="~/Header_Footer_Template.Master" AutoEventWireup="true" CodeBehind="ContactUs.aspx.cs" Inherits="Medical_System_WebApplication.WebForm3" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="section1" runat="server">
-    <form>
-        <div>Our Hours of Operation</div>
         <style>
             table, tr, td {
                 border: 1px solid black;
@@ -10,6 +8,9 @@
 
             }
         </style>
+
+        <div class="container my-4">
+            <p>Our Hours of Operation</p>
             <table style="width: 100%;" border="1">
                 <tr> <%--header--%>
                     <td>&nbsp;</td>
@@ -51,17 +52,17 @@
                     <td class="text-center">Closed</td>
                 </tr>
             </table>
-        <br />
-        <div>
-            If any questions, please call: <asp:HyperLink ID="ContectNumber" runat="server">+60 12-345 6789</asp:HyperLink>
             <br />
-            or send a E-mail to us: <asp:HyperLink ID="email" runat="server">MedicalCentre@gmail.com</asp:HyperLink>
+            <div>
+                If any questions, please call: <asp:HyperLink ID="ContectNumber" runat="server">+60 12-345 6789</asp:HyperLink>
+                <br />
+                or send a E-mail to us: <asp:HyperLink ID="email" runat="server">MedicalCentre@gmail.com</asp:HyperLink>
+            </div>
+            <br />
+            <div>
+                Visit our Medical Centre, at: <asp:HyperLink ID="Address" runat="server"><div>No.123, Jalan Ampang Utara, <br />Taman Pandah Mewah, <br />68000 Ampang, <br />Selangor.</div></asp:HyperLink>
+            </div>
         </div>
-        <br />
-        <div>
-            Visit our Medical Centre, at: <asp:HyperLink ID="Address" runat="server"><div>No.123, Jalan Ampang Utara, <br />Taman Pandah Mewah, <br />68000 Ampang, <br />Selangor.</div></asp:HyperLink>
-        </div>
-    </form>
 </asp:Content>
 
 <%-- Notes (Inside the Contact Us)

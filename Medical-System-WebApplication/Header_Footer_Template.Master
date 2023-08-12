@@ -23,10 +23,12 @@
                 <img src="src/leaves-icon.svg" alt="Logo" width="40" height="44" />
             </a>
             <!-- mobile hamburger icon -->
-             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContents" aria-controls="navbarContents" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbarSupportedContent" class="navbar-collapse collapse">
+
+            <!-- collapsible contents -->
+            <div id="navbarContents" class="navbar-collapse collapse">
                 <ul class="navbar-nav me-auto mb-lg-0">
                     <li class="nav-item mx-2 mt-1 active"><a class="nav-link" href="Homepage.aspx">Home</a></li>
                     <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">Our Services</a></li>
@@ -43,7 +45,6 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Staff</a></li>
-                            <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Customer</a></li>
                         </ul>
                     </li>
@@ -52,8 +53,7 @@
         </div>
     </nav>
 
-
-    <main class="container body-content">
+    <main>
         <asp:ContentPlaceHolder ID="section1" runat="server">
         </asp:ContentPlaceHolder>
 
@@ -63,43 +63,44 @@
     </main>
 
     <footer class="bg-secondary">
-        <div class="container footer mx-auto p-5">
+        <div class="container footer mx-auto px-5 pt-5 pb-2">
             <div class="row">
                 <div class="col">
                     <p class="mb-2 mt-4 fw-bold">Our Services</p>
-                    <p>Centres of Excellence</p>
-                    <p>Accident & Emergency Department</p>
-                    <p>Stroke Centre</p>
+                    <a href="#" class="footer-link">Centres of Excellence</a>
+                    <a href="#" class="footer-link">Accident & Emergency Department</a>
+                    <a href="#" class="footer-link">Stroke Centre</a>
                 </div>
                 <div class="col">
                     <p class="mb-2 mt-4 fw-bold">Patient Care</p>
-                    <p>Patient Info</p>
-                    <p>International Patient</p>
-                    <p>Support & Privileges</p>
+                    <a href="#" class="footer-link">Patient Info</a>
+                    <a href="#" class="footer-link">International Patient</a>
+                    <a href="#" class="footer-link">Support & Privileges</a>
 
                     <p class="mb-2 mt-4 fw-bold">Health Hub</p>
-                    <p>Blogpost</p>
-                    <p>Community Happenings</p>
-                    <p>QUIT Smoking</p>
+                    <a href="#" class="footer-link">Blogpost</a>
+                    <a href="#" class="footer-link">Community Happenings</a>
+                    <a href="#" class="footer-link">QUIT Smoking</a>
                 </div>
                 <div class="col">
                     <p class="mb-2 mt-4 fw-bold">Visiting Hours: General Ward</p>
-                    <p>Centres of Excellence</p>
-                    <p>Accident & Emergency Department</p>
-                    <p>Stroke Centre</p>
-
+                    <a href="#" class="footer-link">Centres of Excellence</a>
+                    <a href="#" class="footer-link">Accident & Emergency Department</a>
+                    <a href="#" class="footer-link">Stroke Centre</a>
                 </div>
                 <div class="col">
                     <p class="mb-2 mt-4 fw-bold">images to be placed</p>
-                    <p>Centres of Excellence</p>
-                    <p>Accident & Emergency Department</p>
-                    <p>Stroke Centre</p>
-
+                    <a href="#" class="footer-link">Centres of Excellence</a>
+                    <a href="#" class="footer-link">Accident & Emergency Department</a>
+                    <a href="#" class="footer-link">Stroke Centre</a>
                 </div>
-
+            </div>
+            <div class="row">
+                <div class="col mt-4">
+                    <p>&copy; <%: DateTime.Now.Year %> - Medical Appointment System</p> 
+                </div>
             </div>
         </div>
-        <p>&copy; <%: DateTime.Now.Year %> - Medical Appointment System</p> 
     </footer>
 
  
@@ -107,6 +108,8 @@
     <!-- Link to Bootstrap Javascript library-->
     <script src="Scripts/bootstrap.bundle.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
 
  </body>
 </html>

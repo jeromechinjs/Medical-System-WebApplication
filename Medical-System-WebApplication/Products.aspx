@@ -4,7 +4,7 @@
 
     <form id="form1" runat="server">
 
-        <div class="container">
+        <div class="container my-4">
             <div class="row">
                 <div class="col-md-3 p-3 m-0">
                     <p> Search by</p>
