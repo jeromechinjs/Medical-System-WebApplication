@@ -22,34 +22,34 @@
 		<p>&nbsp;</p>
 		<form id="form1" runat="server">
 			<%-- Patient's information--%>
-			<div class="container mt-4">
+			<div class="container mt-4 ms-3">
 				<div class="row">
 
 					<div class="col p-0">
 						<h2>Patient&#39s Information</h2>
 						<div class="mb-3 mt-3">
 							<asp:Label for="txtPatientID_Content" ID="PatientID_Label" runat="server" Text="Patient ID"></asp:Label>
-							&nbsp;<asp:TextBox ID="txtPatientID_Content" class="form-control" runat="server" ReadOnly="True" Width="400px"></asp:TextBox>
+							&nbsp;<asp:TextBox ID="txtPatientID_Content" class="form-control" runat="server" ReadOnly="True" Width="380px"></asp:TextBox>
 						</div>
 
 						<div class="mb-3">
 							<asp:Label for="txt_PatientName" ID="PatientName_Label" runat="server" Text="Patient Name"></asp:Label>
-							<asp:TextBox ID="txt_PatientName" class="form-control" runat="server" OnTextChanged="TextBox1_TextChanged1" Width="400px"></asp:TextBox>
+							<asp:TextBox ID="txt_PatientName" class="form-control" runat="server" OnTextChanged="TextBox1_TextChanged1" Width="380px"></asp:TextBox>
 						</div>
 
 						<div class="mb-3">
 							<asp:Label for="txt_Email" ID="Email_Label" runat="server" Text="Email Address"></asp:Label>
-							<asp:TextBox ID="txt_Email" class="form-control" placeholder="name@example.com" runat="server" Width="400px"></asp:TextBox>
+							<asp:TextBox ID="txt_Email" class="form-control" placeholder="name@example.com" runat="server" Width="380px"></asp:TextBox>
 						</div>
 
 						<div class="mb-3">
 							<asp:Label for="txt_Phone" ID="phoneNum_Label" runat="server" Text="Phone Number"></asp:Label>
-							<asp:TextBox ID="txt_Phone" class="form-control" runat="server" Width="400px"></asp:TextBox>
+							<asp:TextBox ID="txt_Phone" class="form-control" runat="server" Width="380px"></asp:TextBox>
 						</div>
 
 						<div class="mb-3">
 							<asp:Label for="dropDown_Gender" ID="Gender_Label" runat="server" Text="Gender"></asp:Label>
-							<asp:DropDownList class="form-select" ID="dropDown_Gender" runat="server" Width="400px">
+							<asp:DropDownList class="form-select" ID="dropDown_Gender" runat="server" Width="380px">
 								<asp:ListItem>Male</asp:ListItem>
 								<asp:ListItem>Female</asp:ListItem>
 							</asp:DropDownList>
@@ -57,7 +57,7 @@
 
 						<div class="mb-3">
 							<asp:Label for="txt_Birth_Calander" ID="Birth_Label" runat="server" Text="Date Of Birth"></asp:Label>
-							<asp:TextBox ID="txt_Birth_Calander" class="form-control" runat="server" type="date" Width="400px"></asp:TextBox>
+							<asp:TextBox ID="txt_Birth_Calander" class="form-control" runat="server" type="date" Width="380px"></asp:TextBox>
 						</div>
 					</div>
 
@@ -69,7 +69,7 @@
 						<div class="container mt-3">
 							<div class="mb-3 mt-3">
 								<asp:Label for="DropDownSelectSpeciality" ID="requestSpeciality_Label" runat="server" Text="Request Speciality"></asp:Label>
-								<asp:DropDownList ID="DropDownSelectSpeciality" class="form-select" runat="server" AutoPostBack="True" Width="400px">
+								<asp:DropDownList ID="DropDownSelectSpeciality" class="form-select" runat="server" AutoPostBack="True" Width="380px">
 									<asp:ListItem>Select Specialty</asp:ListItem>
 									<asp:ListItem>Pain Management</asp:ListItem>
 									<asp:ListItem>Dose Vaccination</asp:ListItem>
@@ -85,7 +85,7 @@
 									<ContentTemplate>
 
 										<asp:Label for="txt_Appointment" ID="appointment_Label" runat="server" Text="Appointment Date"></asp:Label>
-										<asp:TextBox ID="txt_Appointment" runat="server" class="form-control" Width="400px" BackColor="#FFFFCC" ReadOnly="True">Select Appointment Date</asp:TextBox>
+										<asp:TextBox ID="txt_Appointment" runat="server" class="form-control" Width="380px" BackColor="#FFFFCC" ReadOnly="True">Select Appointment Date</asp:TextBox>
 										<asp:ImageButton ID="img_appointment" runat="server" Height="25px" ImageAlign="AbsBottom" ImageUrl="~/src/calendar_appointment.png" OnClick="img_appointment_Click" Width="31px" />
 										<asp:Calendar ID="Appointment_Calendar" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" OnDayRender="Appointment_Calendar_DayRender" OnSelectionChanged="Appointment_Calendar_SelectionChanged" Width="200px">
 											<DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
@@ -103,7 +103,7 @@
 
 							<div class="mb-3">
 								<asp:Label for="Appointment_Time_DropDown" ID="Appointment_Time_Label" runat="server" Text="Appointment Time"></asp:Label>
-								<asp:DropDownList ID="Appointment_Time_DropDown" class="form-select" runat="server" Width="400px">
+								<asp:DropDownList ID="Appointment_Time_DropDown" class="form-select" runat="server" Width="380px">
 									<asp:ListItem>10:00AM - 11:00AM</asp:ListItem>
 								</asp:DropDownList>
 							</div>
@@ -126,13 +126,13 @@
 							<div class="container mt-3">
 								<div class="mb-3 mt-3">
 									<div class="mb-3">
-										<asp:DropDownList ID="AnySpecialty_DropDown" runat="server" class="form-select" Width="250px" AutoPostBack="True" OnSelectedIndexChanged="AnySpecialty_DropDown_SelectedIndexChanged">
+										<asp:DropDownList ID="AnySpecialty_DropDown" runat="server" class="form-select" Width="300px" AutoPostBack="True" OnSelectedIndexChanged="AnySpecialty_DropDown_SelectedIndexChanged">
 											<asp:ListItem Value="0">Any Specialties</asp:ListItem>
 										</asp:DropDownList>
 									</div>
 
 									<div class="mb-3">
-										<asp:DropDownList ID="FindADoctor_DropDown" runat="server" class="form-select" Width="250px" AutoPostBack="True">
+										<asp:DropDownList ID="FindADoctor_DropDown" runat="server" class="form-select" Width="300px" AutoPostBack="True">
 										</asp:DropDownList>
 									</div>
 									<div class="mb-3">

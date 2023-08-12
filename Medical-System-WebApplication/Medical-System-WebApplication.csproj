@@ -98,6 +98,7 @@
     <Content Include="src\doctor_appointment.png" />
     <Content Include="src\leaves-icon.svg" />
     <Content Include="src\profile-login.svg" />
+    <Content Include="src\test.jpg" />
     <Content Include="Style.css" />
     <Content Include="Web.config" />
     <Content Include="Homepage.aspx" />
