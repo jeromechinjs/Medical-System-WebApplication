@@ -16,7 +16,6 @@
 
 
 	<div class="container my-4">
-		<br />
 		<h2>Doctor Appointment</h2>
 		<asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
 		<p>&nbsp;</p>
