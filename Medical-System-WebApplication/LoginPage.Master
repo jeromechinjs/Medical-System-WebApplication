@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LoginPage.Master.cs" Inherits="Medical_System_WebApplication.Site3" %>
+
+<!DOCTYPE html>
+
+<html  lang="en">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Header Footer Template</title>
+
+    <!-- Link to Bootstrap CSS library (and custom css) -->
+    <link href="Style.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="src/leaves-icon.svg">
+    
+</head>
+<body>
+    <main style="overflow: hidden">
+        <div class="container-fluid p-0">
+            <div class="row">
+                <!-- background -->
+                <div class="col position-relative p-0 d-none d-lg-block vh-100" style="background: linear-gradient(90deg, #09203f 0%, #537895 100%);">
+                    <div class="container overlay-content">
+                        <div class="row flex-column">
+                            <div class="col">
+                                <p class="fs-1">Hi there. <br> Great to see you.</p>
+                            </div>
+                        </div>
+                    </div>        
+
+                </div>
+                <!-- login form -->
+                <div class="col p-0">
+
+                </div>
+            </div>
+        </div>        
+
+        <asp:ContentPlaceHolder ID="loginPageTitle" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder ID="extras" runat="server">
+        </asp:ContentPlaceHolder>
+
+    </main>
+ 
+
+    <!-- Link to Bootstrap Javascript library-->
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+
+ </body>
+</html>

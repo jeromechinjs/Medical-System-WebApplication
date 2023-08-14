@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Homepage" Language="C#" MasterPageFile="~/Header_Footer_Template.Master" AutoEventWireup="true" CodeBehind="Homepage.aspx.cs" Inherits="Medical_System_WebApplication.WebForm1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="section1" runat="server">
-    <div class="p-0 video-section">
+    <div class="p-0 video-section position-relative">
         <video autoplay muted loop>
             <source src="src/homepage-video.mp4" type="video/mp4"/>
         </video>
@@ -11,7 +11,7 @@
         <div class="container overlay-content">
             <div class="row flex-column">
                 <div class="col">
-                    <div class="overlay-text fs-1">Need Help? <br> We're here to assist.</div>
+                    <div class="fs-1">Need Help? <br> We're here to assist.</div>
                 </div>
                 <div class="col mt-4">
                     <form id="homepageForm" runat="server">

@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Header_Footer_Template.Master.cs" Inherits="Medical_System_WebApplication.Site1" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Dashboard.Master.cs" Inherits="Medical_System_WebApplication.Site2" %>
 
 <!DOCTYPE html>
 
@@ -20,7 +20,8 @@
     <nav class="navbar navbar-expand-xl bg-body-tertiary sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand px-3 ms-2" href="Homepage.aspx">
-                <img src="src/leaves-icon.svg" alt="Logo" width="40" height="44" />
+                <img src="src/leaves-icon.svg" alt="Logo" width="40" height="44" /> 
+                Dashboard
             </a>
             <!-- mobile hamburger icon -->
              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContents" aria-controls="navbarContents" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,8 +45,8 @@
                             <img src="src/profile-login.svg" alt="Logo" width="30" height="34" />
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="StaffLogin.aspx" target="_blank">Staff</a></li>
-                            <li><a class="dropdown-item" href="PatientLogin.aspx" target="_blank">Customer</a></li>
+                            <li><a class="dropdown-item" href="#" target="_blank">Staff</a></li>
+                            <li><a class="dropdown-item" href="#" target="_blank">Customer</a></li>
                         </ul>
                     </li>
                 </ul>

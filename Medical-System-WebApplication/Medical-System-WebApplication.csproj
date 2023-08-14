@@ -104,6 +104,11 @@
     <Content Include="Appointment.aspx" />
     <Content Include="ContactUs.aspx" />
     <Content Include="Products.aspx" />
+    <Content Include="PatientDashboard.aspx" />
+    <Content Include="StaffDashboard.aspx" />
+    <Content Include="PatientLogin.aspx" />
+    <Content Include="PatientSignUp.aspx" />
+    <Content Include="StaffLogin.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ahmad.aspx.cs">
@@ -163,6 +168,55 @@
     <Compile Include="Products.aspx.designer.cs">
       <DependentUpon>Products.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard.Master.cs">
+      <DependentUpon>Dashboard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Master.designer.cs">
+      <DependentUpon>Dashboard.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PatientDashboard.aspx.cs">
+      <DependentUpon>PatientDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientDashboard.aspx.designer.cs">
+      <DependentUpon>PatientDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.Master.cs">
+      <DependentUpon>LoginPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.Master.designer.cs">
+      <DependentUpon>LoginPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="StaffDashboard.aspx.cs">
+      <DependentUpon>StaffDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffDashboard.aspx.designer.cs">
+      <DependentUpon>StaffDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PatientLogin.aspx.cs">
+      <DependentUpon>PatientLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientLogin.aspx.designer.cs">
+      <DependentUpon>PatientLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PatientSignUp.aspx.cs">
+      <DependentUpon>PatientSignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientSignUp.aspx.designer.cs">
+      <DependentUpon>PatientSignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffLogin.aspx.cs">
+      <DependentUpon>StaffLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffLogin.aspx.designer.cs">
+      <DependentUpon>StaffLogin.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="libman.json" />
@@ -190,6 +244,8 @@
     <Content Include="Scripts\bootstrap.esm.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Dashboard.Master" />
+    <Content Include="LoginPage.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

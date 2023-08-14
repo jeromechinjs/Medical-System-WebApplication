@@ -26,10 +26,6 @@
 
 /* --- home page ---*/
 
-.video-section {
-    position: relative;
-}
-
 .video-section .overlay {
     position: absolute;
     height: 80%;
@@ -41,7 +37,8 @@
     opacity: 0.7;
 }
 
-.video-section .overlay-content {
+/*.video-section .overlay-content (can try have reusable .overlay-content class*/
+.overlay-content {
     position: absolute;
     z-index: 3;
     top: 28%;
