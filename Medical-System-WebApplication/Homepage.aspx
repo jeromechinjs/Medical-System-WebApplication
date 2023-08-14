@@ -16,7 +16,8 @@
                 <div class="col mt-4">
                     <form id="homepageForm" runat="server">
 		                <asp:DropDownList class="form-select w-auto" ID="assistItem_dropdown" runat="server">
-			                <asp:ListItem>A Doctor</asp:ListItem>
+			                <asp:ListItem>I am looking for</asp:ListItem>
+                            <asp:ListItem>A Doctor</asp:ListItem>
 			                <asp:ListItem>Health Packages</asp:ListItem>
                             <asp:ListItem>Location</asp:ListItem>
 			                <asp:ListItem>News & Events</asp:ListItem>
