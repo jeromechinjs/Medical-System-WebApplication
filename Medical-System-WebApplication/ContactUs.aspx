@@ -6,49 +6,47 @@
                 border: 1px solid black;
                 border-collapse: collapse;
             }
+
+            td{
+                text-align: center;
+            }
         </style>
 
         <div class="container my-4">
+            <h2>Contact Us</h2>
             <p>Our Hours of Operation</p>
             <table style="width: 100%;" border="1">
-                <tr> <%--header--%>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                <tr>
+                    <td><strong>Day of the Week</strong></td>
+                    <td><strong>Hours of Operation</strong></td>
                 </tr>
-                <tr> <%--monday--%>
-                    <td><strong>Monday</strong></td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                <tr>
+                    <td>Monday</td>
+                    <td>8:00 AM ~ 8:00 PM</td>
                 </tr>
-                <tr> <%--tuesday--%>
-                    <td><strong>Tuesday</strong></td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>8:00 AM ~ 8:00 PM</td>
                 </tr>
-                <tr> <%--wednesday--%>
-                    <td><strong>Wednesday</strong></td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>8:00 AM ~ 8:00 PM</td>
                 </tr>
-                <tr> <%--thursday--%>
-                    <td><strong>Thurday</strong></td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                <tr>
+                    <td>Thurday</td>
+                    <td>8:00 AM ~ 8:00 PM</td>
                 </tr>
-                <tr> <%--friday--%>
-                    <td><strong>Friday</strong></td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                <tr>
+                    <td>Friday</td>
+                    <td>8:00 AM ~ 8:00 PM</td>
                 </tr>
-                <tr> <%--saturday--%>
-                    <td><strong>Saturday</strong></td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                <tr>
+                    <td>Saturday</td>
+                    <td>8:00 AM ~ 6:00 PM</td>
                 </tr>
-                <tr> <%--sunday--%>
-                    <td><strong>Sunday</strong></td>
-                    <td class="text-center">Closed</td>
+                <tr>
+                    <td>Sunday</td>
+                    <td><strong>Closed</strong></td>
                 </tr>
             </table>
             <br />
