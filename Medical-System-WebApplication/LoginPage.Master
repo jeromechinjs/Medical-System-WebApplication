@@ -47,6 +47,7 @@
                         <asp:Button class="btn btn-primary" ID="btn_Login" runat="server" Text="Log In" OnClientClick="javascript:alert('Login Successfully')" />
 
                     </form>
+                    <asp:ContentPlaceHolder ID="patientSignUp" runat="server"></asp:ContentPlaceHolder>
                 </div>
             </div>
         </div>        
