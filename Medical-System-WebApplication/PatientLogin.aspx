@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LoginPage.Master" AutoEventWireup="true" CodeBehind="PatientLogin.aspx.cs" Inherits="Medical_System_WebApplication.WebForm7" %>
+﻿<%@ Page Title="Patient Log In" Language="C#" MasterPageFile="~/LoginPage.Master" AutoEventWireup="true" CodeBehind="PatientLogin.aspx.cs" Inherits="Medical_System_WebApplication.WebForm7" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="loginPageTitle" runat="server">
     Hi there. <br> Great to see you.
 </asp:Content>
@@ -21,6 +21,11 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="loginFormText" runat="server">
-        Log into your account to view your appointments and your profile details.
+        Log into your account to view your appointments and profile details.
 </asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="patientSignUp" runat="server">
+        <a href="PatientSignUp.aspx" class="text-center mt-4" target="_blank">Don't have an account yet? Create one here</a>
+</asp:Content>
+
 

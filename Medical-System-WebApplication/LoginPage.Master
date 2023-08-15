@@ -27,8 +27,9 @@
                     <asp:ContentPlaceHolder ID="loginPageLists" runat="server"></asp:ContentPlaceHolder>
                 </div>
 
-                <!-- login form -->
                 <div class="col flex-column d-flex justify-content-center">
+                    <!-- login form -->
+                    <img src="src/leaves-icon.svg" class="align-self-center" alt="Logo" width="40" height="44" />
                     <p class="my-3 text-center fs-3 fw-bolder text-success">Welcome back</p>
                     <p class="my-2 text-center"><asp:ContentPlaceHolder ID="loginFormText" runat="server"></asp:ContentPlaceHolder></p>
                    

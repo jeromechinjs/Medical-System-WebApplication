@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LoginPage.Master" AutoEventWireup="true" CodeBehind="StaffLogin.aspx.cs" Inherits="Medical_System_WebApplication.WebForm9" %>
+﻿<%@ Page Title="Staff Log In" Language="C#" MasterPageFile="~/LoginPage.Master" AutoEventWireup="true" CodeBehind="StaffLogin.aspx.cs" Inherits="Medical_System_WebApplication.WebForm9" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="loginPageTitle" runat="server">
     View Patient Appointments, <br> All In One Place.
 </asp:Content>

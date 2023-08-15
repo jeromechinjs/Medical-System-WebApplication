@@ -61,7 +61,7 @@
     color: white;
 }
 
-#loginForm {
+#loginForm, #patientSignUpForm {
     margin-top: 3vw;
     padding: 0 9vw;
 }
