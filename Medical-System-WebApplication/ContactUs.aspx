@@ -65,7 +65,10 @@
             <br />
             <div>
                 <h4><strong>Suggestion</strong></h4> <%--thinking...--%>
-            </div>            
+                <asp:Label ID="name" runat="server" Text="Label">Name: </asp:Label><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+
+
+            </div>       
         </div>
 </asp:Content>
 
