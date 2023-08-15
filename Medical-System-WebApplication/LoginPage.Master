@@ -17,32 +17,40 @@
     
 </head>
 <body>
-    <main style="overflow: hidden">
-        <div class="container-fluid p-0">
+    <main>
+        <div class="container-fluid p-0 overflow-hidden">
             <div class="row">
+
                 <!-- background -->
-                <div class="col position-relative p-0 d-none d-lg-block vh-100" style="background: linear-gradient(90deg, #09203f 0%, #537895 100%);">
-                    <div class="container overlay-content">
-                        <div class="row flex-column">
-                            <div class="col">
-                                <p class="fs-1">Hi there. <br> Great to see you.</p>
-                            </div>
-                        </div>
-                    </div>        
-
+                <div class="col flex-column loginBg justify-content-center align-items-center d-none d-sm-flex">
+                    <p class="fs-2 fw-light"><asp:ContentPlaceHolder ID="loginPageTitle" runat="server"></asp:ContentPlaceHolder></p>
+                    <asp:ContentPlaceHolder ID="loginPageLists" runat="server"></asp:ContentPlaceHolder>
                 </div>
-                <!-- login form -->
-                <div class="col p-0">
 
+                <!-- login form -->
+                <div class="col flex-column d-flex justify-content-center">
+                    <p class="my-3 text-center fs-3 fw-bolder text-success">Welcome back</p>
+                    <p class="my-2 text-center"><asp:ContentPlaceHolder ID="loginFormText" runat="server"></asp:ContentPlaceHolder></p>
+                   
+                    <form id="loginForm" runat="server" class="d-flex flex-column justify-content-center">
+						<div class="mb-4">
+							<asp:Label for="loginEmailInput" class="form-label" runat="server" Text="Email Address"></asp:Label>
+							<asp:TextBox ID="loginEmailInput" class="form-control" type="email" placeholder="name@example.com" runat="server"></asp:TextBox>
+						</div>
+
+						<div class="mb-4">
+							<asp:Label for="loginPasswordInput" class="form-label" runat="server" Text="Password"></asp:Label>
+							<asp:TextBox ID="loginPasswordInput" class="form-control" type="password" runat="server"></asp:TextBox>
+						</div>
+
+                        <asp:Button class="btn btn-primary" ID="btn_Login" runat="server" Text="Log In" OnClientClick="javascript:alert('Login Successfully')" />
+
+                    </form>
                 </div>
             </div>
         </div>        
 
-        <asp:ContentPlaceHolder ID="loginPageTitle" runat="server">
-        </asp:ContentPlaceHolder>
 
-        <asp:ContentPlaceHolder ID="extras" runat="server">
-        </asp:ContentPlaceHolder>
 
     </main>
  
