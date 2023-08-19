@@ -5,39 +5,12 @@
 	<!---------- copied into dashboard.master ----------->
 
 	<form id="form1" runat="server">
-		<div>
-			<asp:GridView ID="gvAppointmentManage" runat="server" AutoGenerateColumns="False" DataKeyNames="AppointmentID" 
-				ShowHeaderWhenEmpty="True" OnRowDeleting="gvAppointmentManage_RowDeleting"
-
-				BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True">
+		<div class ="container">
+			<asp:GridView class="table table-bordered table-condensed table-responsive table-hover " ID="gvAppointmentManage" runat="server" AutoGenerateColumns="False" ShowFooter="True" DataKeyNames="AppointmentID" 
+				ShowHeaderWhenEmpty="True" OnRowCommand="gvAppointmentManage_RowCommand" OnRowDeleting="gvAppointmentManage_RowDeleting" AllowSorting="True">
 				<%-- Theme --%>
-				<FooterStyle BackColor="White" ForeColor="#000066" />
-				<HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
-				<PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
-				<RowStyle ForeColor="#000066" />
-				<SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
-				<SortedAscendingCellStyle BackColor="#F1F1F1" />
-				<SortedAscendingHeaderStyle BackColor="#007DBB" />
-				<SortedDescendingCellStyle BackColor="#CAC9C9" />
-				<SortedDescendingHeaderStyle BackColor="#00547E" />
 
 				<Columns>
-					<%-- Appointment ID --%>
-					<asp:TemplateField HeaderText="Appointment ID">
-						<ItemTemplate>
-							<asp:Label Text='<%# Eval("AppointmentID") %>' runat="server" />
-						</ItemTemplate>
-
-						<EditItemTemplate>
-							<asp:TextBox ID="txtAppointmentID" Text='<%# Eval("AppointmentID") %>' runat="server" />
-						</EditItemTemplate>
-
-						<FooterTemplate>
-							<asp:TextBox ID="txtAppointmentIDFooter" runat="server" />
-						</FooterTemplate>
-
-					</asp:TemplateField>
-
 					<%-- Patient ID --%>
 
 					<asp:TemplateField HeaderText="Patient ID">
@@ -48,6 +21,10 @@
 						<EditItemTemplate>
 							<asp:TextBox ID="txtPatientID" Text='<%# Eval("PatientID") %>' runat="server" />
 						</EditItemTemplate>
+
+						<FooterTemplate>
+							<asp:TextBox ID="txtPatientIDFooter" runat="server" />
+						</FooterTemplate>
 
 					</asp:TemplateField>
 
@@ -61,6 +38,10 @@
 						<EditItemTemplate>
 							<asp:TextBox ID="txtAppointmentDate" Text='<%# Eval("AppointmentDate") %>' runat="server" />
 						</EditItemTemplate>
+
+						<FooterTemplate>
+							<asp:TextBox ID="txtAppointmentDateFooter" runat="server" />
+						</FooterTemplate>
 
 					</asp:TemplateField>
 
@@ -76,6 +57,10 @@
 							<asp:TextBox ID="txtAppointmentTime" Text='<%# Eval("AppointmentTime") %>' runat="server" />
 						</EditItemTemplate>
 
+						<FooterTemplate>
+							<asp:TextBox ID="txtAppointmentTimeFooter" runat="server" />
+						</FooterTemplate>
+
 					</asp:TemplateField>
 
 					<%-- Concern --%>
@@ -88,6 +73,10 @@
 						<EditItemTemplate>
 							<asp:TextBox ID="txtConcernAndRequest" Text='<%# Eval("ConcernAndRequest") %>' runat="server" />
 						</EditItemTemplate>
+
+						<FooterTemplate>
+							<asp:TextBox ID="txtConcernAndRequestFooter" runat="server" />
+						</FooterTemplate>
 
 					</asp:TemplateField>
 
@@ -102,12 +91,20 @@
 							<asp:TextBox ID="txtSpecialtyID" Text='<%# Eval("SpecialtyID") %>' runat="server" />
 						</EditItemTemplate>
 
+						<FooterTemplate>
+							<asp:TextBox ID="txtSpecialtyIDFooter" runat="server" />
+						</FooterTemplate>
+
 					</asp:TemplateField>
 
 					<asp:TemplateField>
 						<ItemTemplate>
-							<asp:ImageButton ImageUrl="~/src/check-mark.png" runat="server" CommandName="Check" ToolTip="Check" Width="20px" Height="20px" />
+							<asp:ImageButton ImageUrl="~/src/check-mark.png" runat="server" CommandName="Delete" ToolTip="Check" Width="20px" Height="20px" />
 						</ItemTemplate>
+
+						<FooterTemplate>
+							<asp:ImageButton ImageUrl="~/src/add.png" runat="server" CommandName="AddNew" ToolTip="AddNew" Width="20px" Height="20px" />
+						</FooterTemplate>
 
 					</asp:TemplateField>
 
