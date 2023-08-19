@@ -17,17 +17,17 @@
             <br />
             <div>
                 <p><strong>If any questions, please call: </strong><asp:HyperLink ID="ContectNumber" runat="server">+60 12-345 6789</asp:HyperLink></p>
-                <p><strong>Email: </strong><asp:HyperLink ID="email" runat="server">MedicalCentre@gmail.com</asp:HyperLink></p>
+                <p><strong>Email: </strong><a href="mailto:ASDF@GMAIL.COM">test email</a></p>      
             </div>
             <br />
             <div>
                 <h4><strong>Visit our Medical Centre</strong></h4>
-                <asp:HyperLink ID="Address" runat="server">No.123, Jalan Ampang Utara, Taman Pandah Mewah, 68000 Ampang, Selangor.</asp:HyperLink>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.53781216072!2d101.72179349678954!3d3.2152552000000023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc3843bfb6a031%3A0x2dc5e067aae3ab84!2z5Lic5aeR6Zi_6YO95ouJ5pu8566h55CG5LiO56eR5oqA5aSn5a2m!5e0!3m2!1szh-CN!2smy!4v1692438679049!5m2!1szh-CN!2smy" width=100% height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <br />
             <div>
                 <h4><strong>Our Hours of Operation</strong></h4>
-                <table style="width: 100%;" border="1">
+                <table style="width: 70%;" border="1">
                     <tr>
                         <td><strong>Day of the Week</strong></td>
                         <td><strong>Hours of Operation</strong></td>
@@ -63,19 +63,16 @@
                 </table>
             </div>
             <br />
+            <form id="form1" runat="server">
             <div>
-                <h4><strong>Suggestion</strong></h4> <%--thinking...--%>
-                <asp:Label ID="name" runat="server" Text="Label">Name: </asp:Label><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <h4><strong>Feedback</strong></h4> <%--thinking...--%>
+                <asp:Label ID="name" runat="server" Text="Label">Name: </asp:Label><asp:TextBox ID="txtName" runat="server"></asp:TextBox>
 
 
-            </div>       
+            </div>   
+                </form>
         </div>
 </asp:Content>
-
-<%-- Notes (Inside the Contact Us)
-    - Location / map information
-    - Contact information
-    - Hours of operation--%>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="section2" runat="server"></asp:Content>
 
