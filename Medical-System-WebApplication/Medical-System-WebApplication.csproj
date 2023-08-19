@@ -92,12 +92,12 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="src\add.png" />
     <Content Include="src\alarm.svg" />
     <Content Include="src\alert-circle.svg" />
     <Content Include="src\align-right.svg" />
     <Content Include="src\calendar_appointment.png" />
     <Content Include="src\check-mark.png" />
-    <Content Include="src\checked.png" />
     <Content Include="src\doctor_appointment.png" />
     <Content Include="src\headset.svg" />
     <Content Include="src\homepage-video.mp4" />
