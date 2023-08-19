@@ -44,10 +44,11 @@
 							<asp:TextBox ID="loginPasswordInput" class="form-control" type="password" runat="server"></asp:TextBox>
 						</div>
 
-                        <asp:Button class="btn btn-primary" ID="btn_Login" runat="server" Text="Log In" OnClientClick="javascript:alert('Login Successfully')" />
-
+                        <asp:ContentPlaceHolder ID="btnLogIn" runat="server"></asp:ContentPlaceHolder>
                     </form>
-                    <asp:ContentPlaceHolder ID="patientSignUp" runat="server"></asp:ContentPlaceHolder>
+
+                    <!-- 'Haven't sign up yet?' text for patient signup page -->
+                    <asp:ContentPlaceHolder ID="patientSignUpTxt" runat="server"></asp:ContentPlaceHolder>
                 </div>
             </div>
         </div>        

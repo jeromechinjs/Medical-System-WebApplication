@@ -12,6 +12,8 @@ namespace Medical_System_WebApplication
 {
     public partial class Appointment_Management : System.Web.UI.Page
     {
+	//---------- copied into dashboard.master.cs -----------
+
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         SqlCommand cmd;
         SqlDataAdapter dataAdapter;
@@ -68,6 +70,7 @@ namespace Medical_System_WebApplication
             lblErrorMessage.Text = "";
 
         }
+     //---------- copied into dashboard.master.cs -----------
 
     }
 }

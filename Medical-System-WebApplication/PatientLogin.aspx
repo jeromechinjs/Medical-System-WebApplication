@@ -24,8 +24,12 @@
         Log into your account to view your appointments and profile details.
 </asp:Content>
 
-<asp:Content ID="Content4" ContentPlaceHolderID="patientSignUp" runat="server">
+<asp:Content ID="Content4" ContentPlaceHolderID="patientSignUpTxt" runat="server">
         <a href="PatientSignUp.aspx" class="text-center mt-4" target="_blank">Don't have an account yet? Create one here</a>
+</asp:Content>
+
+<asp:Content ID="Content5" ContentPlaceHolderID="btnLogIn" runat="server">
+    <asp:Button class="btn btn-primary" ID="btn_Login" runat="server" Text="Log In" OnClick="btn_LogIn_Click" />
 </asp:Content>
 
 
