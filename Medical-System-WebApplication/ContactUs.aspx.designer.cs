@@ -42,6 +42,15 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.HyperLink Address;
 
         /// <summary>
+        /// contactUsForm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm contactUsForm;
+
+        /// <summary>
         /// name control.
         /// </summary>
         /// <remarks>

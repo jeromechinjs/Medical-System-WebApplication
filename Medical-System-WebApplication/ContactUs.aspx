@@ -63,12 +63,11 @@
                 </table>
             </div>
             <br />
-            <div>
+            <form id="contactUsForm" runat="server">
                 <h4><strong>Suggestion</strong></h4> <%--thinking...--%>
                 <asp:Label ID="name" runat="server" Text="Label">Name: </asp:Label><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
 
-
-            </div>       
+            </form>
         </div>
 </asp:Content>
 
