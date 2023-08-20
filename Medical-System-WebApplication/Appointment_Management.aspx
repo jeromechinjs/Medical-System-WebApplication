@@ -2,7 +2,7 @@
 
 
 
-<asp:Content ID="Content1" ContentPlaceHolderID="upcomingAppointments" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="completedAppointments" runat="server">
 
 	<!-- copied into StaffDashboard.aspx, refer from there :) -->
 

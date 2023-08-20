@@ -24,15 +24,6 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.ContentPlaceHolder navItemAppointment;
 
         /// <summary>
-        /// completedAppointments control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder completedAppointments;
-
-        /// <summary>
         /// upcomingAppointments control.
         /// </summary>
         /// <remarks>
@@ -40,5 +31,14 @@ namespace Medical_System_WebApplication
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder upcomingAppointments;
+
+        /// <summary>
+        /// completedAppointments control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder completedAppointments;
     }
 }
