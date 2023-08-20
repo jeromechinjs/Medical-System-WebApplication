@@ -71,7 +71,7 @@ namespace Medical_System_WebApplication
 
                 cmd.ExecuteNonQuery();
                 PopulateGridView();
-                Response.Write("<script>alert('Patient Checked in! Appointment Completed. ');</script>");
+                Response.Write("<script>alert('Appointment Canceled.');</script>");
 
                 con.Close();
             }
