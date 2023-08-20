@@ -75,7 +75,7 @@
 								<div class="mb-3 mt-3">
 									<div class="mb-3 ms-4">
 										<asp:DropDownList ID="AnySpecialty_DropDown" runat="server" class="form-select" Width="300px" AutoPostBack="True" OnSelectedIndexChanged="AnySpecialty_DropDown_SelectedIndexChanged">
-											<asp:ListItem Value="0">Any Specialties</asp:ListItem>
+											<li Value="0">Any Specialties</li>
 										</asp:DropDownList>
 									</div>
 

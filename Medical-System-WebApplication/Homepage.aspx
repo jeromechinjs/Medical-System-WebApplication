@@ -14,16 +14,19 @@
                     <div class="fs-1">Need Help? <br> We're here to assist.</div>
                 </div>
                 <div class="col mt-4">
-                    <form id="homepageForm" runat="server">
-		                <asp:DropDownList class="form-select w-auto" ID="assistItem_dropdown" runat="server">
-			                <asp:ListItem>I am looking for</asp:ListItem>
-                            <asp:ListItem>A Doctor</asp:ListItem>
-			                <asp:ListItem>Health Packages</asp:ListItem>
-                            <asp:ListItem>Location</asp:ListItem>
-			                <asp:ListItem>News & Events</asp:ListItem>
-			                <asp:ListItem>SunMed Kid's Club</asp:ListItem>
-		                </asp:DropDownList>   
-                    </form>
+                    <div class="dropdown">
+                         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             I am looking for
+                         </button>
+
+		                <ul class="dropdown-menu form-select w-auto" >
+                            <li><a class="dropdown-item" href="Appointment.aspx">Make Appointment</a></li>
+                            <li><a class="dropdown-item" href="Products.aspx">Buy Products</a></li>
+                            <li><a class="dropdown-item" href="ContactUs.aspx">Location</a></li>
+                            <li><a class="dropdown-item" href="Appointment.aspx">Sign Up</a></li>
+                            <li><a class="dropdown-item" href="goAppointmetPage">A Doctor</a></li>
+		                </ul>   
+                    </div>
                 </div>
             </div>
         </div>        
@@ -31,7 +34,7 @@
 
       <div class="our-mission container-fluid">
         <div class="our-mission-text row flex-xxl-row-reverse p-3 py-5 p-lg-5">
-            <div class="col-0 col-sm-1 col-md-5 col-lg-7 col-xxl-9"><!-- blank area --></div>
+            <div class="col-0 col-sm-1 col-md-5 col-lg-7 col-xxl-9"><!-- spacing blank area --></div>
             <div class="col-12 col-sm-11 col-md-7 col-lg-5 col-xxl-3 p-md-5">
                 <p class="title fw-bold">Our Mission, Transforms Communities</p>
                 <blockquote class="fs-2">“Prioritising patient care always. At your service, every day.”</blockquote>

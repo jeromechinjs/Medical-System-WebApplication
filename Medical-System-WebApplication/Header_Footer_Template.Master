@@ -28,16 +28,16 @@
             </button>
 
             <!-- collapsible contents -->
-            <div id="navbarContents" class="navbar-collapse collapse justify-content-center">
-                <ul class="navbar-nav mb-lg-0">
+            <div id="navbarContents" class="navbar-collapse collapse">
+                <ul class="navbar-nav w-100 mb-lg-0">
                     <li class="nav-item mx-2 mt-1 active"><a class="nav-link" href="Homepage.aspx">Home</a></li>
-                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">Our Services</a></li>
-                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">Patient Care</a></li>
+<%--                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">Our Services</a></li>
+                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">Patient Care</a></li>--%>
                     <li class="nav-item mx-2 mt-1"><a class="nav-link" href="Products.aspx">Products</a></li>
-                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">Promotion</a></li>
-                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">About Us</a></li>
-                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="ContactUs.aspx">Contact Us</a></li>
-                    <li class="nav-item ms-5 mt-1"><a class="btn btn-primary" href="Appointment.aspx" role="button">Make Appointment</a></li>
+<%--                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">Promotion</a></li>
+                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">About Us</a></li>--%>
+                    <li class="nav-item mx-2 mt-1 me-auto"><a class="nav-link" href="ContactUs.aspx">Contact Us</a></li>
+                    <li class="nav-item mt-1"><a class="btn btn-primary" href="Appointment.aspx" role="button">Make Appointment</a></li>
                     <li class="nav-item ms-3">
                         <a class="nav-link" href="Cart.aspx" role="button">
                             <img src="src/cart.svg" alt="Logo" width="30" height="34" />
@@ -93,7 +93,7 @@
                     <a href="#" class="footer-link">Stroke Centre</a>
                 </div>
                 <div class="col">
-                    <p class="mb-2 mt-4 fw-bold">images to be placed</p>
+                    <p class="mb-2 mt-4 fw-bold">Others</p>
                     <a href="#" class="footer-link">Centres of Excellence</a>
                     <a href="#" class="footer-link">Accident & Emergency Department</a>
                     <a href="#" class="footer-link">Stroke Centre</a>

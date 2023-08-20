@@ -90,8 +90,8 @@
 		                <div class="my-3">
 			                <asp:Label for="dropDown_Gender" ID="Gender_Label" runat="server" Text="Gender"></asp:Label>
 			                <asp:DropDownList class="form-select" ID="dropDown_Gender" runat="server" >
-				                <asp:ListItem>Male</asp:ListItem>
-				                <asp:ListItem>Female</asp:ListItem>
+				                <li>Male</li>
+				                <li>Female</li>
 			                </asp:DropDownList>
 		                </div>
 

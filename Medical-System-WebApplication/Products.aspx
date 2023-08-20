@@ -12,7 +12,7 @@
                 <div class="col-md-3 p-3 m-0">
                     <p>Search by</p>
                     <asp:DropDownList class="dropdown-center form-select" ID="DropDownList2" runat="server" DataSourceID="SqlDataSource2" DataTextField="CategoryName" DataValueField="CategoryID" AutoPostBack="True" AppendDataBoundItems="True">
-                        <asp:ListItem Value="-1">Show All</asp:ListItem>
+                        <li Value="-1">Show All</li>
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [ProductCategory]"></asp:SqlDataSource>
                 </div>
