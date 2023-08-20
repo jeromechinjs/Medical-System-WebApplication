@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ahmad.aspx" />
+    <Content Include="Appointment_Management.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -91,10 +92,12 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="src\add.png" />
     <Content Include="src\alarm.svg" />
     <Content Include="src\alert-circle.svg" />
     <Content Include="src\align-right.svg" />
     <Content Include="src\calendar_appointment.png" />
+    <Content Include="src\check-mark.png" />
     <Content Include="src\doctor_appointment.png" />
     <Content Include="src\headset.svg" />
     <Content Include="src\homepage-video.mp4" />
@@ -123,6 +126,13 @@
     </Compile>
     <Compile Include="Ahmad.aspx.designer.cs">
       <DependentUpon>Ahmad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Appointment_Management.aspx.cs">
+      <DependentUpon>Appointment_Management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Appointment_Management.aspx.designer.cs">
+      <DependentUpon>Appointment_Management.aspx</DependentUpon>
     </Compile>
     <Compile Include="Jason.aspx.cs">
       <DependentUpon>Jason.aspx</DependentUpon>

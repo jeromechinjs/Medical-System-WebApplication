@@ -11,17 +11,8 @@ namespace Medical_System_WebApplication
 {
 
 
-    public partial class WebForm3
+    public partial class Appointment_Management
     {
-
-        /// <summary>
-        /// ContectNumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink ContectNumber;
 
         /// <summary>
         /// form1 control.
@@ -33,30 +24,30 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// contactUsForm control.
+        /// gvAppointmentManage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm contactUsForm;
+        protected global::System.Web.UI.WebControls.GridView gvAppointmentManage;
 
         /// <summary>
-        /// name control.
+        /// lblSuccessMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label name;
+        protected global::System.Web.UI.WebControls.Label lblSuccessMessage;
 
         /// <summary>
-        /// txtName control.
+        /// lblErrorMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtName;
+        protected global::System.Web.UI.WebControls.Label lblErrorMessage;
     }
 }
