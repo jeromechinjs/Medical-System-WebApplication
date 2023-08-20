@@ -26,6 +26,15 @@ namespace Medical_System_WebApplication
                 SqlDataSource1.DataBind();
                 DataList1.DataBind();
             }
+
+            if (DropDownList2.SelectedValue == "-1")
+            {
+                SqlDataSource1.SelectCommand = "SELECT * FROM Product";
+            }
+            else
+            {
+                SqlDataSource1.SelectCommand = "SELECT * FROM [Product] inner join ProductCategory on Product.CategoryID=ProductCategory.CategoryID and ProductCategory.CategoryID=@CategoryID";
+            }
             //|| DropDownList2.SelectedValue == "-1"
 
             //if (!Page.IsPostBack)
@@ -52,8 +61,8 @@ namespace Medical_System_WebApplication
             string productID = btn.CommandArgument.ToString();
 
             cart.Add(productID);
-            Debug.WriteLine(cart.Count);
             Session["Cart"] = cart;
         }
     }
 }
+
