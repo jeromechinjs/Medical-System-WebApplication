@@ -94,6 +94,10 @@
     height: 75vh;
 }
 
+.w-15 {
+    width: 15% !important;
+}
+
 @media (max-width: 800px) {
     .video-section .overlay {
         height: 100%;
