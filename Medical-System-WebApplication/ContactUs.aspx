@@ -90,8 +90,8 @@
             </div>
             <br />
             <div>
-                <asp:Label for="feedback_patient" class="form-label" runat="server" Text="Are you an existing patient?"></asp:Label>
-                <asp:RadioButtonList ID="feedback_patient" runat="server">
+                <asp:Label for="feedback_patient" class="form-label" runat="server" Text="Are you an existing patient?"></asp:Label> <br />
+                <asp:RadioButtonList ID="feedback_patient" runat="server" RepeatDirection="Vertical" RepeatLayout="Flow">
                     <asp:ListItem Value="Y">Yes</asp:ListItem>
                     <asp:ListItem Value="N">No</asp:ListItem>
                 </asp:RadioButtonList>
