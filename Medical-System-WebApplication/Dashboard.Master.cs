@@ -15,10 +15,22 @@ namespace Medical_System_WebApplication
     public partial class Site2 : System.Web.UI.MasterPage
     {
 
-        
+        string currentPageUrl = HttpContext.Current.Request.Url.AbsolutePath;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            appointments.Visible = false;            
+            appointments.Visible = false;
+            enquiry.Visible = false;
+
+            // hide btn enquiry in navbar when in patient dashboard
+            if (currentPageUrl == "/StaffDashboard.aspx")
+            {
+                btnEnquiry.Visible = true;
+            } else
+            {
+                btnEnquiry.Visible = false;
+            }
+
 
         }
 
@@ -26,13 +38,24 @@ namespace Medical_System_WebApplication
         {
             profile.Visible = true;
             appointments.Visible = false;
+            enquiry.Visible = false;
+
         }
 
         protected void appointmentView_Click(object sender, EventArgs e)
         {
             profile.Visible = false;
             appointments.Visible = true;
+            enquiry.Visible = false;
 
         }
+        protected void enquiriesView_Click(object sender, EventArgs e)
+        {
+            profile.Visible = false;
+            appointments.Visible = false;
+            enquiry.Visible = true;
+        }
+
+
     }
 }

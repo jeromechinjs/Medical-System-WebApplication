@@ -27,31 +27,36 @@
 
             <ul class="navbar-nav mt-5">
                 <li class="nav-item p-2 mb-2">
-                    <asp:Button class="btn btn-outline-light btn-lg w-100" ID="profileView" runat="server" Text="Profile" OnClick="profileView_Click" />
+                    <asp:Button class="btn btn-outline-light btn-lg w-100" ID="btnProfile" runat="server" Text="Profile" OnClick="profileView_Click" />
                 </li>
                 <li class="nav-item p-2 mb-2">
-                    <asp:Button class="btn btn-outline-light btn-lg w-100" ID="appointmentView" runat="server" Text="Appointment" OnClick="appointmentView_Click" />
+                    <asp:Button class="btn btn-outline-light btn-lg w-100" ID="btnAppointment" runat="server" Text="Appointment" OnClick="appointmentView_Click" />
                 </li>
+	            <li class="nav-item p-2 mb-2">
+		            <asp:Button class="btn btn-outline-light btn-lg w-100" ID="btnEnquiry" runat="server" Text="Enquiries" onclick="enquiriesView_Click" />
+	            </li>
                 <li class="nav-item p-2 mb-2 mt-auto">
                     <a class=" btn btn-outline-danger btn-sm w-100" href="Homepage.aspx">Log Out</a>
                 </li>
             </ul>
 
         </nav>
+
         <main>
             <div class="container-fluid mt-2 overflow-x-hidden">
                 <div class="row">
                     <div class="col-2 d-none d-sm-block"></div> <!-- spacings -->
-                    <div class="col-10 p-4 flex-column d-flex justify-content-center">
-                        <asp:ContentPlaceHolder ID="profile" runat="server"></asp:ContentPlaceHolder>
-                    </div>
+                    <asp:ContentPlaceHolder ID="profile" runat="server"></asp:ContentPlaceHolder>
                 </div>
 
                 <div class="row">
                     <div class="col-2 d-none d-sm-block"></div> <!-- spacings -->
-                    <div class="col-10 p-4 flex-column d-flex justify-content-center">
-                        <asp:ContentPlaceHolder ID="appointments" runat="server"></asp:ContentPlaceHolder>
-                    </div>
+                    <asp:ContentPlaceHolder ID="appointments" runat="server"></asp:ContentPlaceHolder>
+                </div>
+
+                <div class="row">
+                    <div class="col-2 d-none d-sm-block"></div> <!-- spacings -->
+                    <asp:ContentPlaceHolder ID="enquiry" runat="server"></asp:ContentPlaceHolder>
                 </div>
             </div>        
 

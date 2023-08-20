@@ -7,11 +7,13 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Runtime.Remoting.Contexts;
 
 namespace Medical_System_WebApplication
 {
     public partial class WebForm6 : System.Web.UI.Page
     {
+
 
         // Appointment Management 
 
