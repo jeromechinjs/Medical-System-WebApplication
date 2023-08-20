@@ -71,14 +71,13 @@ namespace Medical_System_WebApplication
 
                 cmd.ExecuteNonQuery();
                 PopulateGridView();
-                lblSuccessMessage.Text = "Appointment Checked in !";
-                lblErrorMessage.Text = "";
+                Response.Write("<script>alert('Patient Checked in! Appointment Completed. ');</script>");
+          
                 con.Close();
             }
             catch (Exception ex)
             {
-                lblSuccessMessage.Text = "";
-                lblErrorMessage.Text = ex.Message;
+                Response.Write("<script>alert(" + ex.Message + ");</script>");
             }
 
 
@@ -102,17 +101,14 @@ namespace Medical_System_WebApplication
                     con.Open();
                     cmd.ExecuteNonQuery();
                     PopulateGridView();
-                    lblSuccessMessage.Text = "New Appointment Added!";
-                    lblErrorMessage.Text = "";
-
+                    Response.Write("<script>alert('New Appointment Added! ');</script>");
                     con.Close();
 
                 }
             }
             catch (Exception ex)
             {
-                lblSuccessMessage.Text = "";
-                lblErrorMessage.Text = ex.Message;
+                Response.Write("<script>alert("+ex.Message+");</script>");
             }
 
         }
