@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -18,42 +20,52 @@ namespace Medical_System_WebApplication
 
             if (!IsPostBack)
             {
-                DataTable dt = new DataTable();
-                DataRow dr;
-                dt.Columns.Add("productName");
-                dt.Columns.Add("productImage");
-                dt.Columns.Add("productPrice");
-                dt.Columns.Add("productTotal");
+                ArrayList cart = new ArrayList();
 
-                dr = dt.NewRow();
+                cart = (ArrayList)Session["Cart"];
+                foreach (var item in cart)
+                {
+                    Debug.WriteLine(item);
 
-                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+                    DataTable dt = new DataTable();
+                    DataRow dr;
+                    dt.Columns.Add("productName");
+                    dt.Columns.Add("productImage");
+                    dt.Columns.Add("productPrice");
+                    dt.Columns.Add("productTotal");
 
-                SqlDataAdapter da = new SqlDataAdapter("SELECT * from Product where ProductID= '" + Request.QueryString["id"] + "'", con);
-                DataSet ds = new DataSet();
-
-                da.Fill(ds);
+                    dr = dt.NewRow();
 
 
-                dr["productName"] = ds.Tables[0].Rows[0]["ProductName"].ToString();
-                dr["productImage"] = ds.Tables[0].Rows[0]["ProductImage"].ToString();
-                dr["productPrice"] = ds.Tables[0].Rows[0]["ProductPrice"].ToString();
 
-                int productPrice = Convert.ToInt32(ds.Tables[0].Rows[0]["ProductPrice"].ToString());
+                    SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
 
-                //TextBox tb = (TextBox)GridView1.Rows[0].FindControl("quantity");
-                //int b = Convert.ToInt32(tb.Text.ToString());
+                    SqlDataAdapter da = new SqlDataAdapter("SELECT * from Product where ProductID= '" + item + "'", con);
+                    DataSet ds = new DataSet();
 
-                //int totalPrice = productPrice * b;
-                
-                dr["ProductTotal"] = 5;
+                    da.Fill(ds);
 
-                dt.Rows.Add(dr);
-                GridView1.DataSource = dt;
-                GridView1.DataBind();
+
+                    dr["productName"] = ds.Tables[0].Rows[0]["ProductName"].ToString();
+                    dr["productImage"] = ds.Tables[0].Rows[0]["ProductImage"].ToString();
+                    dr["productPrice"] = ds.Tables[0].Rows[0]["ProductPrice"].ToString();
+
+                    //int productPrice = Convert.ToInt32(ds.Tables[0].Rows[0]["ProductPrice"].ToString());
+
+                    //TextBox tb = (TextBox)GridView1.Rows[0].FindControl("quantity");
+                    //int b = Convert.ToInt32(tb.Text.ToString());
+
+                    //int totalPrice = productPrice * b;
+
+                    dr["ProductTotal"] = 5;
+
+                    dt.Rows.Add(dr);
+                    GridView1.DataSource = dt;
+                    GridView1.DataBind();
+                }
             }
         }
-
-
     }
+
+
 }

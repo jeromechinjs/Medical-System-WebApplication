@@ -6,20 +6,20 @@
             /*border: 1px solid red;*/
         }
     </style>
-    <form id="form1" runat="server">
 
+    <form id="form1" runat="server">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 p-3 m-0">
                     <p>Search by</p>
                     <asp:DropDownList class="dropdown-center form-select" ID="DropDownList2" runat="server" DataSourceID="SqlDataSource2" DataTextField="CategoryName" DataValueField="CategoryID" AutoPostBack="True" AppendDataBoundItems="True">
-                        <asp:ListItem Value="-1" >Show All</asp:ListItem>
+                        <asp:ListItem Value="-1">Show All</asp:ListItem>
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [ProductCategory]"></asp:SqlDataSource>
                 </div>
 
                 <div class="col-md-9 p-3 m-0">
-                    <asp:DataList class="w-100" ID="DataList1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="DataList1_ItemCommand">
+                    <asp:DataList class="w-100" ID="DataList1" runat="server" DataSourceID="SqlDataSource1">
                         <ItemTemplate>
                             <div class="card mb-3">
                                 <div class="row g-0">
@@ -39,8 +39,8 @@
                                             <asp:Label class="card-text" ID="Label8" runat="server" Text='<%# Eval("ProductQuantity") %>'></asp:Label>
                                             <br />
                                             <div class="d-flex flex-row-reverse mt-3">
-                                                <asp:Button class="btn btn-sm btn-primary" ID="Button2" runat="server" Text="Add To Cart" CommandArgument='<%# Eval("ProductID") %>' CommandName="AddToCart" />
-
+                                                <asp:Button class="btn btn-sm btn-primary" ID="Button2" runat="server" Text="Add To Cart" CommandArgument='<%# Eval("ProductID") %>' CommandName="AddToCart" OnClick="Button1_Click"/>
+                                                
                                             </div>
                                         </div>
                                     </div>

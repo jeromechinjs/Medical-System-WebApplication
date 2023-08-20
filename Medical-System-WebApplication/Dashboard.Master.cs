@@ -14,11 +14,11 @@ namespace Medical_System_WebApplication
     {
         // Appointment Mangement
 
-        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-        SqlCommand cmd;
-        SqlDataAdapter dataAdapter;
-        DataSet ds = new DataSet();
-        string query;
+        //SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        //SqlCommand cmd;
+        //SqlDataAdapter dataAdapter;
+        //DataSet ds = new DataSet();
+        //string query;
 
         protected void Page_Load(object sender, EventArgs e)
         {
