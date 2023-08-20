@@ -12,6 +12,8 @@ namespace Medical_System_WebApplication
 {
     public partial class Appointment_Management : System.Web.UI.Page
     {
+        //---------- copied into dashboard.master.cs -----------
+
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         SqlCommand cmd;
         SqlDataAdapter dataAdapter;
@@ -29,7 +31,7 @@ namespace Medical_System_WebApplication
         void PopulateGridView()
         {
             DataTable table = new DataTable();
-            
+
             dataAdapter = new SqlDataAdapter("SELECT * FROM Appointment", con);
             con.Close();
 
@@ -53,7 +55,7 @@ namespace Medical_System_WebApplication
                 gvAppointmentManage.Rows[0].Cells[0].Text = "No Appointment is found !!";
                 gvAppointmentManage.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
             }
-            
+
 
         }
 
@@ -78,9 +80,10 @@ namespace Medical_System_WebApplication
                 lblSuccessMessage.Text = "";
                 lblErrorMessage.Text = ex.Message;
             }
-            
+
 
         }
+        //---------- copied into dashboard.master.cs -----------
 
         protected void gvAppointmentManage_RowCommand(object sender, GridViewCommandEventArgs e)
         {
@@ -112,7 +115,7 @@ namespace Medical_System_WebApplication
                 lblSuccessMessage.Text = "";
                 lblErrorMessage.Text = ex.Message;
             }
-            
+
         }
 
 

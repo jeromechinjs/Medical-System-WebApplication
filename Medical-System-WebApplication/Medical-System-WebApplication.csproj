@@ -66,6 +66,11 @@
   <ItemGroup>
     <Content Include="Ahmad.aspx" />
     <Content Include="Appointment_Management.aspx" />
+    <Content Include="App_Data\Database.mdf" />
+    <Content Include="App_Data\Database_log.ldf">
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
+    <Content Include="Cart.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -82,8 +87,6 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
-    <Content Include="App_Data\Database.mdf" />
-    <Content Include="App_Data\Database_log.ldf" />
     <Content Include="Jason.aspx" />
     <Content Include="John.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -99,13 +102,17 @@
     <Content Include="src\calendar_appointment.png" />
     <Content Include="src\check-mark.png" />
     <Content Include="src\doctor_appointment.png" />
+    <Content Include="src\example of doctor.png" />
     <Content Include="src\headset.svg" />
     <Content Include="src\homepage-video.mp4" />
     <Content Include="src\leaves-icon.svg" />
     <Content Include="src\list.svg" />
+    <Content Include="src\M99Flip.jpg" />
     <Content Include="src\our-mission.jpg" />
+    <Content Include="src\PanadolOptizorb.jpg" />
     <Content Include="src\people.svg" />
     <Content Include="src\profile-login.svg" />
+    <Content Include="src\SurgicalMask.jpg" />
     <Content Include="src\test.jpg" />
     <Content Include="Style.css" />
     <Content Include="Web.config" />
@@ -133,6 +140,13 @@
     </Compile>
     <Compile Include="Appointment_Management.aspx.designer.cs">
       <DependentUpon>Appointment_Management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Jason.aspx.cs">
       <DependentUpon>Jason.aspx</DependentUpon>

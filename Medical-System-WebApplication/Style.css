@@ -61,7 +61,8 @@
     color: white;
 }
 
-#loginForm, #patientSignUpForm {
+#loginForm, 
+#patientSignUpForm {
     margin-top: 3vw;
     padding: 0 9vw;
 }
@@ -72,6 +73,29 @@
     background-color: #FFB654;
     padding: 1rem;
     border-radius: 50%;
+}
+
+/* --- Dashboard page ---*/
+
+.dashboard-nav .nav-item a {
+    transition: all 0.5s;
+}
+
+.dashboard-nav .nav-item a:hover {
+    background-color: #8D8D8D;
+}
+
+.dashboard-nav .nav-item:last-child a:hover {
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+.dashboard-nav .navbar-nav {
+    height: 75vh;
+}
+
+.w-15 {
+    width: 15% !important;
 }
 
 @media (max-width: 800px) {

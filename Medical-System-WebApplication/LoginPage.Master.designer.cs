@@ -69,21 +69,21 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.TextBox loginPasswordInput;
 
         /// <summary>
-        /// btn_Login control.
+        /// btnLogIn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_Login;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder btnLogIn;
 
         /// <summary>
-        /// patientSignUp control.
+        /// patientSignUpTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder patientSignUp;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder patientSignUpTxt;
     }
 }

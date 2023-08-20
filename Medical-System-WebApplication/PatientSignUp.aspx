@@ -29,7 +29,7 @@
                 </div>
 
 
-                <div class="col d-none d-sm-block"></div>
+                <div class="col d-none d-sm-block"></div> <!-- spacings -->
                 <div class="col flex-column d-flex justify-content-center">
                     <!-- signup form -->
                     <img src="src/leaves-icon.svg" class="align-self-center" alt="Logo" width="40" height="44" />
@@ -100,7 +100,7 @@
 			                <asp:TextBox ID="txt_Birth_Calander" class="form-control" runat="server" type="date" ></asp:TextBox>
 		                </div>
 
-                        <asp:Button class="btn btn-primary my-3" ID="btn_SignUp" runat="server" Text="Sign Up" OnClientClick="javascript:alert('Sign Up Successfully')" />
+                        <asp:Button class="btn btn-primary my-3" ID="btn_SignUp" runat="server" Text="Sign Up" OnClientClick="javascript:alert('Sign Up Successfully')" OnClick="btn_SignUp_Click" />
 	                </form>
                 </div>
             </div>

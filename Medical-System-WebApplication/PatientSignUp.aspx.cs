@@ -13,5 +13,11 @@ namespace Medical_System_WebApplication
         {
 
         }
+
+        protected void btn_SignUp_Click(object sender, EventArgs e)
+        {
+            // check if login credentials correct, direct to dashboard
+            Response.Redirect("PatientDashboard.aspx");
+        }
     }
 }

@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="Appointment Schedule" Language="C#" MasterPageFile="~/Dashboard.Master" AutoEventWireup="true" CodeBehind="Appointment_Management.aspx.cs" Inherits="Medical_System_WebApplication.Appointment_Management" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="section1" runat="server">
+
+<asp:Content ID="Content1" ContentPlaceHolderID="upcomingAppointments" runat="server">
+
 
 
 	<form id="form1" runat="server">
@@ -120,6 +122,4 @@
 	</form>
 
 
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="section2" runat="server">
 </asp:Content>

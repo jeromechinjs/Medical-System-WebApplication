@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Header Footer Template</title>
+    <title>Dashboard</title>
 
     <!-- Link to Bootstrap CSS library (and custom css) -->
     <link href="Style.css" rel="stylesheet" />
@@ -17,92 +17,47 @@
     
 </head>
 <body>
-    <nav class="navbar navbar-expand-xl bg-body-tertiary sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand px-3 ms-2" href="Homepage.aspx">
-                <img src="src/leaves-icon.svg" alt="Logo" width="40" height="44" /> 
-                Dashboard
-            </a>
-            <!-- mobile hamburger icon -->
-             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContents" aria-controls="navbarContents" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- collapsible contents -->
-            <div id="navbarContents" class="navbar-collapse collapse justify-content-center">
-                <ul class="navbar-nav mb-lg-0">
-                    <li class="nav-item mx-2 mt-1 active"><a class="nav-link" href="Homepage.aspx">Home</a></li>
-                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">Our Services</a></li>
-                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">Patient Care</a></li>
-                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">Health Hub</a></li>
-                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="Products.aspx">Products</a></li>
-                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">Promotion</a></li>
-                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="#">About Us</a></li>
-                    <li class="nav-item mx-2 mt-1"><a class="nav-link" href="ContactUs.aspx">Contact Us</a></li>
-                    <li class="nav-item ms-5 mt-1"><a class="btn btn-primary" href="Appointment.aspx" role="button">Make Appointment</a></li>
-                    <li class="nav-item dropdown ms-3">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="src/profile-login.svg" alt="Logo" width="30" height="34" />
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" target="_blank">Staff</a></li>
-                            <li><a class="dropdown-item" href="#" target="_blank">Customer</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    <nav class="dashboard-nav fixed-top p-4 w-15 h-100 bg-dark text-light fs-5">
+        <span class="navbar-brand fw-bolder fs-4">
+            <img src="src/leaves-icon.svg" alt="Logo" width="40" height="44" /> 
+            Dashboard
+        </span>
+        <ul class="navbar-nav mt-5">
+            <li class="nav-item"><a class="nav-link p-2 mb-2 rounded">Profile</a></li>
+            <li class="nav-item"><a class="nav-link p-2 mb-2 rounded"><asp:ContentPlaceHolder ID="navItemAppointment" runat="server"></asp:ContentPlaceHolder></a></li>
+            <li class="nav-item"><a class="nav-link p-2 mb-2 rounded">Completed Appointments</a></li>
+            <li class="nav-item mt-auto"><a class="nav-link p-2 mb-2 rounded">Log Out</a></li>
+        </ul>
     </nav>
 
     <main>
-        <asp:ContentPlaceHolder ID="section1" runat="server">
-        </asp:ContentPlaceHolder>
+        <div class="container-fluid mt-2 overflow-x-hidden">
+            <div class="row">
+                <div class="col-2 d-none d-sm-block"></div> <!-- spacings -->
+                <div class="col-10 p-4 flex-column d-flex justify-content-center">
+                    <p class="my-3 fs-2 fw-bolder">Personal Info</p>
+                   
+						<div class="mb-4 flex">
+							<asp:Label for="emailData" class="form-label" runat="server" Text="Email Address"></asp:Label>
+						</div>
 
-        <asp:ContentPlaceHolder ID="section2" runat="server">
-        </asp:ContentPlaceHolder>
+						<div class="mb-4">
+							<asp:Label for="passwordData" class="form-label" runat="server" Text="Password"></asp:Label>
+						</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2 d-none d-sm-block"></div> <!-- spacings -->
+                <div class="col-10 p-4 flex-column d-flex justify-content-center">
+ 
+                </div>
+            </div>
+        </div>        
+
+        <asp:ContentPlaceHolder ID="upcomingAppointments" runat="server"></asp:ContentPlaceHolder>
 
     </main>
-
-    <footer class="bg-secondary">
-        <div class="container footer mx-auto px-5 pt-5 pb-2">
-            <div class="row">
-                <div class="col">
-                    <p class="mb-2 mt-4 fw-bold">Our Services</p>
-                    <a href="#" class="footer-link">Centres of Excellence</a>
-                    <a href="#" class="footer-link">Accident & Emergency Department</a>
-                    <a href="#" class="footer-link">Stroke Centre</a>
-                </div>
-                <div class="col">
-                    <p class="mb-2 mt-4 fw-bold">Patient Care</p>
-                    <a href="#" class="footer-link">Patient Info</a>
-                    <a href="#" class="footer-link">International Patient</a>
-                    <a href="#" class="footer-link">Support & Privileges</a>
-
-                    <p class="mb-2 mt-4 fw-bold">Health Hub</p>
-                    <a href="#" class="footer-link">Blogpost</a>
-                    <a href="#" class="footer-link">Community Happenings</a>
-                    <a href="#" class="footer-link">QUIT Smoking</a>
-                </div>
-                <div class="col">
-                    <p class="mb-2 mt-4 fw-bold">Visiting Hours: General Ward</p>
-                    <a href="#" class="footer-link">Centres of Excellence</a>
-                    <a href="#" class="footer-link">Accident & Emergency Department</a>
-                    <a href="#" class="footer-link">Stroke Centre</a>
-                </div>
-                <div class="col">
-                    <p class="mb-2 mt-4 fw-bold">images to be placed</p>
-                    <a href="#" class="footer-link">Centres of Excellence</a>
-                    <a href="#" class="footer-link">Accident & Emergency Department</a>
-                    <a href="#" class="footer-link">Stroke Centre</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col mt-4">
-                    <p>&copy; <%: DateTime.Now.Year %> - Medical Appointment System</p> 
-                </div>
-            </div>
-        </div>
-    </footer>
 
  
 

@@ -32,7 +32,7 @@
 
 						<div class="mb-3">
 							<div class="card" style="width: 70%; height: 30%">
-								<asp:Image ID="JohnImg" class="card-img-top" alt="Dr. John" runat="server" ImageUrl="~/src/test.jpg" Height="300px" />
+								<asp:Image ID="JohnImg" class="card-img-top" alt="Dr. John" runat="server" ImageUrl="~/src/example of doctor.png" Height="300px" />
 							</div>
 						</div>
 

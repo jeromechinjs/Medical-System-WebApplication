@@ -24,3 +24,9 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="loginFormText" runat="server">
     Log into your account to view upcoming patient appointments.
 </asp:Content>
+
+<asp:Content ID="Content5" ContentPlaceHolderID="btnLogIn" runat="server">
+    <asp:Button class="btn btn-primary" ID="btn_Login" runat="server" Text="Log In" OnClick="btn_LogIn_Click" />
+</asp:Content>
+
+

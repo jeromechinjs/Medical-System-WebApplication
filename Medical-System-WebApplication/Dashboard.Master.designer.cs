@@ -15,21 +15,21 @@ namespace Medical_System_WebApplication
     {
 
         /// <summary>
-        /// section1 control.
+        /// navItemAppointment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder section1;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder navItemAppointment;
 
         /// <summary>
-        /// section2 control.
+        /// upcomingAppointments control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder section2;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder upcomingAppointments;
     }
 }
