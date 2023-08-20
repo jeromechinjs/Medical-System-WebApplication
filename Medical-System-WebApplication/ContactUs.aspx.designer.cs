@@ -51,6 +51,15 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.TextBox feedback_phone;
 
         /// <summary>
+        /// feedback_patient control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList feedback_patient;
+
+        /// <summary>
         /// feedback_textbox control.
         /// </summary>
         /// <remarks>
@@ -58,5 +67,14 @@ namespace Medical_System_WebApplication
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox feedback_textbox;
+
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }
