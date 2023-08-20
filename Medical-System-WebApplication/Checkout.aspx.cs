@@ -73,8 +73,7 @@ namespace Medical_System_WebApplication
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Write("<script>alert('Order Placed, Thank you for your purchase');</script>");
-
+            Response.Redirect("Homepage.aspx");
         }
     }
 }

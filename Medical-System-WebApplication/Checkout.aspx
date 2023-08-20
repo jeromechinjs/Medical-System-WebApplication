@@ -76,7 +76,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <asp:Button class="btn btn-lg btn-primary" ID="Button1" runat="server" Text="Place Order" OnClick="Button1_Click" />
+                <asp:Button class="btn btn-lg btn-primary" ID="Button1" runat="server" Text="Place Order" OnClick="Button1_Click" OnClientClick="javascript:alert('Order Placed, Thank you for your purchase')"/>
             </div>
         </div>
         <br />
