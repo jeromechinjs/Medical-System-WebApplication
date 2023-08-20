@@ -102,11 +102,14 @@
     <Content Include="src\calendar_appointment.png" />
     <Content Include="src\check-mark.png" />
     <Content Include="src\doctor_appointment.png" />
+    <Content Include="src\example of doctor.png" />
     <Content Include="src\headset.svg" />
     <Content Include="src\homepage-video.mp4" />
     <Content Include="src\leaves-icon.svg" />
     <Content Include="src\list.svg" />
+    <Content Include="src\M99Flip.jpg" />
     <Content Include="src\our-mission.jpg" />
+    <Content Include="src\PanadolOptizorb.jpg" />
     <Content Include="src\people.svg" />
     <Content Include="src\profile-login.svg" />
     <Content Include="src\SurgicalMask.jpg" />

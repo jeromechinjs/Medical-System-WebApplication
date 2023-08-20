@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
@@ -14,16 +16,18 @@ using System.Xml.Linq;
 namespace Medical_System_WebApplication
 {
     public partial class WebForm4 : System.Web.UI.Page
-    {
+    {        
+        ArrayList cart = new ArrayList();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack || DropDownList2.SelectedValue == "-1")
+            if (!Page.IsPostBack)
             {
-                string command = SqlDataSource1.SelectCommand; // added just for debug purpose
                 SqlDataSource1.SelectCommand = "SELECT * FROM Product";
                 SqlDataSource1.DataBind();
                 DataList1.DataBind();
             }
+            //|| DropDownList2.SelectedValue == "-1"
+
             //if (!Page.IsPostBack)
             //{
             //    SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
@@ -41,9 +45,15 @@ namespace Medical_System_WebApplication
             //}
         }
 
-        protected void DataList1_ItemCommand(object source, DataListCommandEventArgs e)
+        protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Cart.aspx?id=" + e.CommandArgument.ToString());
+            Button btn = (Button)sender;
+
+            string productID = btn.CommandArgument.ToString();
+
+            cart.Add(productID);
+            Debug.WriteLine(cart.Count);
+            Session["Cart"] = cart;
         }
     }
 }
