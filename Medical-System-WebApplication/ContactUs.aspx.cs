@@ -12,7 +12,7 @@ namespace Medical_System_WebApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            feedback_patient.RepeatDirection = RepeatDirection.Horizontal;
+            //feedback_patient.RepeatDirection = RepeatDirection.Horizontal;
 
         }
     }

@@ -65,8 +65,6 @@
             </table>
         </div>
     </div>
-    
-
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="section2" runat="server">
