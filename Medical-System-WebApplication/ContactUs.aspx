@@ -102,7 +102,7 @@
                 <asp:TextBox ID="feedback_textbox" class="form-control" runat="server" AutoPostBack="True" Height="165px" MaxLength="1000" Width=80% TextMode="MultiLine"></asp:TextBox>
             </div>
             <br />
-            <asp:Button ID="Button1" runat="server" Text="Button" />
+            <asp:Button ID="feedback_submit" runat="server" Text="Submit" OnClientClick="javascript:alert('Submit Successfully.\nWe will reply you as soon as posible')" />
         </form>
     </div>
 </asp:Content>
