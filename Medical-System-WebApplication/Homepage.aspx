@@ -15,7 +15,7 @@
                 </div>
                 <div class="col mt-4">
                     <div class="dropdown">
-                         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                         <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                              I am looking for
                          </button>
 
@@ -23,8 +23,8 @@
                             <li><a class="dropdown-item" href="Appointment.aspx">Make Appointment</a></li>
                             <li><a class="dropdown-item" href="Products.aspx">Buy Products</a></li>
                             <li><a class="dropdown-item" href="ContactUs.aspx">Location</a></li>
-                            <li><a class="dropdown-item" href="Appointment.aspx">Sign Up</a></li>
-                            <li><a class="dropdown-item" href="goAppointmetPage">A Doctor</a></li>
+                            <li><a class="dropdown-item" href="PatientSignUp.aspx">Sign Up</a></li>
+                            <li><a class="dropdown-item" href="Appointment.aspx">A Doctor</a></li>
 		                </ul>   
                     </div>
                 </div>
