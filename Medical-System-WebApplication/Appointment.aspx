@@ -49,8 +49,8 @@
 						<div class="mb-3">
 							<asp:Label for="dropDown_Gender" ID="Gender_Label" runat="server" Text="Gender"></asp:Label>
 							<asp:DropDownList class="form-select" ID="dropDown_Gender" runat="server" Width="320px">
-								<li>Male</li>
-								<li>Female</li>
+								<asp:ListItem>Male</asp:ListItem>
+								<asp:ListItem>Female</asp:ListItem>
 							</asp:DropDownList>
 						</div>
 
@@ -69,10 +69,10 @@
 							<div class="mb-3 mt-3">
 								<asp:Label for="DropDownSelectSpeciality" ID="requestSpeciality_Label" runat="server" Text="Request Speciality"></asp:Label>
 								<asp:DropDownList ID="DropDownSelectSpeciality" class="form-select" runat="server" AutoPostBack="True" Width="320px">
-									<li>Select Specialty</li>
-									<li>Pain Management</li>
-									<li>Dose Vaccination</li>
-									<li>Spine Management</li>
+									<asp:ListItem>Select Specialty</asp:ListItem>
+									<asp:ListItem>Pain Management</asp:ListItem>
+									<asp:ListItem>Dose Vaccination</asp:ListItem>
+									<asp:ListItem>Spine Management</asp:ListItem>
 								</asp:DropDownList>
 							</div>
 
@@ -103,7 +103,7 @@
 							<div class="mb-3">
 								<asp:Label for="Appointment_Time_DropDown" ID="Appointment_Time_Label" runat="server" Text="Appointment Time"></asp:Label>
 								<asp:DropDownList ID="Appointment_Time_DropDown" class="form-select" runat="server" Width="320px">
-									<li>10:00AM - 11:00AM</li>
+									<asp:ListItem>10:00AM - 11:00AM</asp:ListItem>
 								</asp:DropDownList>
 							</div>
 
@@ -127,7 +127,7 @@
 								<div class="mb-3 mt-3">
 									<div class="mb-3 ms-4">
 										<asp:DropDownList ID="AnySpecialty_DropDown" runat="server" class="form-select" Width="300px" AutoPostBack="True" OnSelectedIndexChanged="AnySpecialty_DropDown_SelectedIndexChanged">
-											<li Value="0">Any Specialties</li>
+											<asp:ListItem Value="0">Any Specialties</asp:ListItem>
 										</asp:DropDownList>
 									</div>
 
