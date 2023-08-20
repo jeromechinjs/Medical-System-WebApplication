@@ -82,7 +82,7 @@
 
 				<asp:TemplateField>
 					<ItemTemplate>
-						<asp:ImageButton ImageUrl="~/src/check-mark.png" runat="server" CommandName="Delete" ToolTip="Check" Width="20px" Height="20px" />
+						<asp:ImageButton ImageUrl="~/src/deletebtn.png" runat="server" CommandName="Delete" ToolTip="Check" Width="20px" Height="20px" />
 					</ItemTemplate>
 
 				</asp:TemplateField>

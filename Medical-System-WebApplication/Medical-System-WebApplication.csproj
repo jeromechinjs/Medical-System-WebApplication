@@ -102,6 +102,7 @@
     <Content Include="src\calendar_appointment.png" />
     <Content Include="src\cart.svg" />
     <Content Include="src\check-mark.png" />
+    <Content Include="src\deletebtn.png" />
     <Content Include="src\doctor_appointment.png" />
     <Content Include="src\example of doctor.png" />
     <Content Include="src\headset.svg" />
