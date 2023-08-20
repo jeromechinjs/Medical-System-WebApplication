@@ -58,7 +58,7 @@
                                 <ItemStyle CssClass="card-title" Width="30%" HorizontalAlign="Center"></ItemStyle>
                                 <HeaderStyle HorizontalAlign="Center" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="productPrice" HeaderText="Price">
+                            <asp:BoundField DataField="productPrice" HeaderText="Price (RM)">
                                 <ItemStyle Width="10%" HorizontalAlign="Center"></ItemStyle>
                             </asp:BoundField>
                             <asp:TemplateField HeaderText="Quantity">
@@ -67,7 +67,7 @@
                                     <input type="number" class="text-center" style="width: 7em; border: none" id="quantity" name="quantity" min="1" value="1" readonly>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:BoundField DataField="productTotal" HeaderText="Total">
+                            <asp:BoundField DataField="productTotal" HeaderText="Total (RM)">
                                 <ItemStyle Width="10%" HorizontalAlign="Center"></ItemStyle>
                             </asp:BoundField>
                         </Columns>

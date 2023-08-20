@@ -6,7 +6,6 @@
             border: 1px solid red;
         }*/
     </style>
-
     <form id="form1" runat="server">
         <div class="container">
             <div class="row">

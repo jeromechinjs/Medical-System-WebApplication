@@ -11,6 +11,7 @@ using System.Web;
 using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
 
 namespace Medical_System_WebApplication
 {
@@ -18,6 +19,10 @@ namespace Medical_System_WebApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            TextBox1.Text = "";
+            TextBox2.Text = "";
+
+
             if (!IsPostBack)
             {
                 ArrayList cart = new ArrayList();
@@ -69,6 +74,7 @@ namespace Medical_System_WebApplication
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Write("<script>alert('Order Placed, Thank you for your purchase');</script>");
+
         }
     }
 }
