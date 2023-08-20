@@ -63,22 +63,14 @@
                 </table>
             </div>
             <br />
-<<<<<<< HEAD
-            <form id="form1" runat="server">
-            <div>
-                <h4><strong>Feedback</strong></h4> <%--thinking...--%>
+
+            <form id="contactUsForm" runat="server">
+                <h4><strong>Feedback</strong></h4>
                 <asp:Label ID="name" runat="server" Text="Label">Name: </asp:Label><asp:TextBox ID="txtName" runat="server"></asp:TextBox>
 
-
-            </div>   
-                </form>
-=======
-            <form id="contactUsForm" runat="server">
-                <h4><strong>Suggestion</strong></h4> <%--thinking...--%>
-                <asp:Label ID="name" runat="server" Text="Label">Name: </asp:Label><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-
+                <h4><strong>Suggestion</strong></h4>
+                <asp:Label ID="Label1" runat="server" Text="Label">Name: </asp:Label><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
             </form>
->>>>>>> 8f77c2cfcd1708f5d458c52986aaf0647164633a
         </div>
 </asp:Content>
 

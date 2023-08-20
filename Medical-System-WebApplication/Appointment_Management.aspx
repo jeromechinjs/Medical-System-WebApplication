@@ -1,9 +1,10 @@
 ﻿<%@ Page Title="Appointment Schedule" Language="C#" MasterPageFile="~/Dashboard.Master" AutoEventWireup="true" CodeBehind="Appointment_Management.aspx.cs" Inherits="Medical_System_WebApplication.Appointment_Management" %>
 
 
+
 <asp:Content ID="Content1" ContentPlaceHolderID="upcomingAppointments" runat="server">
 
-
+	<!-- copied into StaffDashboard.aspx, refer from there :) -->
 
 	<form id="form1" runat="server">
 		<div class ="container">
@@ -121,5 +122,6 @@
 		</div>
 	</form>
 
+	<!-- copied into StaffDashboard.aspx, refer from there :) -->
 
 </asp:Content>

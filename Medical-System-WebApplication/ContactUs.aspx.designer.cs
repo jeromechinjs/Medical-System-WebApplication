@@ -24,13 +24,13 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.HyperLink ContectNumber;
 
         /// <summary>
-        /// form1 control.
+        /// contactUsForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm contactUsForm;
 
         /// <summary>
         /// name control.
@@ -51,22 +51,13 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.TextBox txtName;
 
         /// <summary>
-        /// contactUsForm control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm contactUsForm;
-
-        /// <summary>
-        /// name control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label name;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
         /// TextBox1 control.

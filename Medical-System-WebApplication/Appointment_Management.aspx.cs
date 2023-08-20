@@ -12,7 +12,7 @@ namespace Medical_System_WebApplication
 {
     public partial class Appointment_Management : System.Web.UI.Page
     {
-        //---------- copied into dashboard.master.cs -----------
+        //---------- copied into StaffDashboard.aspx.cs, refer from there :) -----------
 
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         SqlCommand cmd;
@@ -83,7 +83,6 @@ namespace Medical_System_WebApplication
 
 
         }
-        //---------- copied into dashboard.master.cs -----------
 
         protected void gvAppointmentManage_RowCommand(object sender, GridViewCommandEventArgs e)
         {
@@ -117,7 +116,7 @@ namespace Medical_System_WebApplication
             }
 
         }
-
+        //---------- copied into StaffDashboard.aspx.cs, refer from there :) -----------
 
     }
 }
