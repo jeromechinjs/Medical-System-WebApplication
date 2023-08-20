@@ -12,6 +12,7 @@ namespace Medical_System_WebApplication
 {
     public partial class WebForm6 : System.Web.UI.Page
     {
+
         // Appointment Management 
 
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);

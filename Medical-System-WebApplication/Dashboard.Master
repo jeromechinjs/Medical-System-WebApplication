@@ -14,10 +14,6 @@
 
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="src/leaves-icon.svg">
-
-
-
-   </script>
     
 </head>
 <body>
@@ -28,17 +24,21 @@
                 Dashboard
             </span>            
 
+
             <ul class="navbar-nav mt-5">
-                <li class="nav-item"><a class="nav-link p-2 mb-2 rounded"  runat="server">Profile</a></li>
-                <li class="nav-item"><a class="nav-link p-2 mb-2 rounded" runat="server"><asp:ContentPlaceHolder ID="navItemAppointment" runat="server"></asp:ContentPlaceHolder></a></li>
-                <li class="nav-item"><a class="nav-link p-2 mb-2 rounded" runat="server">Completed Appointments</a></li>
+                <li class="nav-item p-2 mb-2 rounded">
+                    <asp:Button class="btn btn-primary" ID="profileView" runat="server" Text="Profile" OnClick="profileView_Click" />
+                </li>
+                <li class="nav-item p-2 mb-2 rounded">
+                    <asp:Button class="btn btn-primary" ID="appointmentView" runat="server" Text="Profile" OnClick="appointmentView_Click" />
+                </li>
                 <li class="nav-item mt-auto"><a class="nav-link p-2 mb-2 rounded">Log Out</a></li>
             </ul>
 
         </nav>
         <main>
             <div class="container-fluid mt-2 overflow-x-hidden">
-                <div class="row" id="profile" runat="server">
+                <div class="row">
                     <div class="col-2 d-none d-sm-block"></div> <!-- spacings -->
                     <div class="col-10 p-4 flex-column d-flex justify-content-center">
                         <p class="my-3 fs-2 fw-bolder">Personal Info</p>
@@ -53,7 +53,7 @@
                     </div>
                 </div>
 
-                <div class="row" id="futureAppt" runat="server">
+                <div class="row">
                     <div class="col-2 d-none d-sm-block"></div> <!-- spacings -->
                     <div class="col-10 p-4 flex-column d-flex justify-content-center">
                         <asp:ContentPlaceHolder ID="upcomingAppointments" runat="server"></asp:ContentPlaceHolder>
@@ -61,7 +61,7 @@
                 </div>
 
 
-                <div class="row" id="completedAppt" runat="server">
+                <div class="row">
                     <div class="col-2 d-none d-sm-block"></div> <!-- spacings -->
                     <div class="col-10 p-4 flex-column d-flex justify-content-center">
                         <asp:ContentPlaceHolder ID="completedAppointments" runat="server"></asp:ContentPlaceHolder>

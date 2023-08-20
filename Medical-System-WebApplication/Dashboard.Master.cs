@@ -19,5 +19,16 @@ namespace Medical_System_WebApplication
         {
 
         }
+
+        protected void profileView_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Homepage.aspx");
+        }
+
+        protected void appointmentView_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Homepage.aspx");
+
+        }
     }
 }
