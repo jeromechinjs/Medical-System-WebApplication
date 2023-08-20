@@ -2,22 +2,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
+using System.Web.Services.Description;
 using System.Web.UI;
-using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace Medical_System_WebApplication
 {
-    public partial class Cart : System.Web.UI.Page
+    public partial class Checkout : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (!IsPostBack)
             {
                 ArrayList cart = new ArrayList();
@@ -68,9 +68,7 @@ namespace Medical_System_WebApplication
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Checkout.aspx");
+            Response.Write("<script>alert('Order Placed, Thank you for your purchase');</script>");
         }
     }
-
-
 }

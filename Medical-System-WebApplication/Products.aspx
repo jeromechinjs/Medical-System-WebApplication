@@ -1,10 +1,10 @@
 ﻿<%@ Page Title="Products" Language="C#" MasterPageFile="~/Header_Footer_Template.Master" AutoEventWireup="true" CodeBehind="Products.aspx.cs" Inherits="Medical_System_WebApplication.WebForm4" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="section1" runat="server">
-    <style>
+    <style>/*
         * {
-            /*border: 1px solid red;*/
-        }
+            border: 1px solid red;
+        }*/
     </style>
 
     <form id="form1" runat="server">
@@ -46,22 +46,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <%--<div class="row">
-                                <div class="col-md-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <asp:Image class="card-img-top" ID="Image1" runat="server" ImageUrl='<%# Eval("ProductImage") %>' />
-                                        <div class="card-body">
-                                            <asp:Label class="card-title" ID="Label1" runat="server" Text='<%# Eval("ProductName") %>'></asp:Label>
-                                            <asp:Label class="card-text" ID="Label2" runat="server" Text='<%# Eval("ProductDesc") %>'></asp:Label>
-                                            <asp:Label class="card-text" ID="Label3" runat="server" Text='<%# Eval("ProductPrice") %>'></asp:Label>
-                                            <asp:Label class="card-text" ID="Label4" runat="server" Text='<%# Eval("ProductQuantity") %>'></asp:Label>
-                                        </div>
-                                        <div class="card-footer">
-                                            <asp:Button class="btn btn-primary" ID="Button1" runat="server" Text="Button" CommandArgument='<%# Eval("ProductID") %>' CommandName="AddToCart" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>--%>
                         </ItemTemplate>
                     </asp:DataList>
                 </div>

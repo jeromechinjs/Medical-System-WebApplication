@@ -4,7 +4,7 @@
 
     <form id="form1" runat="server">
         <div class="container">
-            <asp:GridView class="card w-100" ID="GridView1" runat="server" AutoGenerateColumns="False">
+            <asp:GridView class="card w-100 my-5 p-3" ID="GridView1" runat="server" AutoGenerateColumns="False">
                 <Columns>                    
                     <asp:ImageField DataImageUrlField="productImage" HeaderText="Image">
                         <ItemStyle Width="30%" HorizontalAlign="Center"></ItemStyle>
@@ -35,7 +35,7 @@
                 <HeaderStyle HorizontalAlign="Center" />
             </asp:GridView>
             <div class="text-center">
-                <asp:Button class="btn btn-lg btn-primary" ID="Button1" runat="server" Text="CheckOut" />
+                <asp:Button class="btn btn-lg btn-primary" ID="Button1" runat="server" Text="CheckOut" OnClick="Button1_Click" />
             </div>
         </div>
         <br />

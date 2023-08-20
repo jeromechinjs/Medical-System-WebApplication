@@ -39,7 +39,7 @@
                     <li class="nav-item mx-2 mt-1"><a class="nav-link" href="ContactUs.aspx">Contact Us</a></li>
                     <li class="nav-item ms-5 mt-1"><a class="btn btn-primary" href="Appointment.aspx" role="button">Make Appointment</a></li>
                     <li class="nav-item ms-3">
-                        <a class="nav-link" href="#" role="button">
+                        <a class="nav-link" href="Cart.aspx" role="button">
                             <img src="src/cart.svg" alt="Logo" width="30" height="34" />
                         </a>
                     </li>
