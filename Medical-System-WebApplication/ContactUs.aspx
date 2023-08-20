@@ -72,12 +72,38 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="section2" runat="server">
     <div class="container my-4">
         <h2>Feedback</h2>
-        <p></p>
+        <p>Do you have any suggestions want to share with us?</p>
         <form id="form1" runat="server">
-            Name: 
-            <asp:TextBox ID="feedback_name" runat="server"></asp:TextBox>
+            <div>
+                <asp:Label for="feedback_name" class="form-label" runat="server" Text="Your Name: "></asp:Label>
+                <asp:TextBox ID="feedback_name" class="form-control" type="name" placeholder="Full Name*" runat="server"></asp:TextBox>
+            </div>
+            <br />
+            <div>
+                <asp:Label for="feedback_email" class="form-label" runat="server" Text="Your Email: "></asp:Label>
+                <asp:TextBox ID="feedback_email" class="form-control" type="email" placeholder="name@example.com*" runat="server"></asp:TextBox>
+            </div>
+            <br />
+            <div>
+                <asp:Label for="feedback_phone" class="form-label" runat="server" Text="Your Phone Number: "></asp:Label>
+                <asp:TextBox ID="feedback_phone" class="form-control" type="phone" placeholder="+6012 345 6789*" runat="server"></asp:TextBox>
+            </div>
+            <br />
+            <div>
+                <asp:Label for="feedback_patient" class="form-label" runat="server" Text="Are you an existing patient?"></asp:Label> <br />
+                <asp:RadioButtonList ID="feedback_patient" runat="server" RepeatDirection="Vertical" RepeatLayout="Flow">
+                    <asp:ListItem Value="Y">Yes</asp:ListItem>
+                    <asp:ListItem Value="N">No</asp:ListItem>
+                </asp:RadioButtonList>
+            </div>
+            <br />
+            <div>
+                <asp:Label for="feedback_textbox" runat="server" Text="Inquiry / Feedback / Suggestion"></asp:Label>
+                <asp:TextBox ID="feedback_textbox" class="form-control" runat="server" AutoPostBack="True" Height="165px" MaxLength="1000" Width=80% TextMode="MultiLine"></asp:TextBox>
+            </div>
+            <br />
+            <asp:Button ID="feedback_submit" runat="server" Text="Submit" OnClientClick="javascript:alert('Submit Successfully.\nWe will reply you as soon as posible')" />
         </form>
-        
     </div>
 </asp:Content>
 

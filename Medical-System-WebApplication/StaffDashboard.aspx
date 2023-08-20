@@ -115,11 +115,11 @@
 			</Columns>
 		</asp:GridView>
 
-		<br />
-		<asp:Label ID="lblSuccessMessage" Text="" runat="server" ForeColor="Green"/>
+			<br />
 
-		<br />
-		<asp:Label ID="lblErrorMessage" Text="" runat="server" ForeColor="Red" />
-	</div>
+			<br />
+		</div>
+	</form>
+	</form>
 </asp:Content>
 
