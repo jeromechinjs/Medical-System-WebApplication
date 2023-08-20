@@ -123,15 +123,15 @@
 					<div class="col p-0 my-2 my-lg-0">
 						<div class="card my-4">
 							<h2 class="card-body">Find a doctor</h2>
-							<div class="container mt-3">
+							<div class="container mt-3 ms-3">
 								<div class="mb-3 mt-3">
-									<div class="mb-3">
+									<div class="mb-3 ms-4">
 										<asp:DropDownList ID="AnySpecialty_DropDown" runat="server" class="form-select" Width="300px" AutoPostBack="True" OnSelectedIndexChanged="AnySpecialty_DropDown_SelectedIndexChanged">
 											<asp:ListItem Value="0">Any Specialties</asp:ListItem>
 										</asp:DropDownList>
 									</div>
 
-									<div class="mb-3">
+									<div class="mb-3 ms-4">
 										<asp:DropDownList ID="FindADoctor_DropDown" runat="server" class="form-select" Width="300px" AutoPostBack="True">
 										</asp:DropDownList>
 									</div>

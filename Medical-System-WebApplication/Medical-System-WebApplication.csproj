@@ -113,7 +113,6 @@
     <Content Include="src\people.svg" />
     <Content Include="src\profile-login.svg" />
     <Content Include="src\SurgicalMask.jpg" />
-    <Content Include="src\test.jpg" />
     <Content Include="Style.css" />
     <Content Include="Web.config" />
     <Content Include="Homepage.aspx" />
