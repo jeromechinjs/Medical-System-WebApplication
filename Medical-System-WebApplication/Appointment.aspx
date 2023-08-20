@@ -15,7 +15,7 @@
 	</style>
 
 
-	<div class="container my-4">
+	<div class="container my-4" >
 		<h2>Doctor Appointment</h2>
 		<asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
 		<p>&nbsp;</p>
@@ -63,7 +63,7 @@
 
 
 					<%-- Appointment's information--%>
-					<div class="col my-5 my-lg-0">
+					<div class="col p-0 my-2 my-lg-0">
 						<h2>Appointment Details</h2>
 						<div class="container mt-3">
 							<div class="mb-3 mt-3">
@@ -119,7 +119,8 @@
 						</div>
 					</div>
 
-					<div class="col">
+
+					<div class="col p-0 my-2 my-lg-0">
 						<div class="card my-4">
 							<h2 class="card-body">Find a doctor</h2>
 							<div class="container mt-3">
@@ -144,9 +145,9 @@
 						</div>
 					</div>
 				</div>
-			</div>
+	</div>
 
-		</form>
+	</form>
 	</div>
 </asp:Content>
 
