@@ -35,7 +35,7 @@
                 <HeaderStyle HorizontalAlign="Center" />
             </asp:GridView>
             <div class="text-center">
-                <asp:Button class="btn btn-lg btn-primary" ID="Button2" runat="server" Text="CheckOut" OnClick="Button2_Click" />
+                <asp:Button class="btn btn-lg btn-primary" ID="Button2" runat="server" Text="Check Out" OnClick="Button2_Click" />
             </div>
         </div>
         <br />

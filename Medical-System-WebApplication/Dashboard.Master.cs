@@ -15,19 +15,23 @@ namespace Medical_System_WebApplication
     public partial class Site2 : System.Web.UI.MasterPage
     {
 
+        
         protected void Page_Load(object sender, EventArgs e)
         {
+            appointments.Visible = false;            
 
         }
 
         protected void profileView_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Homepage.aspx");
+            profile.Visible = true;
+            appointments.Visible = false;
         }
 
         protected void appointmentView_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Homepage.aspx");
+            profile.Visible = false;
+            appointments.Visible = true;
 
         }
     }

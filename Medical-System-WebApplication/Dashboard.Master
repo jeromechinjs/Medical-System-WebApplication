@@ -18,7 +18,7 @@
 </head>
 <body>
     <form id="dashboard" runat="server">
-        <nav class="dashboard-nav fixed-top px-4 py-5 w-15 h-100 bg-dark text-light fs-5">
+        <nav class="dashboard-nav fixed-top px-3 py-5 w-15 h-100 bg-dark text-light fs-5">
             <span class="navbar-brand fw-bolder fs-4">
                 <img src="src/leaves-icon.svg" alt="Logo" width="40" height="44"/> 
                 Dashboard
@@ -26,13 +26,15 @@
 
 
             <ul class="navbar-nav mt-5">
-                <li class="nav-item p-2 mb-2 rounded">
-                    <asp:Button class="btn btn-primary" ID="profileView" runat="server" Text="Profile" OnClick="profileView_Click" />
+                <li class="nav-item p-2 mb-2">
+                    <asp:Button class="btn btn-outline-light btn-lg w-100" ID="profileView" runat="server" Text="Profile" OnClick="profileView_Click" />
                 </li>
-                <li class="nav-item p-2 mb-2 rounded">
-                    <asp:Button class="btn btn-primary" ID="appointmentView" runat="server" Text="Profile" OnClick="appointmentView_Click" />
+                <li class="nav-item p-2 mb-2">
+                    <asp:Button class="btn btn-outline-light btn-lg w-100" ID="appointmentView" runat="server" Text="Appointment" OnClick="appointmentView_Click" />
                 </li>
-                <li class="nav-item mt-auto"><a class="nav-link p-2 mb-2 rounded" href="Homepage.aspx">Log Out</a></li>
+                <li class="nav-item p-2 mb-2 mt-auto">
+                    <a class=" btn btn-outline-danger btn-sm w-100" href="Homepage.aspx">Log Out</a>
+                </li>
             </ul>
 
         </nav>
@@ -41,30 +43,14 @@
                 <div class="row">
                     <div class="col-2 d-none d-sm-block"></div> <!-- spacings -->
                     <div class="col-10 p-4 flex-column d-flex justify-content-center">
-                        <p class="my-3 fs-2 fw-bolder">Personal Info</p>
-                   
-					    <div class="mb-4 flex">
-						    <asp:Label for="emailData" class="form-label" runat="server" Text="Email Address"></asp:Label>
-					    </div>
-
-					    <div class="mb-4">
-						    <asp:Label for="passwordData" class="form-label" runat="server" Text="Password"></asp:Label>
-					    </div>
+                        <asp:ContentPlaceHolder ID="profile" runat="server"></asp:ContentPlaceHolder>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-2 d-none d-sm-block"></div> <!-- spacings -->
                     <div class="col-10 p-4 flex-column d-flex justify-content-center">
-                        <asp:ContentPlaceHolder ID="upcomingAppointments" runat="server"></asp:ContentPlaceHolder>
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="col-2 d-none d-sm-block"></div> <!-- spacings -->
-                    <div class="col-10 p-4 flex-column d-flex justify-content-center">
-                        <asp:ContentPlaceHolder ID="completedAppointments" runat="server"></asp:ContentPlaceHolder>
+                        <asp:ContentPlaceHolder ID="appointments" runat="server"></asp:ContentPlaceHolder>
                     </div>
                 </div>
             </div>        

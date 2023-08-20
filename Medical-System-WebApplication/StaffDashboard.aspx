@@ -1,10 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Dashboard.Master" AutoEventWireup="true" CodeBehind="StaffDashboard.aspx.cs" Inherits="Medical_System_WebApplication.WebForm6" %>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="upcomingAppointments" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="profile" runat="server">
+	<p class="my-3 fs-2 fw-bolder">Personal Info</p>
+                   
+	<div class="mb-4 flex">
+		<asp:Label for="emailData" class="form-label" runat="server" Text="Email Address"></asp:Label>
+	</div>
+
+	<div class="mb-4">
+		<asp:Label for="passwordData" class="form-label" runat="server" Text="Password"></asp:Label>
+	</div>
 </asp:Content>
 
 
-<asp:Content ID="Content3" ContentPlaceHolderID="completedAppointments" runat="server">
+<asp:Content ID="Content3" ContentPlaceHolderID="appointments" runat="server">
 	<div class ="container">
 		<asp:GridView class="table table-bordered table-condensed table-responsive table-hover " ID="gvAppointmentManage" runat="server" AutoGenerateColumns="False" ShowFooter="True" DataKeyNames="AppointmentID" 
 			ShowHeaderWhenEmpty="True" OnRowCommand="gvAppointmentManage_RowCommand" OnRowDeleting="gvAppointmentManage_RowDeleting" AllowSorting="True">

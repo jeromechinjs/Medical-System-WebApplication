@@ -42,21 +42,21 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.Button appointmentView;
 
         /// <summary>
-        /// upcomingAppointments control.
+        /// profile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder upcomingAppointments;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder profile;
 
         /// <summary>
-        /// completedAppointments control.
+        /// appointments control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder completedAppointments;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder appointments;
     }
 }

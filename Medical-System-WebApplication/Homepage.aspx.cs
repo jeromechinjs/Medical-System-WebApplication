@@ -14,10 +14,5 @@ namespace Medical_System_WebApplication
 
         }
 
-        protected void goAppointmentPage(object sender, EventArgs e)
-        {
-            Response.Redirect("Appointment.aspx");
-        }
-
     }
 }

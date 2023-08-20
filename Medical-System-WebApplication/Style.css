@@ -77,17 +77,8 @@
 
 /* --- Dashboard page ---*/
 
-.dashboard-nav .nav-item a {
-    transition: all 0.5s;
-}
-
-.dashboard-nav .nav-item a:hover {
-    background-color: #8D8D8D;
-}
-
 .dashboard-nav .nav-item:last-child a:hover {
     text-decoration: underline;
-    background-color: transparent;
 }
 
 .dashboard-nav .navbar-nav {
