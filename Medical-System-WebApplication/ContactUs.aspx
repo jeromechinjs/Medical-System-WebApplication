@@ -90,13 +90,19 @@
             </div>
             <br />
             <div>
-                <asp:Label for="feedback_patient?" class="form-label" runat="server" Text="Are you an existing patient?"></asp:Label>
+                <asp:Label for="feedback_patient" class="form-label" runat="server" Text="Are you an existing patient?"></asp:Label>
+                <asp:RadioButtonList ID="feedback_patient" runat="server">
+                    <asp:ListItem Value="Y">Yes</asp:ListItem>
+                    <asp:ListItem Value="N">No</asp:ListItem>
+                </asp:RadioButtonList>
             </div>
             <br />
             <div>
                 <asp:Label for="feedback_textbox" runat="server" Text="Inquiry / Feedback / Suggestion"></asp:Label>
                 <asp:TextBox ID="feedback_textbox" class="form-control" runat="server" AutoPostBack="True" Height="165px" MaxLength="1000" Width=80% TextMode="MultiLine"></asp:TextBox>
             </div>
+            <br />
+            <asp:Button ID="Button1" runat="server" Text="Button" />
         </form>
     </div>
 </asp:Content>
