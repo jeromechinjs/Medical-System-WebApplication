@@ -1,10 +1,8 @@
-﻿<%@ Page Title="Appointment Schedule" Language="C#" MasterPageFile="~/Header_Footer_Template.Master" AutoEventWireup="true" CodeBehind="Appointment_Management.aspx.cs" Inherits="Medical_System_WebApplication.Appointment_Management" %>
+﻿<%@ Page Title="Appointment Schedule" Language="C#" MasterPageFile="~/Dashboard.Master" AutoEventWireup="true" CodeBehind="Appointment_Management.aspx.cs" Inherits="Medical_System_WebApplication.Appointment_Management" %>
 
-<<<<<<< HEAD
-<asp:Content ID="Content1" ContentPlaceHolderID="section1" runat="server">
-=======
-<asp:Content ID="Content1" ContentPlaceHolderID="completedAppointments" runat="server">
->>>>>>> a3a194ca67e0ef286f22088725465af8a3f84822
+
+<asp:Content ID="Content1" ContentPlaceHolderID="upcomingAppointments" runat="server">
+
 
 
 	<form id="form1" runat="server">
