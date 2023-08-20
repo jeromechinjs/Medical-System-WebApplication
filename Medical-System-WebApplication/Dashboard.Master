@@ -14,59 +14,65 @@
 
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="src/leaves-icon.svg">
+
+
+
+   </script>
     
 </head>
 <body>
-    <nav class="dashboard-nav fixed-top px-4 py-5 w-15 h-100 bg-dark text-light fs-5">
-        <span class="navbar-brand fw-bolder fs-4">
-            <img src="src/leaves-icon.svg" alt="Logo" width="40" height="44" /> 
-            Dashboard
-        </span>
-        <ul class="navbar-nav mt-5">
-            <li class="nav-item"><a class="nav-link p-2 mb-2 rounded">Profile</a></li>
-            <li class="nav-item"><a class="nav-link p-2 mb-2 rounded"><asp:ContentPlaceHolder ID="navItemAppointment" runat="server"></asp:ContentPlaceHolder></a></li>
-            <li class="nav-item"><a class="nav-link p-2 mb-2 rounded">Completed Appointments</a></li>
-            <li class="nav-item mt-auto"><a class="nav-link p-2 mb-2 rounded">Log Out</a></li>
-        </ul>
-    </nav>
+    <form id="dashboard" runat="server">
+        <nav class="dashboard-nav fixed-top px-4 py-5 w-15 h-100 bg-dark text-light fs-5">
+            <span class="navbar-brand fw-bolder fs-4">
+                <img src="src/leaves-icon.svg" alt="Logo" width="40" height="44"/> 
+                Dashboard
+            </span>            
 
-    <main>
-        <div class="container-fluid mt-2 overflow-x-hidden">
-            <div class="row">
-                <div class="col-2 d-none d-sm-block"></div> <!-- spacings -->
-                <div class="col-10 p-4 flex-column d-flex justify-content-center">
-                    <p class="my-3 fs-2 fw-bolder">Personal Info</p>
+            <ul class="navbar-nav mt-5">
+                <li class="nav-item"><a class="nav-link p-2 mb-2 rounded"  runat="server">Profile</a></li>
+                <li class="nav-item"><a class="nav-link p-2 mb-2 rounded" runat="server"><asp:ContentPlaceHolder ID="navItemAppointment" runat="server"></asp:ContentPlaceHolder></a></li>
+                <li class="nav-item"><a class="nav-link p-2 mb-2 rounded" runat="server">Completed Appointments</a></li>
+                <li class="nav-item mt-auto"><a class="nav-link p-2 mb-2 rounded">Log Out</a></li>
+            </ul>
+
+        </nav>
+        <main>
+            <div class="container-fluid mt-2 overflow-x-hidden">
+                <div class="row" id="profile" runat="server">
+                    <div class="col-2 d-none d-sm-block"></div> <!-- spacings -->
+                    <div class="col-10 p-4 flex-column d-flex justify-content-center">
+                        <p class="my-3 fs-2 fw-bolder">Personal Info</p>
                    
-					<div class="mb-4 flex">
-						<asp:Label for="emailData" class="form-label" runat="server" Text="Email Address"></asp:Label>
-					</div>
+					    <div class="mb-4 flex">
+						    <asp:Label for="emailData" class="form-label" runat="server" Text="Email Address"></asp:Label>
+					    </div>
 
-					<div class="mb-4">
-						<asp:Label for="passwordData" class="form-label" runat="server" Text="Password"></asp:Label>
-					</div>
+					    <div class="mb-4">
+						    <asp:Label for="passwordData" class="form-label" runat="server" Text="Password"></asp:Label>
+					    </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-2 d-none d-sm-block"></div> <!-- spacings -->
-                <div class="col-10 p-4 flex-column d-flex justify-content-center">
-                    <asp:ContentPlaceHolder ID="upcomingAppointments" runat="server"></asp:ContentPlaceHolder>
+                <div class="row" id="futureAppt" runat="server">
+                    <div class="col-2 d-none d-sm-block"></div> <!-- spacings -->
+                    <div class="col-10 p-4 flex-column d-flex justify-content-center">
+                        <asp:ContentPlaceHolder ID="upcomingAppointments" runat="server"></asp:ContentPlaceHolder>
+                    </div>
                 </div>
-            </div>
 
 
-            <div class="row">
-                <div class="col-2 d-none d-sm-block"></div> <!-- spacings -->
-                <div class="col-10 p-4 flex-column d-flex justify-content-center">
-                    <asp:ContentPlaceHolder ID="completedAppointments" runat="server"></asp:ContentPlaceHolder>
+                <div class="row" id="completedAppt" runat="server">
+                    <div class="col-2 d-none d-sm-block"></div> <!-- spacings -->
+                    <div class="col-10 p-4 flex-column d-flex justify-content-center">
+                        <asp:ContentPlaceHolder ID="completedAppointments" runat="server"></asp:ContentPlaceHolder>
+                    </div>
                 </div>
-            </div>
-        </div>        
+            </div>        
 
 
-    </main>
+        </main>
 
- 
+    </form>
 
     <!-- Link to Bootstrap Javascript library-->
     <script src="Scripts/bootstrap.bundle.min.js"></script>

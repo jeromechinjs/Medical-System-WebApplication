@@ -7,13 +7,17 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Services.Description;
+using System.Web.UI.HtmlControls;
 
 namespace Medical_System_WebApplication
 {
     public partial class Site2 : System.Web.UI.MasterPage
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
+
         }
     }
 }

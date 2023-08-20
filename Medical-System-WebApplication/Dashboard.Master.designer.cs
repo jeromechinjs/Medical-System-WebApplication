@@ -15,6 +15,15 @@ namespace Medical_System_WebApplication
     {
 
         /// <summary>
+        /// dashboard control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm dashboard;
+
+        /// <summary>
         /// navItemAppointment control.
         /// </summary>
         /// <remarks>
@@ -24,6 +33,24 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.ContentPlaceHolder navItemAppointment;
 
         /// <summary>
+        /// profile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl profile;
+
+        /// <summary>
+        /// futureAppt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl futureAppt;
+
+        /// <summary>
         /// upcomingAppointments control.
         /// </summary>
         /// <remarks>
@@ -31,6 +58,15 @@ namespace Medical_System_WebApplication
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder upcomingAppointments;
+
+        /// <summary>
+        /// completedAppt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl completedAppt;
 
         /// <summary>
         /// completedAppointments control.
