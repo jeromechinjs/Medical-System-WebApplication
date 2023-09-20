@@ -138,10 +138,11 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="enquiry" runat="server">
     <div class="col-10 p-4 flex-column d-flex justify-content-center">
         <p class="my-3 fs-2 fw-bolder">Enquiries</p>
-
+        <asp:GridView class="table table-bordered table-condensed table-responsive table-hover " ID="gvFeedback" runat="server" DataSourceID="sqlFeedback"></asp:GridView>
+        
+        <asp:SqlDataSource ID="sqlFeedback" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Feedback]"></asp:SqlDataSource>
+        
     </div>
-
-
 </asp:Content>
 
 
