@@ -9,6 +9,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.OleDb;
 using System.IO;
+using System.CodeDom;
 
 namespace Medical_System_WebApplication
 {
@@ -29,6 +30,22 @@ namespace Medical_System_WebApplication
                 GetSpecialty();
                 FindADoctor_DropDown.Items.Insert(0, " Find A Doctor");
             }
+
+            if (!string.IsNullOrEmpty(Request.QueryString["PatientName"]))
+            {
+                con.Open();
+                cmd = new SqlCommand("SELECT PatientID, PatientName, PatientEmailAddress, PatientPhoneNum FROM [Patient] WHERE PatientName = @PatientName", con);
+                cmd.Parameters.AddWithValue("@PatientName", Request.QueryString["PatientName"]);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    txt_PatientID.Text = dr["PatientID"].ToString();
+                    txt_PatientName.Text = dr["PatientName"].ToString();
+                    txt_Email.Text = dr["PatientEmailAddress"].ToString();
+                    txt_Phone.Text = dr["PatientPhoneNum"].ToString();
+                }
+                con.Close();
+            } 
         }
         private void GetSpecialty()
         {

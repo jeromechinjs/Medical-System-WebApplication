@@ -14,7 +14,7 @@
 	</style>
 
 
-	<div class="container my-4" >
+	<div class="container my-4">
 		<h2>Doctor Appointment</h2>
 		<asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
 		<p>&nbsp;</p>
@@ -27,7 +27,7 @@
 						<h2>Patient&#39s Information</h2>
 						<div class="mb-3 mt-3">
 							<asp:Label for="txtPatientID_Content" ID="PatientID_Label" runat="server" Text="Patient ID"></asp:Label>
-							&nbsp;<asp:TextBox ID="txtPatientID_Content" class="form-control" runat="server" ReadOnly="True" Width="320px"></asp:TextBox>
+							&nbsp;<asp:TextBox ID="txt_PatientID" class="form-control" runat="server" ReadOnly="True" Width="320px"></asp:TextBox>
 						</div>
 
 						<div class="mb-3">
@@ -123,30 +123,30 @@
 						<div class="card my-4">
 							<h2 class="card-body">Find a doctor</h2>
 							<div class="container mt-3 ms-3">
-								<div class="mb-3 mt-3">
-									<div class="mb-3 ms-4">
-										<asp:DropDownList ID="AnySpecialty_DropDown" runat="server" class="form-select" Width="300px" AutoPostBack="True" OnSelectedIndexChanged="AnySpecialty_DropDown_SelectedIndexChanged">
-											<asp:ListItem Value="0">Any Specialties</asp:ListItem>
-										</asp:DropDownList>
-									</div>
 
-									<div class="mb-3 ms-4">
-										<asp:DropDownList ID="FindADoctor_DropDown" runat="server" class="form-select" Width="300px" AutoPostBack="True">
-										</asp:DropDownList>
-									</div>
-									<div class="mb-3">
-										<asp:Button ID="btn_searchDoctor" class="btn btn-primary" runat="server" Text="Search" OnClick="btn_searchDoctor_Click" />
+								<div class="mb-3 ms-4">
+									<asp:DropDownList ID="AnySpecialty_DropDown" runat="server" class="form-select" Width="300px" AutoPostBack="True" OnSelectedIndexChanged="AnySpecialty_DropDown_SelectedIndexChanged">
+										<asp:ListItem Value="0">Any Specialties</asp:ListItem>
+									</asp:DropDownList>
+								</div>
+
+								<div class="mb-3 ms-4">
+									<asp:DropDownList ID="FindADoctor_DropDown" runat="server" class="form-select" Width="300px" AutoPostBack="True">
+									</asp:DropDownList>
+								</div>
+								<div class="mb-3">
+									<asp:Button ID="btn_searchDoctor" class="btn btn-primary" runat="server" Text="Search" OnClick="btn_searchDoctor_Click" />
 
 
-									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-	</div>
+			</div>
 
-	</form>
+
+		</form>
 	</div>
 </asp:Content>
 
