@@ -24,13 +24,22 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.HtmlControls.HtmlForm patientSignUpForm;
 
         /// <summary>
-        /// patientFirstName_label control.
+        /// patientFirstName_Label control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label patientFirstName_label;
+        protected global::System.Web.UI.WebControls.Label patientFirstName_Label;
+
+        /// <summary>
+        /// requiredFirstName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredFirstName;
 
         /// <summary>
         /// patientFirstName control.
@@ -42,13 +51,22 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.TextBox patientFirstName;
 
         /// <summary>
-        /// patientLastName_label control.
+        /// patientLastName_Label control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label patientLastName_label;
+        protected global::System.Web.UI.WebControls.Label patientLastName_Label;
+
+        /// <summary>
+        /// requiredLastName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredLastName;
 
         /// <summary>
         /// patientLastName control.
@@ -69,6 +87,15 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.Label Email_Label;
 
         /// <summary>
+        /// requiredEmailSignup control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredEmailSignup;
+
+        /// <summary>
         /// txt_Email control.
         /// </summary>
         /// <remarks>
@@ -85,6 +112,15 @@ namespace Medical_System_WebApplication
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label password_Label;
+
+        /// <summary>
+        /// requiredPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredPassword;
 
         /// <summary>
         /// password control.
@@ -105,6 +141,15 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.Label address_Label;
 
         /// <summary>
+        /// requiredAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredAddress;
+
+        /// <summary>
         /// address control.
         /// </summary>
         /// <remarks>
@@ -121,6 +166,15 @@ namespace Medical_System_WebApplication
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label city_Label;
+
+        /// <summary>
+        /// requiredCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredCity;
 
         /// <summary>
         /// city control.
@@ -141,6 +195,15 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.Label state_Label;
 
         /// <summary>
+        /// requiredState control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredState;
+
+        /// <summary>
         /// state control.
         /// </summary>
         /// <remarks>
@@ -157,6 +220,15 @@ namespace Medical_System_WebApplication
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label zipcode_Label;
+
+        /// <summary>
+        /// requiredXipcode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredXipcode;
 
         /// <summary>
         /// zipcode control.
@@ -177,6 +249,15 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.Label phoneNum_Label;
 
         /// <summary>
+        /// requiredPhoneNum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredPhoneNum;
+
+        /// <summary>
         /// txt_Phone control.
         /// </summary>
         /// <remarks>
@@ -193,6 +274,15 @@ namespace Medical_System_WebApplication
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Gender_Label;
+
+        /// <summary>
+        /// requiredGender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredGender;
 
         /// <summary>
         /// dropDown_Gender control.
@@ -213,6 +303,15 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.Label Birth_Label;
 
         /// <summary>
+        /// requiredBirthDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredBirthDate;
+
+        /// <summary>
         /// txt_Birth_Calander control.
         /// </summary>
         /// <remarks>
@@ -220,6 +319,15 @@ namespace Medical_System_WebApplication
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_Birth_Calander;
+
+        /// <summary>
+        /// validationSummaryPatientSignup control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary validationSummaryPatientSignup;
 
         /// <summary>
         /// btn_SignUp control.

@@ -42,41 +42,49 @@
 		                </div>--%>
                         <div class="row">
                             <div class="col">
-			                    <asp:Label for="patientFirstName" class="form-label" ID="patientFirstName_label" runat="server" Text="First Name"></asp:Label>
+			                    <asp:Label for="patientFirstName" class="form-label" ID="patientFirstName_Label" runat="server" Text="First Name"></asp:Label>
+                                <asp:RequiredFieldValidator ID="requiredFirstName" runat="server" ErrorMessage="Kindly enter your first name" ControlToValidate="patientFirstName" CssClass="text-danger d-inline" Display="Dynamic">*</asp:RequiredFieldValidator>
                                 <asp:TextBox ID="patientFirstName" class="form-control" runat="server" ></asp:TextBox>
                             </div>
                              <div class="col">
-			                    <asp:Label for="patientLastName" class="form-label" ID="patientLastName_label" runat="server" Text="Last Name"></asp:Label>
+			                    <asp:Label for="patientLastName" class="form-label" ID="patientLastName_Label" runat="server" Text="Last Name"></asp:Label>
+                                 <asp:RequiredFieldValidator ID="requiredLastName" runat="server" ErrorMessage="Kindly enter your last name" ControlToValidate="patientLastName" CssClass="text-danger d-inline" Display="Dynamic">*</asp:RequiredFieldValidator>
                                 <asp:TextBox ID="patientLastName" class="form-control" runat="server" ></asp:TextBox>
                             </div>
                         </div>
 
 		                <div class="my-3">
 			                <asp:Label for="txt_Email" class="form-label" ID="Email_Label" runat="server" Text="Email Address"></asp:Label>
-			                <asp:TextBox ID="txt_Email" class="form-control" placeholder="name@example.com" runat="server" ></asp:TextBox>
+			                <asp:RequiredFieldValidator ID="requiredEmailSignup" runat="server" ErrorMessage="Kindly enter an email" ControlToValidate="txt_Email" CssClass="text-danger d-inline" Display="Dynamic">*</asp:RequiredFieldValidator>
+                            <asp:TextBox ID="txt_Email" class="form-control" placeholder="name@example.com" runat="server" ></asp:TextBox>
 		                </div>
 
                         <div class="my-3">
 			                <asp:Label for="password" class="form-label" ID="password_Label" runat="server" Text="Password"></asp:Label>
-			                <asp:TextBox ID="password" class="form-control" runat="server" ></asp:TextBox>
+			                <asp:RequiredFieldValidator ID="requiredPassword" runat="server" ErrorMessage="Kindly enter a password" ControlToValidate="password" CssClass="text-danger d-inline" Display="Dynamic">*</asp:RequiredFieldValidator>
+                            <asp:TextBox ID="password" class="form-control" runat="server" ></asp:TextBox>
 		                </div>
 
                         <div class="my-3">
 			                <asp:Label for="address" class="form-label" ID="address_Label" runat="server" Text="Address"></asp:Label>
-			                <asp:TextBox ID="address" class="form-control" runat="server" ></asp:TextBox>
+			                <asp:RequiredFieldValidator ID="requiredAddress" runat="server" ErrorMessage="Kindly enter your address" ControlToValidate="address" CssClass="text-danger d-inline" Display="Dynamic">*</asp:RequiredFieldValidator>
+                            <asp:TextBox ID="address" class="form-control" runat="server" ></asp:TextBox>
 		                </div>
 
                         <div class="row my-3">
                             <div class="col">
 			                    <asp:Label for="city" class="form-label" ID="city_Label" runat="server" Text="City"></asp:Label>
+                                <asp:RequiredFieldValidator ID="requiredCity" runat="server" ErrorMessage="Kindly enter your city" ControlToValidate="city" CssClass="text-danger d-inline" Display="Dynamic">*</asp:RequiredFieldValidator>
                                 <asp:TextBox ID="city" class="form-control" runat="server" ></asp:TextBox>
                             </div>
                              <div class="col">
 			                    <asp:Label for="state" class="form-label" ID="state_Label" runat="server" Text="State"></asp:Label>
+                                <asp:RequiredFieldValidator ID="requiredState" runat="server" ErrorMessage="Kindly enter your state" ControlToValidate="state" CssClass="text-danger d-inline" Display="Dynamic">*</asp:RequiredFieldValidator>
                                 <asp:TextBox ID="state" class="form-control" runat="server" ></asp:TextBox>
                             </div>
                             <div class="col">
 			                    <asp:Label for="zipcode" class="form-label" ID="zipcode_Label" runat="server" Text="Zipcode"></asp:Label>
+                                <asp:RequiredFieldValidator ID="requiredXipcode" runat="server" ErrorMessage="Kindly enter your zipcode" ControlToValidate="zipcode" CssClass="text-danger d-inline" Display="Dynamic">*</asp:RequiredFieldValidator>
                                 <asp:TextBox ID="zipcode" class="form-control" runat="server" ></asp:TextBox>
                             </div>
 
@@ -84,23 +92,29 @@
 
 		                <div class="my-3">
 			                <asp:Label for="txt_Phone" ID="phoneNum_Label" runat="server" Text="Phone Number"></asp:Label>
-			                <asp:TextBox ID="txt_Phone" class="form-control" runat="server" ></asp:TextBox>
+			                <asp:RequiredFieldValidator ID="requiredPhoneNum" runat="server" ErrorMessage="Kindly enter your phone number" ControlToValidate="txt_Phone" CssClass="text-danger d-inline" Display="Dynamic">*</asp:RequiredFieldValidator>
+                            <asp:TextBox ID="txt_Phone" class="form-control" runat="server" ></asp:TextBox>
 		                </div>
 
 		                <div class="my-3">
 			                <asp:Label for="dropDown_Gender" ID="Gender_Label" runat="server" Text="Gender"></asp:Label>
-			                <asp:DropDownList class="form-select" ID="dropDown_Gender" runat="server" >
+			                <asp:RequiredFieldValidator ID="requiredGender" runat="server" ErrorMessage="Kindly select your gender" ControlToValidate="dropDown_Gender" CssClass="text-danger d-inline" Display="Dynamic">*</asp:RequiredFieldValidator>
+                            <asp:DropDownList class="form-select" ID="dropDown_Gender" runat="server" >
 				                <asp:ListItem Value="Male">Male</asp:ListItem>
 				                <asp:ListItem Value="Female">Female</asp:ListItem>
+                               	<asp:ListItem Value="Unknown">Rather Not Say</asp:ListItem>
 			                </asp:DropDownList>
 		                </div>
 
 		                <div class="my-3">
 			                <asp:Label for="txt_Birth_Calander" ID="Birth_Label" runat="server" Text="Date Of Birth"></asp:Label>
-			                <asp:TextBox ID="txt_Birth_Calander" class="form-control" runat="server" type="date" ></asp:TextBox>
+			                <asp:RequiredFieldValidator ID="requiredBirthDate" runat="server" ErrorMessage="Kindly enter your birth date" ControlToValidate="txt_Birth_Calander" CssClass="text-danger d-inline" Display="Dynamic">*</asp:RequiredFieldValidator>
+                            <asp:TextBox ID="txt_Birth_Calander" class="form-control" runat="server" type="date" ></asp:TextBox>
 		                </div>
 
-                        <asp:Button class="btn btn-primary my-3" ID="btn_SignUp" runat="server" Text="Sign Up" OnClientClick="javascript:alert('Sign Up Successfully')" OnClick="btn_SignUp_Click" />
+                        <asp:ValidationSummary ID="validationSummaryPatientSignup" runat="server" CssClass="text-danger" />
+
+                        <asp:Button class="btn btn-primary my-3" ID="btn_SignUp" runat="server" Text="Sign Up" OnClick="btn_SignUp_Click" />
 	                </form>
                 </div>
             </div>
