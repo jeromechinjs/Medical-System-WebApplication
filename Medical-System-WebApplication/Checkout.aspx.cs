@@ -25,9 +25,9 @@ namespace Medical_System_WebApplication
 
             if (!IsPostBack)
             {
-                ArrayList cart = new ArrayList();
+                String[] cart = Session["Cart"].ToString().Split(',');
 
-                cart = (ArrayList)Session["Cart"];
+                cart = cart.Where(x => !string.IsNullOrEmpty(x)).ToArray();
                 foreach (var item in cart)
                 {
                     Debug.WriteLine(item);

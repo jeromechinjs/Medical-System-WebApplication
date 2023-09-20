@@ -17,7 +17,6 @@ namespace Medical_System_WebApplication
 {
     public partial class WebForm4 : System.Web.UI.Page
     {        
-        ArrayList cart = new ArrayList();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -35,23 +34,7 @@ namespace Medical_System_WebApplication
             {
                 SqlDataSource1.SelectCommand = "SELECT * FROM [Product] inner join ProductCategory on Product.CategoryID=ProductCategory.CategoryID and ProductCategory.CategoryID=@CategoryID";
             }
-            //|| DropDownList2.SelectedValue == "-1"
-
-            //if (!Page.IsPostBack)
-            //{
-            //    SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-
-            //    SqlCommand com = new SqlCommand("SELECT * from Product", con);
-            //    SqlDataAdapter da = new SqlDataAdapter(com);
-            //    DataSet ds = new DataSet();
-            //    da.Fill(ds, "Product");
-
-            //    con.Open();
-
-
-
-            //    con.Close();
-            //}
+            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -60,8 +43,15 @@ namespace Medical_System_WebApplication
 
             string productID = btn.CommandArgument.ToString();
 
-            cart.Add(productID);
-            Session["Cart"] = cart;
+            if (Session["cart"] != null)
+            {
+                Session["Cart"] = Session["Cart"] + "," + productID;
+            }
+            else
+            {
+                Session["Cart"] = productID;
+            }
+            System.Diagnostics.Debug.WriteLine(Session["Cart"]);
         }
     }
 }

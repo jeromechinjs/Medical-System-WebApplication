@@ -21,27 +21,25 @@ namespace Medical_System_WebApplication
 
             if (!IsPostBack)
             {
-                ArrayList cart = new ArrayList();
+                
+                String[] cart = Session["Cart"].ToString().Split(',');
 
-
-                cart = (ArrayList)Session["Cart"];
+                cart = cart.Where(x => !string.IsNullOrEmpty(x)).ToArray();
 
                 if (cart != null)
                 {
-                    foreach (var item in cart)
+                    DataTable dt = new DataTable();
+                    DataRow dr;
+                    dt.Columns.Add("productName");
+                    dt.Columns.Add("productImage");
+                    dt.Columns.Add("productPrice");
+                    dt.Columns.Add("productTotal");
+
+                    dr = dt.NewRow();
+
+                    foreach (string item in cart)
                     {
-                        Debug.WriteLine(item);
-
-                        DataTable dt = new DataTable();
-                        DataRow dr;
-                        dt.Columns.Add("productName");
-                        dt.Columns.Add("productImage");
-                        dt.Columns.Add("productPrice");
-                        dt.Columns.Add("productTotal");
-
-                        dr = dt.NewRow();
-
-
+                        Debug.WriteLine(item);                        
 
                         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
 
@@ -51,25 +49,26 @@ namespace Medical_System_WebApplication
                         da.Fill(ds);
 
 
-                        dr["productName"] = ds.Tables[0].Rows[0]["ProductName"].ToString();
-                        dr["productImage"] = ds.Tables[0].Rows[0]["ProductImage"].ToString();
-                        dr["productPrice"] = ds.Tables[0].Rows[0]["ProductPrice"].ToString();
+                        //dr["productName"] = ds.Tables[0].Rows[0]["ProductName"].ToString();
+                        //dr["productImage"] = ds.Tables[0].Rows[0]["ProductImage"].ToString();
+                        //dr["productPrice"] = ds.Tables[0].Rows[0]["ProductPrice"].ToString();
 
-                        //int productPrice = Convert.ToInt32(ds.Tables[0].Rows[0]["ProductPrice"].ToString());
 
-                        //TextBox tb = (TextBox)GridView1.Rows[0].FindControl("quantity");
                         //int b = Convert.ToInt32(tb.Text.ToString());
 
                         //int totalPrice = productPrice * b;
 
-                        dr["ProductTotal"] = 5;
+                        //dr["ProductTotal"] = 5;
 
-                        dt.Rows.Add(dr);
+
+                        dt.Rows.Add(ds.Tables[0].Rows[0]["ProductName"].ToString(), ds.Tables[0].Rows[0]["ProductImage"].ToString(), ds.Tables[0].Rows[0]["ProductPrice"].ToString(), 5);
+                        
                         GridView1.DataSource = dt;
                         GridView1.DataBind();
                     }
                 }
-                else
+                
+                if (GridView1.DataSource == null)
                 {
                     string emptyCart = "<div class=\"card w-100 my-5 p-3\">\r\n    <h2>No Items in Cart</h2>\r\n</div>";
                     Button2.Visible = false;
@@ -79,8 +78,23 @@ namespace Medical_System_WebApplication
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Session["Cart"] = null;
+            Button btn = (Button)sender;
+            string productName = btn.CommandArgument.ToString();
+            string productID = "";
 
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+
+            SqlCommand command = new SqlCommand("SELECT ProductID from Product where ProductName= '" + productName + "'", con);
+
+            con.Open();
+            SqlDataReader read = command.ExecuteReader();
+            if (read.Read())
+            {
+                productID = read.GetString(0);
+            }
+            con.Close();
+            Session["Cart"] = Session["Cart"].ToString().Replace(productID,"");
+            
             Response.Redirect("Cart.aspx");
         }
 
@@ -88,8 +102,6 @@ namespace Medical_System_WebApplication
         {
             Response.Redirect("Checkout.aspx");
         }
-
-
     }
 
 

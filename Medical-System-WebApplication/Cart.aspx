@@ -20,7 +20,8 @@
                     <asp:TemplateField HeaderText="Quantity">
                         <ItemStyle Width="10%" HorizontalAlign="Center"></ItemStyle>
                         <ItemTemplate>
-                            <input type="number" class="text-center" style="width: 7em" id="quantity" name="quantity" min="1" value="1">
+                            <asp:TextBox type="number" ID="TextBox1" class="text-center" style="width: 7em" name="quantity" min="1" value="1" runat="server"></asp:TextBox>
+                            <%--<input type="number" class="text-center" style="width: 7em" id="quantity" runat="server" name="quantity" min="1" value="1">--%>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:BoundField DataField="productTotal" HeaderText="Total (RM)">
@@ -28,13 +29,14 @@
                     </asp:BoundField>
                     <asp:TemplateField HeaderText="">
                         <ItemTemplate>
-                            <asp:Button class="btn btn-sm btn-primary w-10" ID="Button1" runat="server" Text="Remove" OnClick="Button1_Click" />
+                            <asp:Button class="btn btn-sm btn-primary w-10" ID="Button1" runat="server" Text="Remove" CommandArgument='<%# Eval("ProductName") %>' CommandName="RemoveCartItem" OnClick="Button1_Click" />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
                 <HeaderStyle HorizontalAlign="Center" />
-            </asp:GridView>
+            </asp:GridView>        
             <div class="text-center">
+                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                 <asp:Button class="btn btn-lg btn-primary" ID="Button2" runat="server" Text="Check Out" OnClick="Button2_Click" />
             </div>
         </div>
