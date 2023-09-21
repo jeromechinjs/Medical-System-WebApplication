@@ -70,9 +70,13 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="section2" runat="server">
     <div class="container my-4">
+        <br />
         <h2>Feedback</h2>
         <p>Do you have any suggestions want to share with us?</p>
         <form id="form1" runat="server">
+
+            <asp:FormView ID="fvFeedback" runat="server" DefaultMode="Insert" InsertMethod="fvFeedback_InsertMethod" DataKeyNames="FeedbackName"></asp:FormView>
+
             <div>
                 <asp:Label for="feedback_name" class="form-label" runat="server" Text="Your Name: "></asp:Label>
                 <asp:TextBox ID="feedback_name" class="form-control" type="name" placeholder="Full Name*" runat="server"></asp:TextBox>
