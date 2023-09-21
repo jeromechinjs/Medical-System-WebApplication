@@ -37,7 +37,7 @@
             <div class="col-0 col-sm-1 col-md-5 col-lg-7"><!-- spacing blank area --></div>
             <div class="col-12 col-sm-11 col-md-7 col-lg-5 p-md-5">
                 <p class="title fw-bold">Our Mission, Transforms Communities</p>
-                <blockquote class="fs-2">“Prioritising patient care always. At your service, every day.”</blockquote>
+                <blockquote class="fs-2">“Prioritising patient care always. <br />At your service, every day.”</blockquote>
                 <p>
                     Established in November 1999, Sunway Medical Centre is an Australian Council 
                     on Healthcare Standards (ACHS) and Malaysian Society for Quality in Health (MSQH) 
