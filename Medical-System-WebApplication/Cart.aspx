@@ -19,9 +19,8 @@
                     </asp:BoundField>
                     <asp:TemplateField HeaderText="Quantity">
                         <ItemStyle Width="10%" HorizontalAlign="Center"></ItemStyle>
-                        <ItemTemplate>
-                            <asp:TextBox type="number" ID="TextBox1" class="text-center" style="width: 7em" name="quantity" min="1" value="1" runat="server"></asp:TextBox>
-                            <%--<input type="number" class="text-center" style="width: 7em" id="quantity" runat="server" name="quantity" min="1" value="1">--%>
+                        <ItemTemplate>                    
+                            <asp:TextBox type="number" ID="TextBox1" class="text-center" style="width: 7em" name="quantity" min="1" value="1" runat="server" OnTextChanged="txt_OnTextChanged" AutoPostBack="true"></asp:TextBox>                         
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:BoundField DataField="productTotal" HeaderText="Total (RM)">
