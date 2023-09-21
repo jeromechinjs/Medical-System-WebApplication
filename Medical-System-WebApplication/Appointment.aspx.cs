@@ -32,11 +32,11 @@ namespace Medical_System_WebApplication
 
             }
 
-            if (!string.IsNullOrEmpty(Request.QueryString["PatientName"]))
+            if (!string.IsNullOrEmpty(Request.QueryString["PatientEmailAddress"]))
             {
                 con.Open();
-                cmd = new SqlCommand("SELECT PatientID, PatientName, PatientEmailAddress, PatientPhoneNum FROM [Patient] WHERE PatientName = @PatientName", con);
-                cmd.Parameters.AddWithValue("@PatientName", Request.QueryString["PatientName"]);
+                cmd = new SqlCommand("SELECT PatientID, PatientName, PatientEmailAddress, PatientPhoneNum FROM [Patient] WHERE PatientEmailAddress = @PatientEmailAddress", con);
+                cmd.Parameters.AddWithValue("@PatientEmailAddress", Request.QueryString["PatientEmailAddress"]);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
