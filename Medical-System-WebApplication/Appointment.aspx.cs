@@ -146,13 +146,12 @@ namespace Medical_System_WebApplication
         protected void btn_Submit_Click(object sender, EventArgs e)
         {
            
-            string sqlQuery = "INSERT INTO [Appointment] (PatientID, AppointmentDate," + "AppointmentTime, ConcernAndRequest, SpecialtyID) VALUES (@PatientID, @AppointmentDate, @AppointmentTime, @ConcernAndRequest, @SpecialtyID)";
+            string sqlQuery = "INSERT INTO [Appointment] (PatientID, AppointmentDate," + "AppointmentTime, ConcernAndRequest, SpecialtyName) VALUES (@PatientID, @AppointmentDate, @AppointmentTime, @ConcernAndRequest, @SpecialtyName)";
             cmd = new SqlCommand(sqlQuery, con);
 
             string PatientID = txt_PatientID.Text;
             cmd.Parameters.AddWithValue("PatientID", PatientID);
 
-            // DateTime dateTime = DateTime.ParseExact(txt_Appointment.Text, "dd/MM/yyyy", null);
             string AppointmentDate = txt_Appointment.Text;
             cmd.Parameters.AddWithValue("AppointmentDate", AppointmentDate);
 
@@ -162,8 +161,8 @@ namespace Medical_System_WebApplication
             string ConcernAndRequest = MedicalConcernTextBox.Text;
             cmd.Parameters.AddWithValue("ConcernAndRequest", ConcernAndRequest);
 
-            string SpecialtyID = DropDownSelectSpeciality.Text;
-            cmd.Parameters.AddWithValue("SpecialtyID", SpecialtyID);
+            string SpecialtyName = DropDownSelectSpeciality.Text;
+            cmd.Parameters.AddWithValue("SpecialtyName", SpecialtyName);
 
             con.Open();
             cmd.ExecuteNonQuery();

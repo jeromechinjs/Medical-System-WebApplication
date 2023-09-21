@@ -111,7 +111,7 @@
 								<asp:TextBox ID="MedicalConcernTextBox" runat="server" class="form-control" AutoPostBack="True" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Dotted" Columns="1" EnableTheming="True" ForeColor="#333333" Height="165px" MaxLength="1000" OnTextChanged="MedicalConcernTextBo_TextChanged" TextMode="MultiLine" Width="400px"></asp:TextBox>
 
 								<br />
-								<asp:Button class="btn btn-sm btn-primary" ID="btn_Submit" runat="server" Text="Submit" Width="130px" OnClientClick="javascript:alert('Booked Successfully')" OnClick="btn_Submit_Click" />
+								<asp:Button class="btn btn-sm btn-primary" ID="btn_Submit" runat="server" Text="Submit" Width="130px" OnClick="btn_Submit_Click" />
 
 
 							</div>
