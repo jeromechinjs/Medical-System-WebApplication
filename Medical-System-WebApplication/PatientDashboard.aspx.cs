@@ -31,13 +31,13 @@ namespace Medical_System_WebApplication
 
         void PopulateGridView()
         {
+            con.Open();
             DataTable table = new DataTable();
 
             dataAdapter = new SqlDataAdapter("SELECT * FROM Appointment", con);
-            con.Close();
+          
 
             dataAdapter.Fill(table);
-
 
             if (table.Rows.Count > 0)
             {
@@ -56,6 +56,7 @@ namespace Medical_System_WebApplication
                 gvAppointmentManage.Rows[0].Cells[0].Text = "No Appointment is found !!";
                 gvAppointmentManage.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
             }
+            con.Close();
 
 
         }

@@ -98,13 +98,13 @@
 
                     <%-- Specialty ID --%>
 
-                    <asp:TemplateField HeaderText="Specialty ID">
+                    <asp:TemplateField HeaderText="Specialty Name">
                         <ItemTemplate>
-                            <asp:Label Text='<%# Eval("SpecialtyID") %>' runat="server" />
+                            <asp:Label Text='<%# Eval("SpecialtyName") %>' runat="server" />
                         </ItemTemplate>
 
                         <EditItemTemplate>
-                            <asp:TextBox ID="txtSpecialtyID" Text='<%# Eval("SpecialtyID") %>' runat="server" />
+                            <asp:TextBox ID="txtSpecialtyID" Text='<%# Eval("SpecialtyName") %>' runat="server" />
                         </EditItemTemplate>
 
                         <FooterTemplate>
