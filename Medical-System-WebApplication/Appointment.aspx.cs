@@ -29,6 +29,7 @@ namespace Medical_System_WebApplication
 
                 GetSpecialty();
                 FindADoctor_DropDown.Items.Insert(0, " Find A Doctor");
+
             }
 
             if (!string.IsNullOrEmpty(Request.QueryString["PatientName"]))
@@ -140,6 +141,34 @@ namespace Medical_System_WebApplication
             
             Response.Redirect(FindADoctor_DropDown.SelectedItem.Text.Trim() + ".aspx");
             
+        }
+
+        protected void btn_Submit_Click(object sender, EventArgs e)
+        {
+           
+            string sqlQuery = "INSERT INTO [Appointment] (PatientID, AppointmentDate," + "AppointmentTime, ConcernAndRequest, SpecialtyID) VALUES (@PatientID, @AppointmentDate, @AppointmentTime, @ConcernAndRequest, @SpecialtyID)";
+            cmd = new SqlCommand(sqlQuery, con);
+
+            string PatientID = txt_PatientID.Text;
+            cmd.Parameters.AddWithValue("PatientID", PatientID);
+
+            // DateTime dateTime = DateTime.ParseExact(txt_Appointment.Text, "dd/MM/yyyy", null);
+            string AppointmentDate = txt_Appointment.Text;
+            cmd.Parameters.AddWithValue("AppointmentDate", AppointmentDate);
+
+            string AppointmentTime = Appointment_Time_DropDown.Text;
+            cmd.Parameters.AddWithValue("AppointmentTime", AppointmentTime);
+
+            string ConcernAndRequest = MedicalConcernTextBox.Text;
+            cmd.Parameters.AddWithValue("ConcernAndRequest", ConcernAndRequest);
+
+            string SpecialtyID = DropDownSelectSpeciality.Text;
+            cmd.Parameters.AddWithValue("SpecialtyID", SpecialtyID);
+
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+            Response.Write("<script>alert('Thanks for the booking. Booked Successfully.');</script>");
         }
     }
 }
