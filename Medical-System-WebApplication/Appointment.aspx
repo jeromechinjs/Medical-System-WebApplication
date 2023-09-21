@@ -148,7 +148,7 @@
 									</asp:DropDownList>
 								</div>
 								<div class="mb-3">
-									<asp:Button ID="btn_searchDoctor" class="btn btn-primary" runat="server" Text="Search" OnClick="btn_searchDoctor_Click" />
+									<asp:Button ID="btn_searchDoctor" class="btn btn-primary" CausesValidation="false" runat="server" Text="Search" OnClick="btn_searchDoctor_Click" />
 
 
 								</div>

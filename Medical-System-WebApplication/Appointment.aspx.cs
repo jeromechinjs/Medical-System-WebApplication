@@ -139,7 +139,16 @@ namespace Medical_System_WebApplication
             display = "Your Specialty: " + AnySpecialty_DropDown.SelectedItem.Text + "Your Doctor: " + FindADoctor_DropDown.SelectedItem.Text + "";
             Display.Text = display;*/
             
-            Response.Redirect(FindADoctor_DropDown.SelectedItem.Text.Trim() + ".aspx");
+            if(FindADoctor_DropDown.SelectedIndex == 0)
+            {
+                Response.Write("<script>alert('Please select Specialty or Doctor Name to proceed');</script>");
+            }
+            else
+            {
+                Response.Redirect(FindADoctor_DropDown.SelectedItem.Text.Trim() + ".aspx");
+            }
+
+            
             
         }
 
