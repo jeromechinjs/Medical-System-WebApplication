@@ -19,7 +19,7 @@ namespace Medical_System_WebApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            TextBox1.Text = "";
+            txtAddress.Text = "";
             TextBox2.Text = "";
 
 
@@ -42,6 +42,7 @@ namespace Medical_System_WebApplication
 
                     dr = dt.NewRow();
 
+                    int sum = 0;
                     int count = 0;
                     foreach (string item in cart)
                     {
@@ -72,8 +73,14 @@ namespace Medical_System_WebApplication
                         GridView1.DataSource = dt;
                         GridView1.DataBind();
 
-                        count++;
+                        sum = sum + Convert.ToInt32(ds.Tables[0].Rows[0]["ProductPrice"].ToString());
+                        GridView1.FooterRow.Cells[4].Text = sum.ToString();
+                        GridView1.FooterRow.Cells[3].HorizontalAlign = HorizontalAlign.Center;
+                        GridView1.FooterRow.Cells[4].HorizontalAlign = HorizontalAlign.Center;
+
+                        count++;                                                
                     }
+                    
 
                     if (Session["Quantity"] != null)
                     {
@@ -92,10 +99,12 @@ namespace Medical_System_WebApplication
             }
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
+        protected void placeOrder(object sender, EventArgs e)
+        {            
             Session["cart"] = null;
+            
             Response.Redirect("Homepage.aspx");
         }
+
     }
 }

@@ -85,6 +85,7 @@ namespace Medical_System_WebApplication
                         GridView1.DataBind();
 
                         GridView1.FooterRow.Cells[4].Text = sum.ToString();
+                        GridView1.FooterRow.Cells[3].HorizontalAlign = HorizontalAlign.Center;
                         GridView1.FooterRow.Cells[4].HorizontalAlign = HorizontalAlign.Center;
 
                         count++;

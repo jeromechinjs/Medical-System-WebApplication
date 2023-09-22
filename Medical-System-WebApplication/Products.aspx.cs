@@ -47,7 +47,6 @@ namespace Medical_System_WebApplication
             {
                 if (Session["cart"].ToString().Contains(productID))
                 {
-                    System.Diagnostics.Debug.WriteLine("ok");
                     btn.OnClientClick = "javascript:alert('Item already exist in cart')";                    
                 }
                 else

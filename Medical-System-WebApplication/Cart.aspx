@@ -23,7 +23,7 @@
                             <asp:TextBox type="number" ID="TextBox1" class="text-center" Style="width: 7em" name="quantity" min="1" value="1" runat="server" OnTextChanged="txt_OnTextChanged" AutoPostBack="true"></asp:TextBox>
                         </ItemTemplate>
                         <FooterTemplate>
-                            <asp:Label style="text-align:center; font-weight:bold" ID="Label1" runat="server" Text="Total Payment"></asp:Label>
+                            <asp:Label style="font-weight:bold" ID="Label1" runat="server" Text="Total Payment"></asp:Label>
                         </FooterTemplate>
                     </asp:TemplateField>
                     <asp:BoundField DataField="productTotal" HeaderText="Total (RM)">
