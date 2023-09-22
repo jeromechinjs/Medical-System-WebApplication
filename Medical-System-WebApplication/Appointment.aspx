@@ -92,7 +92,7 @@
 										<asp:Label for="txt_Appointment" ID="appointment_Label" runat="server" Text="Appointment Date"></asp:Label>
 										&nbsp;<asp:RequiredFieldValidator ID="RFAppointmentDate" runat="server" ErrorMessage="Please ensure Appointment Date is filled up" ControlToValidate="txt_Appointment" Display="Dynamic" ForeColor="Red">Required*</asp:RequiredFieldValidator>
 										<asp:TextBox ID="txt_Appointment" runat="server" class="form-control" Width="320px" BackColor="#FFFFCC" placeholder="Select an Appointment Date" ReadOnly="True"></asp:TextBox>
-										<asp:ImageButton ID="img_appointment" runat="server" Height="25px" ImageAlign="AbsBottom" ImageUrl="~/src/calendar_appointment.png" OnClick="img_appointment_Click" Width="31px" />
+										<asp:ImageButton ID="img_appointment" runat="server" Height="25px" ImageAlign="AbsBottom" CausesValidation="false" ImageUrl="~/src/calendar_appointment.png" OnClick="img_appointment_Click" Width="31px" />
 										<asp:Calendar ID="Appointment_Calendar" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" OnDayRender="Appointment_Calendar_DayRender" OnSelectionChanged="Appointment_Calendar_SelectionChanged" Width="200px">
 											<DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
 											<NextPrevStyle VerticalAlign="Bottom" />
