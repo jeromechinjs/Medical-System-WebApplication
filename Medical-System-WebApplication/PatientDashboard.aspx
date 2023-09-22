@@ -23,11 +23,8 @@
 	</div>
 	<asp:SqlDataSource ID="SqlDataSource1" runat="server" 
 		ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
-		SelectCommand="SELECT * FROM [Patient] WHERE ([PatientEmailAddress] = @PatientEmailAddress)">
+		SelectCommand="SELECT * FROM [Patient]">
 
-		<SelectParameters>
-            <asp:SessionParameter DefaultValue="d" Name="PatientEmailAddress" SessionField="loggedInEmail" Type="String" />
-        </SelectParameters>
 	</asp:SqlDataSource>
 
 </asp:Content>

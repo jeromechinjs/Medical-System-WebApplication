@@ -23,6 +23,7 @@ namespace Medical_System_WebApplication
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!IsPostBack)
             {
                 PopulateGridView();
@@ -39,69 +40,31 @@ namespace Medical_System_WebApplication
                 cmd.Parameters.AddWithValue("@CustomerID", CustomerID);
 
                 con.Open();
-                //SqlDataReader dr = cmd.ExecuteReader();
-
-                // data binding
-                //if (dr.Read())
-                {
-                    //CustomerIDLabel.Text = (string)dr["CustomerID"];
-                    //CompanyNameLabel.Text = (string)dr["CompanyName"];
-                    //ContactNameLabel.Text = (string)dr["ContactName"];
-                    //ContactTitleLabel.Text = (string)dr["ContactTitle"];
-                    //AddressLabel.Text = (string)dr["Address"];
-                    //CityTextBoxLabel.Text = (string)dr["City"];
-                    //RegionLabel.Text = (string)dr["Region"];
-                    //PostalCodeLabel.Text = (string)dr["PostalCode"];
-                    //CountryLabel.Text = (string)dr["Country"];
-                    //PhoneLabel.Text = (string)dr["Phone"];
-                    //FaxLabel.Text = (string)dr["Fax"];
-                }
 
             }
         }
 
-        protected void btnUpdate_Click(object sender, EventArgs e)
-        {
-            //string CustomerID = CustomerIDLabel.Text;
-            //string CompanyName = CompanyNameTextBox.Text;
+        //protected void btnUpdate_Click(object sender, EventArgs e)
+        //{
+        //    //string CustomerID = CustomerIDLabel.Text;
+        //    //string CompanyName = CompanyNameTextBox.Text;
 
-            string sql = @"update Customers set CompanyName = @CompanyName where CustomerID = @CustomerID";
-
-
-            string strCon = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-            SqlConnection con = new SqlConnection(strCon);
-            SqlCommand cmd = new SqlCommand(sql, con);
-            //cmd.Parameters.AddWithValue("@CustomerID", CustomerID);
-            //cmd.Parameters.AddWithValue("@CompanyName", CompanyName);
-
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
-
-            Response.Redirect("Menu.aspx");
-
-        }
-
-        protected void btnDelete_Click(object sender, EventArgs e)
-        {
-            //string CustomerID = CustomerIDLabel.Text;
-
-            string sql = @"delete from Customers where CustomerID = @CustomerID";
-
-            string strCon = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-            SqlConnection con = new SqlConnection(strCon);
-            SqlCommand cmd = new SqlCommand(sql, con);
-            //cmd.Parameters.AddWithValue("@CustomerID", CustomerID);
-
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
-
-            Response.Redirect("Menu.aspx");
-
-        }
+        //    string sql = @"update Customers set CompanyName = @CompanyName where CustomerID = @CustomerID";
 
 
+        //    string strCon = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+        //    SqlConnection con = new SqlConnection(strCon);
+        //    SqlCommand cmd = new SqlCommand(sql, con);
+        //    //cmd.Parameters.AddWithValue("@CustomerID", CustomerID);
+        //    //cmd.Parameters.AddWithValue("@CompanyName", CompanyName);
+
+        //    con.Open();
+        //    cmd.ExecuteNonQuery();
+        //    con.Close();
+
+        //    Response.Redirect("Menu.aspx");
+
+        //}
 
 
         void PopulateGridView()
