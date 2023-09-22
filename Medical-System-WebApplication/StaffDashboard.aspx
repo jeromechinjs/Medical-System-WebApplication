@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Dashboard.Master" AutoEventWireup="true" CodeBehind="StaffDashboard.aspx.cs" Inherits="Medical_System_WebApplication.WebForm6" %>
+﻿    <%@ Page Title="" Language="C#" MasterPageFile="~/Dashboard.Master" AutoEventWireup="true" CodeBehind="StaffDashboard.aspx.cs" Inherits="Medical_System_WebApplication.WebForm6" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="profile" runat="server">
     <div class="col-10 p-4 flex-column d-flex justify-content-center">
@@ -98,13 +98,13 @@
 
                     <%-- Specialty ID --%>
 
-                    <asp:TemplateField HeaderText="Specialty ID">
+                    <asp:TemplateField HeaderText="Specialty Name">
                         <ItemTemplate>
-                            <asp:Label Text='<%# Eval("SpecialtyID") %>' runat="server" />
+                            <asp:Label Text='<%# Eval("SpecialtyName") %>' runat="server" />
                         </ItemTemplate>
 
                         <EditItemTemplate>
-                            <asp:TextBox ID="txtSpecialtyID" Text='<%# Eval("SpecialtyID") %>' runat="server" />
+                            <asp:TextBox ID="txtSpecialtyID" Text='<%# Eval("SpecialtyName") %>' runat="server" />
                         </EditItemTemplate>
 
                         <FooterTemplate>
@@ -138,18 +138,6 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="enquiry" runat="server">
     <div class="col-10 p-4 flex-column d-flex justify-content-center">
         <p class="my-3 fs-2 fw-bolder">Enquiries</p>
-        <asp:GridView class="table table-bordered table-condensed table-responsive table-hover " ID="gvFeedback" runat="server" DataSourceID="sqlFeedback" AutoGenerateColumns="False" DataKeyNames="FeedbackName" AllowPaging="True">
-            <Columns>
-                <asp:BoundField DataField="FeedbackName" HeaderText="Name" ReadOnly="True" SortExpression="FeedbackName"></asp:BoundField>
-                <asp:BoundField DataField="FeedbackEmail" HeaderText="Email" SortExpression="FeedbackEmail"></asp:BoundField>
-                <asp:BoundField DataField="FeedbackPhone" HeaderText="Phone Number" SortExpression="FeedbackPhone"></asp:BoundField>
-                <asp:BoundField DataField="FeedbackPatient" HeaderText="Patient? (Y = Yes / N = No)" SortExpression="FeedbackPatient"></asp:BoundField>
-                <asp:BoundField DataField="FeedbackTextBox" HeaderText="Feedback Content" SortExpression="FeedbackTextBox"></asp:BoundField>
-            </Columns>
-        </asp:GridView>
-        
-        <asp:SqlDataSource ID="sqlFeedback" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Feedback]"></asp:SqlDataSource>
-        
     </div>
 </asp:Content>
 

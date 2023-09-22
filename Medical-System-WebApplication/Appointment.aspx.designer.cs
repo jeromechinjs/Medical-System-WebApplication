@@ -60,6 +60,15 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.Label PatientName_Label;
 
         /// <summary>
+        /// RFName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFName;
+
+        /// <summary>
         /// txt_PatientName control.
         /// </summary>
         /// <remarks>
@@ -78,6 +87,15 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.Label Email_Label;
 
         /// <summary>
+        /// RFEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFEmail;
+
+        /// <summary>
         /// txt_Email control.
         /// </summary>
         /// <remarks>
@@ -85,6 +103,15 @@ namespace Medical_System_WebApplication
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_Email;
+
+        /// <summary>
+        /// REEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REEmail;
 
         /// <summary>
         /// phoneNum_Label control.
@@ -96,6 +123,15 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.Label phoneNum_Label;
 
         /// <summary>
+        /// RFPhoneNum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFPhoneNum;
+
+        /// <summary>
         /// txt_Phone control.
         /// </summary>
         /// <remarks>
@@ -103,6 +139,15 @@ namespace Medical_System_WebApplication
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_Phone;
+
+        /// <summary>
+        /// REPhoneNum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REPhoneNum;
 
         /// <summary>
         /// Gender_Label control.
@@ -132,6 +177,15 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.Label Birth_Label;
 
         /// <summary>
+        /// RFDateOfBirth control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFDateOfBirth;
+
+        /// <summary>
         /// txt_Birth_Calander control.
         /// </summary>
         /// <remarks>
@@ -148,6 +202,15 @@ namespace Medical_System_WebApplication
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label requestSpeciality_Label;
+
+        /// <summary>
+        /// RFRequestSpecialty control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFRequestSpecialty;
 
         /// <summary>
         /// DropDownSelectSpeciality control.
@@ -186,6 +249,15 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.Label appointment_Label;
 
         /// <summary>
+        /// RFAppointmentDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFAppointmentDate;
+
+        /// <summary>
         /// txt_Appointment control.
         /// </summary>
         /// <remarks>
@@ -222,6 +294,15 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.Label Appointment_Time_Label;
 
         /// <summary>
+        /// RFAppointmentTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFAppointmentTime;
+
+        /// <summary>
         /// Appointment_Time_DropDown control.
         /// </summary>
         /// <remarks>
@@ -240,6 +321,15 @@ namespace Medical_System_WebApplication
         protected global::System.Web.UI.WebControls.Label MedicalConcern_Label;
 
         /// <summary>
+        /// RFMedicalConcern control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFMedicalConcern;
+
+        /// <summary>
         /// MedicalConcernTextBox control.
         /// </summary>
         /// <remarks>
@@ -256,6 +346,15 @@ namespace Medical_System_WebApplication
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_Submit;
+
+        /// <summary>
+        /// VSAppointment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary VSAppointment;
 
         /// <summary>
         /// AnySpecialty_DropDown control.

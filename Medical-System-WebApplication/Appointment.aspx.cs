@@ -32,11 +32,11 @@ namespace Medical_System_WebApplication
 
             }
 
-            if (!string.IsNullOrEmpty(Request.QueryString["PatientName"]))
+            if (!string.IsNullOrEmpty(Request.QueryString["PatientEmailAddress"]))
             {
                 con.Open();
-                cmd = new SqlCommand("SELECT PatientID, PatientName, PatientEmailAddress, PatientPhoneNum FROM [Patient] WHERE PatientName = @PatientName", con);
-                cmd.Parameters.AddWithValue("@PatientName", Request.QueryString["PatientName"]);
+                cmd = new SqlCommand("SELECT PatientID, PatientName, PatientEmailAddress, PatientPhoneNum FROM [Patient] WHERE PatientEmailAddress = @PatientEmailAddress", con);
+                cmd.Parameters.AddWithValue("@PatientEmailAddress", Request.QueryString["PatientEmailAddress"]);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
@@ -139,7 +139,16 @@ namespace Medical_System_WebApplication
             display = "Your Specialty: " + AnySpecialty_DropDown.SelectedItem.Text + "Your Doctor: " + FindADoctor_DropDown.SelectedItem.Text + "";
             Display.Text = display;*/
             
-            Response.Redirect(FindADoctor_DropDown.SelectedItem.Text.Trim() + ".aspx");
+            if(FindADoctor_DropDown.SelectedIndex == 0)
+            {
+                Response.Write("<script>alert('Please select Specialty or Doctor Name to proceed');</script>");
+            }
+            else
+            {
+                Response.Redirect(FindADoctor_DropDown.SelectedItem.Text.Trim() + ".aspx");
+            }
+
+            
             
         }
 
