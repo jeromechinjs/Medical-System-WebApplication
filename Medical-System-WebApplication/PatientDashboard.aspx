@@ -6,31 +6,28 @@
 
 		<asp:DetailsView class="table table-bordered table-condensed table-responsive table-hover" ID="profileInfo" AutoGenerateRows="False" DataKeyNames="PatientID" runat="server" Height="100%" Width="80%" DataSourceID="SqlDataSource1">
 			<Fields>
-				<asp:BoundField DataField="PatientID" HeaderText="ID" ReadOnly="True" SortExpression="PatientID" />
-                <asp:BoundField DataField="PatientName" HeaderText="Name" SortExpression="PatientName" />
-                <asp:BoundField DataField="PatientEmailAddress" HeaderText="Email" SortExpression="PatientEmailAddress" />
-                <asp:BoundField DataField="PatientPhoneNum" HeaderText="Phone Number" SortExpression="PatientPhoneNum" />
+				<asp:BoundField DataField="PatientID" HeaderText="PatientID" ReadOnly="True" SortExpression="PatientID" InsertVisible="False" />
+                <asp:BoundField DataField="PatientName" HeaderText="PatientName" SortExpression="PatientName" />
+				<asp:BoundField DataField="PatientEmailAddress" HeaderText="PatientEmailAddress" SortExpression="PatientEmailAddress" />
+				<asp:BoundField DataField="PatientPassword" HeaderText="PatientPassword" SortExpression="PatientPassword" />
+				<asp:BoundField DataField="PatientAddress" HeaderText="PatientAddress" SortExpression="PatientAddress" />
+				<asp:BoundField DataField="PatientCity" HeaderText="PatientCity" SortExpression="PatientCity" />
+				<asp:BoundField DataField="PatientState" HeaderText="PatientState" SortExpression="PatientState" />
+				<asp:BoundField DataField="PatientZipcode" HeaderText="PatientZipcode" SortExpression="PatientZipcode" />
+                <asp:BoundField DataField="PatientPhoneNum" HeaderText="PatientPhoneNum" SortExpression="PatientPhoneNum" />
 				<asp:BoundField DataField="Gender" HeaderText="Gender" SortExpression="Gender" />
-                <asp:BoundField DataField="DateOfBirth" HeaderText="Birth Date" SortExpression="DateOfBirth" />
-				                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
+                <asp:BoundField DataField="DateOfBirth" HeaderText="DateOfBirth" SortExpression="DateOfBirth" />
 
 			</Fields>
 		</asp:DetailsView>                   
 	</div>
 	<asp:SqlDataSource ID="SqlDataSource1" runat="server" 
 		ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
-		SelectCommand="SELECT * FROM [Patient]"
-		UpdateCommand="UPDATE [Patient] SET PatientID = @PatientID, PatientName = @PatientName, PatientEmailAddress = @PatientEmailAddress, PatientPhoneNum = @PatientPhoneNum, Gender = @Gender, DateOfBirth = @DateOfBirth
-        WHERE PatientID = @PatientID">
+		SelectCommand="SELECT * FROM [Patient] WHERE ([PatientEmailAddress] = @PatientEmailAddress)">
 
-		<UpdateParameters>
-			<asp:Parameter Name="PatientID" Type="String" />
-			<asp:Parameter Name="PatientName" Type="String" />
-			<asp:Parameter Name="PatientEmailAddress" Type="String" />
-			<asp:Parameter Name="PatientPhoneNum" Type="String" />
-			<asp:Parameter Name="Gender" Type="String" />
-			<asp:Parameter Name="DateOfBirth" Type="DateTime" />
-		</UpdateParameters>               
+		<SelectParameters>
+            <asp:SessionParameter DefaultValue="d" Name="PatientEmailAddress" SessionField="loggedInEmail" Type="String" />
+        </SelectParameters>
 	</asp:SqlDataSource>
 
 </asp:Content>

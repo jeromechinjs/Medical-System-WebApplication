@@ -25,8 +25,24 @@
     Log into your account to view upcoming patient appointments.
 </asp:Content>
 
-<asp:Content ID="Content5" ContentPlaceHolderID="btnLogIn" runat="server">
-    <asp:Button class="btn btn-primary" ID="btn_Login" runat="server" Text="Log In" OnClick="btn_LogIn_Click" />
+<asp:Content ID="Content6" ContentPlaceHolderID="loginForm" runat="server">
+    <form id="loginForm" runat="server" class="d-flex flex-column justify-content-center">
+	    <div class="mb-4">
+		    <asp:Label for="loginEmailInput" class="form-label" runat="server" Text="Email Address"></asp:Label>
+            <asp:RequiredFieldValidator ID="requiredEmail" runat="server" ErrorMessage="Kindly enter your email" ControlToValidate="loginEmailInput" CssClass="text-danger d-inline" Display="Dynamic">*</asp:RequiredFieldValidator>
+		    <asp:TextBox ID="loginEmailInput" class="form-control" type="email" placeholder="name@example.com" runat="server"></asp:TextBox>
+        </div>
+
+	    <div class="mb-4">
+		    <asp:Label for="loginPasswordInput" class="form-label" runat="server" Text="Password"></asp:Label>
+            <asp:RequiredFieldValidator ID="requiredPassword" runat="server" ErrorMessage="Kindly enter your password" ControlToValidate="loginPasswordInput" CssClass="text-danger d-inline" Display="Dynamic">*</asp:RequiredFieldValidator>
+            <asp:TextBox ID="loginPasswordInput" class="form-control" type="password" runat="server"></asp:TextBox>
+	    </div>
+
+        <asp:ValidationSummary ID="validationSummaryPatientLogin" runat="server" CssClass="text-danger" />
+
+        <asp:Button class="btn btn-primary" ID="btn_Login" runat="server" Text="Log In" OnClick="btn_LogIn_Click" />
+    </form>
 </asp:Content>
 
 

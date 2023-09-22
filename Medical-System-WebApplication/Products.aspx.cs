@@ -53,6 +53,11 @@ namespace Medical_System_WebApplication
             }
             System.Diagnostics.Debug.WriteLine(Session["Cart"]);
         }
+
+        protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
