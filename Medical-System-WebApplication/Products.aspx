@@ -38,7 +38,7 @@
                                             <asp:Label class="card-text" ID="Label8" runat="server" Text='<%# Eval("ProductQuantity") %>'></asp:Label>
                                             <br />
                                             <div class="d-flex flex-row-reverse mt-3">
-                                                <asp:Button class="btn btn-sm btn-primary" ID="Button2" runat="server" Text="Add To Cart" CommandArgument='<%# Eval("ProductID") %>' CommandName="AddToCart" OnClick="Button1_Click" OnClientClick="javascript:alert('Item added to Cart')"/>
+                                                <asp:Button class="btn btn-sm btn-primary" ID="Button2" runat="server" Text="Add To Cart" CommandArgument='<%# Eval("ProductID") %>' CommandName="AddToCart" OnClick="Button1_Click" OnClientClick="javascript:alert('Item added to Cart')" />
                                                 
                                             </div>
                                         </div>

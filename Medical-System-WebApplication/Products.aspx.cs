@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
+using System.Runtime.Remoting.Contexts;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -34,7 +35,6 @@ namespace Medical_System_WebApplication
             {
                 SqlDataSource1.SelectCommand = "SELECT * FROM [Product] inner join ProductCategory on Product.CategoryID=ProductCategory.CategoryID and ProductCategory.CategoryID=@CategoryID";
             }
-            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -45,7 +45,16 @@ namespace Medical_System_WebApplication
 
             if (Session["cart"] != null)
             {
-                Session["Cart"] = Session["Cart"] + "," + productID;
+                if (Session["cart"].ToString().Contains(productID))
+                {
+                    System.Diagnostics.Debug.WriteLine("ok");
+                    btn.OnClientClick = "javascript:alert('Item already exist in cart')";                    
+                }
+                else
+                {
+                    Session["Cart"] = Session["Cart"] + "," + productID;
+                    btn.OnClientClick = "javascript:alert('Item added to Cart')";
+                }
             }
             else
             {

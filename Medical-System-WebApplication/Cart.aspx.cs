@@ -25,12 +25,13 @@ namespace Medical_System_WebApplication
             if (!IsPostBack)
             {
 
-                if (Session["Cart"] != null && ViewState["Grid"] == null)
+                if (Session["Cart"] != null)
                 {
                     String[] cart = Session["Cart"].ToString().Split(',');
 
                     cart = cart.Where(x => !string.IsNullOrEmpty(x)).ToArray();
 
+                    System.Diagnostics.Debug.WriteLine(cart);
                     DataTable dt = new DataTable();
                     DataRow dr;
                     dt.Columns.Add("productName");
@@ -57,8 +58,8 @@ namespace Medical_System_WebApplication
                             String[] total = Session["Total"].ToString().Split(',');
                             total = total.Where(x => !string.IsNullOrEmpty(x)).ToArray();
 
-                            
 
+                            System.Diagnostics.Debug.WriteLine(count + "Hi am count");
                             dt.Rows.Add(ds.Tables[0].Rows[0]["ProductName"].ToString(), ds.Tables[0].Rows[0]["ProductImage"].ToString(), ds.Tables[0].Rows[0]["ProductPrice"].ToString(), total[count]);
                                                         
                         }

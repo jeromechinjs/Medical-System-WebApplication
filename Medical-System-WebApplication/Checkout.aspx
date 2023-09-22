@@ -64,7 +64,7 @@
                             <asp:TemplateField HeaderText="Quantity">
                                 <ItemStyle Width="10%" HorizontalAlign="Center"></ItemStyle>
                                 <ItemTemplate>
-                                    <input type="number" class="text-center" style="width: 7em; border: none" id="quantity" name="quantity" min="1" value="1" readonly>
+                                    <asp:TextBox type="number" ID="TextBox1" class="text-center" style="width: 7em" name="quantity" min="1" value="1" runat="server" readonly="true"></asp:TextBox>     
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:BoundField DataField="productTotal" HeaderText="Total (RM)">
