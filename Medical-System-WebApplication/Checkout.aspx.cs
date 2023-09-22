@@ -42,7 +42,6 @@ namespace Medical_System_WebApplication
 
                     dr = dt.NewRow();
 
-                    int sum = 0;
                     int count = 0;
                     foreach (string item in cart)
                     {
@@ -60,8 +59,6 @@ namespace Medical_System_WebApplication
                             String[] total = Session["Total"].ToString().Split(',');
                             total = total.Where(x => !string.IsNullOrEmpty(x)).ToArray();
 
-
-                            System.Diagnostics.Debug.WriteLine(count + "Hi am count");
                             dt.Rows.Add(ds.Tables[0].Rows[0]["ProductName"].ToString(), ds.Tables[0].Rows[0]["ProductImage"].ToString(), ds.Tables[0].Rows[0]["ProductPrice"].ToString(), total[count]);
 
                         }
@@ -73,8 +70,9 @@ namespace Medical_System_WebApplication
                         GridView1.DataSource = dt;
                         GridView1.DataBind();
 
-                        sum = sum + Convert.ToInt32(ds.Tables[0].Rows[0]["ProductPrice"].ToString());
-                        GridView1.FooterRow.Cells[4].Text = sum.ToString();
+                        GridView1.FooterRow.Cells[4].Text = Session["Sum"].ToString();
+
+                        System.Diagnostics.Debug.WriteLine(Session["Sum"].ToString());
                         GridView1.FooterRow.Cells[3].HorizontalAlign = HorizontalAlign.Center;
                         GridView1.FooterRow.Cells[4].HorizontalAlign = HorizontalAlign.Center;
 
@@ -101,8 +99,10 @@ namespace Medical_System_WebApplication
 
         protected void placeOrder(object sender, EventArgs e)
         {            
-            Session["cart"] = null;
-            
+            Session["Cart"] = null;
+            Session["Total"] = null;
+            Session["Quantity"] = null;
+
             Response.Redirect("Homepage.aspx");
         }
 

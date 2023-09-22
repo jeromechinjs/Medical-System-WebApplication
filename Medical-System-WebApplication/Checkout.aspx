@@ -84,7 +84,7 @@
             </div>
             <div class="text-center">
                 <asp:ValidationSummary ID="ValidationSummary1" ShowMessageBox="true" ShowSummary="false" runat="server" />
-                <asp:Button class="btn btn-lg btn-primary" ID="Button1" runat="server" Text="Place Order" CausesValidation="true" OnClick="placeOrder" />
+                <asp:Button class="btn btn-lg btn-primary" ID="Button1" runat="server" Text="Place Order" CausesValidation="true" OnClick="placeOrder"  />
             </div>
         </div>
         <br />

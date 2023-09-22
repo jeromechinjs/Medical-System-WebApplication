@@ -85,6 +85,9 @@ namespace Medical_System_WebApplication
                         GridView1.DataBind();
 
                         GridView1.FooterRow.Cells[4].Text = sum.ToString();
+                        Session["Sum"] = sum.ToString();
+
+                        System.Diagnostics.Debug.WriteLine(Session["Sum"].ToString());
                         GridView1.FooterRow.Cells[3].HorizontalAlign = HorizontalAlign.Center;
                         GridView1.FooterRow.Cells[4].HorizontalAlign = HorizontalAlign.Center;
 
@@ -271,10 +274,6 @@ namespace Medical_System_WebApplication
                 Session["Total"] = newTotal;
                 System.Diagnostics.Debug.WriteLine(Session["Total"]);
             }
-            //GridViewRow gridRow = (GridViewRow)((Button)sender).NamingContainer;
-            //TextBox quantityTB = (TextBox)gridRow.FindControl("TextBox1");
-
-            //txt_OnTextChanged(quantityTB, e);
 
             Response.Redirect("Cart.aspx");
         }
@@ -326,6 +325,10 @@ namespace Medical_System_WebApplication
             System.Diagnostics.Debug.WriteLine(Session["Total"].ToString());
 
             GridView1.FooterRow.Cells[4].Text = sum.ToString();
+
+            Session["Sum"] = sum.ToString();
+
+            System.Diagnostics.Debug.WriteLine(Session["Sum"].ToString());
         }
 
     }

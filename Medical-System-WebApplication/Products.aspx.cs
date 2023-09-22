@@ -43,9 +43,9 @@ namespace Medical_System_WebApplication
 
             string productID = btn.CommandArgument.ToString();
 
-            if (Session["cart"] != null)
+            if (Session["Cart"] != null)
             {
-                if (Session["cart"].ToString().Contains(productID))
+                if (Session["Cart"].ToString().Contains(productID))
                 {
                     btn.OnClientClick = "javascript:alert('Item already exist in cart')";                    
                 }
