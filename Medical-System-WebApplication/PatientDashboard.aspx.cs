@@ -41,9 +41,50 @@ namespace Medical_System_WebApplication
 
             if (table.Rows.Count > 0)
             {
-                gvAppointmentManage.DataSource = table;
-                gvAppointmentManage.DataBind();
+                if (Session["PatientEmailAddress"] != null)
+                {
+                    gvAppointmentManage.DataSource = table;
+
+                    string conString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
+                    string query = "SELECT A.PatientID, A.AppointmentDate, A.AppointmentTime, A.ConcernAndRequest, P.PatientEmailAddress FROM A Appointment, P Patient WHERE A.PatientID = P.PatientID AND P.PatientEmailAddress=" + Session["PatientEmmailAddress"] + "";
+                    
+
+                    using (SqlConnection con = new SqlConnection(conString))
+                    {
+                        using (SqlCommand cmd = new SqlCommand(query, con))
+                        {
+                            con.Open();
+                            cmd.Parameters.AddWithValue("@P." + Session["PatientEmailAddress"] + "", Session["PatientEmailAddress"]);
+                            
+                            gvAppointmentManage.DataBind();
+                            con.Close();
+                        }
+                    }
+                    
+                }
+                else
+                {
+                    Response.Redirect("PatientLogin.aspx");
+                }
             }
+                
+                //cmd.Parameters.AddWithValue("@P." + Session["PatientEmailAddress"] + "", !string.IsNullOrEmpty(this.Page.User.Identity.Name) ? this.Page.User.Identity.Name : (object)DBNull.Value);
+                //using (SqlConnection con = new SqlConnection(conString))
+                //{
+                //    using (SqlDataAdapter sda = new SqlDataAdapter())
+                //    {
+                //        cmd.Connection = con;
+                //        sda.SelectCommand = cmd;
+                //        using (DataTable dt = new DataTable())
+                //        {
+                //            sda.Fill(dt);
+                            
+                //        }
+                //    }
+                //}
+                
+            
             else
             {
                 table.Rows.Add(table.NewRow());

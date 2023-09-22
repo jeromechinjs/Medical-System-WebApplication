@@ -27,7 +27,7 @@
 						<h2>Patient&#39s Information</h2>
 						<div class="mb-3 mt-3">
 							<asp:Label for="txtPatientID_Content" ID="PatientID_Label" runat="server" Text="Patient ID"></asp:Label>
-							&nbsp;<asp:TextBox ID="txt_PatientID" class="form-control" runat="server" ReadOnly="True" Width="320px"></asp:TextBox>
+							&nbsp;<asp:TextBox ID="txt_PatientID" class="form-control" runat="server" Width="320px"></asp:TextBox>
 						</div>
 
 						<div class="mb-3">
