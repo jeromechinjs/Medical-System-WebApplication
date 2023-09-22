@@ -140,16 +140,15 @@
         <p class="my-3 fs-2 fw-bolder">Enquiries</p>
         <asp:GridView class="table table-bordered table-condensed table-responsive table-hover " ID="gvFeedback" runat="server" DataSourceID="sqlFeedback" AutoGenerateColumns="False" DataKeyNames="FeedbackName" AllowPaging="True">
             <Columns>
+                <asp:CommandField ShowDeleteButton="True" ></asp:CommandField>
+                <asp:BoundField DataField="FeedbackNo" HeaderText="No" ReadOnly="true" SortExpression="FeedbackNo"></asp:BoundField>
                 <asp:BoundField DataField="FeedbackName" HeaderText="Name" ReadOnly="True" SortExpression="FeedbackName"></asp:BoundField>
                 <asp:BoundField DataField="FeedbackEmail" HeaderText="Email" SortExpression="FeedbackEmail"></asp:BoundField>
                 <asp:BoundField DataField="FeedbackPhone" HeaderText="Phone Number" SortExpression="FeedbackPhone"></asp:BoundField>
                 <asp:BoundField DataField="FeedbackPatient" HeaderText="Patient? (Y = Yes / N = No)" SortExpression="FeedbackPatient"></asp:BoundField>
                 <asp:BoundField DataField="FeedbackTextBox" HeaderText="Feedback Content" SortExpression="FeedbackTextBox"></asp:BoundField>
             </Columns>
-        </asp:GridView>
-        
-        <asp:SqlDataSource ID="sqlFeedback" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Feedback]"></asp:SqlDataSource>
-        
+        </asp:GridView> 
     </div>
 </asp:Content>
 
