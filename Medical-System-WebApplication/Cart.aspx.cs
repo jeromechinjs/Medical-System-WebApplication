@@ -25,7 +25,7 @@ namespace Medical_System_WebApplication
             if (!IsPostBack)
             {
 
-                if (Session["Cart"] != null)
+                if (Session["Cart"] != null && ViewState["Grid"] == null)
                 {
                     String[] cart = Session["Cart"].ToString().Split(',');
 
@@ -40,9 +40,9 @@ namespace Medical_System_WebApplication
 
                     dr = dt.NewRow();
 
+                    int count = 0;
                     foreach (string item in cart)
                     {
-                        Debug.WriteLine(item);
 
                         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
 
@@ -51,10 +51,38 @@ namespace Medical_System_WebApplication
 
                         da.Fill(ds);
 
-                        dt.Rows.Add(ds.Tables[0].Rows[0]["ProductName"].ToString(), ds.Tables[0].Rows[0]["ProductImage"].ToString(), ds.Tables[0].Rows[0]["ProductPrice"].ToString(), ds.Tables[0].Rows[0]["ProductPrice"].ToString());
+
+                        if (Session["Total"] != null)
+                        {
+                            String[] total = Session["Total"].ToString().Split(',');
+                            total = total.Where(x => !string.IsNullOrEmpty(x)).ToArray();
+
+                            
+
+                            dt.Rows.Add(ds.Tables[0].Rows[0]["ProductName"].ToString(), ds.Tables[0].Rows[0]["ProductImage"].ToString(), ds.Tables[0].Rows[0]["ProductPrice"].ToString(), total[count]);
+                                                        
+                        }
+                        else
+                        {
+                            dt.Rows.Add(ds.Tables[0].Rows[0]["ProductName"].ToString(), ds.Tables[0].Rows[0]["ProductImage"].ToString(), ds.Tables[0].Rows[0]["ProductPrice"].ToString(), ds.Tables[0].Rows[0]["ProductPrice"].ToString());
+                        }
 
                         GridView1.DataSource = dt;
                         GridView1.DataBind();
+
+                        count++;
+                    }
+
+                    if (Session["Quantity"] != null)
+                    {
+                        String[] quantity = Session["Quantity"].ToString().Split(',');
+                        quantity = quantity.Where(x => !string.IsNullOrEmpty(x)).ToArray();
+                        int countQuantity = 0;
+                        foreach (GridViewRow row in GridView1.Rows)
+                        {
+                            TextBox rowQuantity = (TextBox)row.FindControl("TextBox1");
+                            rowQuantity.Text = quantity[countQuantity++];
+                        }
                     }
 
                 }
@@ -104,26 +132,36 @@ namespace Medical_System_WebApplication
 
             int quantity = Convert.ToInt32(quantityTB.Text);
 
-            System.Diagnostics.Debug.WriteLine(quantity);
-
-            System.Diagnostics.Debug.WriteLine(rowIndex + "Hi am row index");
 
             GridViewRow rowTest = GridView1.Rows[rowIndex];
-
-            System.Diagnostics.Debug.WriteLine(GridView1.Rows[rowIndex].Cells[2].Text);
 
             string rowPrice = GridView1.Rows[rowIndex].Cells[2].Text;
 
             int price = Convert.ToInt32(rowPrice);
 
-            System.Diagnostics.Debug.WriteLine(rowPrice + " Hi am price");
 
             int total = 0;
             total = quantity * price;
 
             GridView1.Rows[rowIndex].Cells[4].Text = total.ToString();
 
-        }
-    }
+            string totalPriceList = "";
+            string quantityList = "";
 
+            foreach (GridViewRow row in GridView1.Rows)
+            {
+                TextBox rowQuantity = (TextBox)row.FindControl("TextBox1");
+
+                quantityList = quantityList + "," + rowQuantity.Text;
+                totalPriceList = totalPriceList + "," + row.Cells[4].Text;
+            }
+
+            Session["Quantity"] = quantityList;
+            Session["Total"] = totalPriceList;
+
+            System.Diagnostics.Debug.WriteLine(Session["Quantity"]);
+            System.Diagnostics.Debug.WriteLine(Session["Total"]);
+        }
+
+    }
 }
