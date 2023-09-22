@@ -140,7 +140,6 @@
         <p class="my-3 fs-2 fw-bolder">Enquiries</p>
         <asp:GridView class="table table-bordered table-condensed table-responsive table-hover " ID="gvFeedback" runat="server" DataSourceID="sqlFeedback" AutoGenerateColumns="False" DataKeyNames="FeedbackName" AllowPaging="True">
             <Columns>
-                <asp:HyperLinkField DataNavigateUrlFields="CustomerId" DataNavigateUrlFormatString="DeleteLabExercise_2.aspx?CustomerId={0}" Text="Delete"></asp:HyperLinkField>
                 <asp:CommandField ShowDeleteButton="True" ></asp:CommandField>
                 <asp:BoundField DataField="FeedbackNo" HeaderText="No" ReadOnly="true" SortExpression="FeedbackNo"></asp:BoundField>
                 <asp:BoundField DataField="FeedbackName" HeaderText="Name" ReadOnly="True" SortExpression="FeedbackName"></asp:BoundField>
