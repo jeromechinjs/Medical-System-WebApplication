@@ -141,12 +141,12 @@
         <asp:GridView class="table table-bordered table-condensed table-responsive table-hover " ID="gvFeedback" runat="server" DataSourceID="sqlFeedback" AutoGenerateColumns="False" DataKeyNames="FeedbackName" AllowPaging="True">
             <Columns>
                 <asp:CommandField ShowDeleteButton="True"></asp:CommandField>
-                <asp:BoundField DataField="FeedbackNo" HeaderText="FeedbackNo" ReadOnly="True" InsertVisible="False" SortExpression="FeedbackNo"></asp:BoundField>
-                <asp:BoundField DataField="FeedbackName" HeaderText="FeedbackName" SortExpression="FeedbackName"></asp:BoundField>
-                <asp:BoundField DataField="FeedbackEmail" HeaderText="FeedbackEmail" SortExpression="FeedbackEmail"></asp:BoundField>
-                <asp:BoundField DataField="FeedbackPhone" HeaderText="FeedbackPhone" SortExpression="FeedbackPhone"></asp:BoundField>
-                <asp:BoundField DataField="FeedbackPatient" HeaderText="FeedbackPatient" SortExpression="FeedbackPatient"></asp:BoundField>
-                <asp:BoundField DataField="FeedbackTextBox" HeaderText="FeedbackTextBox" SortExpression="FeedbackTextBox"></asp:BoundField>
+                <asp:BoundField DataField="FeedbackNo" HeaderText="No" ReadOnly="True" InsertVisible="False" SortExpression="FeedbackNo"></asp:BoundField>
+                <asp:BoundField DataField="FeedbackName" HeaderText="Name" SortExpression="FeedbackName"></asp:BoundField>
+                <asp:BoundField DataField="FeedbackEmail" HeaderText="Email" SortExpression="FeedbackEmail"></asp:BoundField>
+                <asp:BoundField DataField="FeedbackPhone" HeaderText="Phone Number" SortExpression="FeedbackPhone"></asp:BoundField>
+                <asp:BoundField DataField="FeedbackPatient" HeaderText="Patient? (Y = Yes / N = No)" SortExpression="FeedbackPatient"></asp:BoundField>
+                <asp:BoundField DataField="FeedbackTextBox" HeaderText="Feedback / Suggestion" SortExpression="FeedbackTextBox"></asp:BoundField>
             </Columns>
         </asp:GridView>
         <asp:SqlDataSource runat="server" ID="SqlFeedback" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Feedback]" DeleteCommand="DELETE FROM [Feedback] WHERE [FeedbackNo] = @FeedbackNo" InsertCommand="INSERT INTO [Feedback] ([FeedbackName], [FeedbackEmail], [FeedbackPhone], [FeedbackPatient], [FeedbackTextBox]) VALUES (@FeedbackName, @FeedbackEmail, @FeedbackPhone, @FeedbackPatient, @FeedbackTextBox)" UpdateCommand="UPDATE [Feedback] SET [FeedbackName] = @FeedbackName, [FeedbackEmail] = @FeedbackEmail, [FeedbackPhone] = @FeedbackPhone, [FeedbackPatient] = @FeedbackPatient, [FeedbackTextBox] = @FeedbackTextBox WHERE [FeedbackNo] = @FeedbackNo">
