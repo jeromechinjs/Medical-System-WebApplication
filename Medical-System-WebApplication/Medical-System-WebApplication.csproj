@@ -42,10 +42,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\lib\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -66,7 +74,9 @@
   <ItemGroup>
     <Content Include="Ahmad.aspx" />
     <Content Include="App_Data\Database.mdf" />
-    <Content Include="App_Data\Database_log.ldf" />
+    <Content Include="App_Data\Database_log.ldf">
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
     <Content Include="Cart.aspx" />
     <Content Include="Checkout.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -85,6 +95,16 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Entity Data Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Entity Data Model.Context.cs</LastGenOutput>
+      <DependentUpon>Entity Data Model.edmx</DependentUpon>
+    </Content>
+    <Content Include="Entity Data Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Entity Data Model.edmx</DependentUpon>
+      <LastGenOutput>Entity Data Model.cs</LastGenOutput>
+    </Content>
     <Content Include="Jason.aspx" />
     <Content Include="John.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -111,7 +131,9 @@
     <Content Include="src\our-mission.jpg" />
     <Content Include="src\PanadolOptizorb.jpg" />
     <Content Include="src\people.svg" />
+    <Content Include="src\Plasters.jpg" />
     <Content Include="src\profile-login.svg" />
+    <Content Include="src\smallBandage.jpg" />
     <Content Include="src\SurgicalMask.jpg" />
     <Content Include="Style.css" />
     <Content Include="Web.config" />
@@ -146,6 +168,21 @@
     </Compile>
     <Compile Include="Checkout.aspx.designer.cs">
       <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entity Data Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Entity Data Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity Data Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Entity Data Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity Data Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Entity Data Model.edmx</DependentUpon>
     </Compile>
     <Compile Include="Jason.aspx.cs">
       <DependentUpon>Jason.aspx</DependentUpon>
@@ -265,6 +302,13 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <EntityDeploy Include="Entity Data Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Entity Data Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Entity Data Model.edmx.diagram">
+      <DependentUpon>Entity Data Model.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <Content Include="Header_Footer_Template.Master" />
     <Content Include="Dashboard.Master" />
@@ -283,7 +327,9 @@
     </None>
     <Content Include="web.sitemap" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

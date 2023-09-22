@@ -40,7 +40,7 @@ namespace Medical_System_WebApplication
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    txt_PatientID.Text = dr["PatientID"].ToString();
+                    //txt_PatientID.Text = dr["PatientID"].ToString();
                     txt_PatientName.Text = dr["PatientName"].ToString();
                     txt_Email.Text = dr["PatientEmailAddress"].ToString();
                     txt_Phone.Text = dr["PatientPhoneNum"].ToString();
@@ -155,11 +155,11 @@ namespace Medical_System_WebApplication
         protected void btn_Submit_Click(object sender, EventArgs e)
         {
            
-            string sqlQuery = "INSERT INTO [Appointment] (PatientID, AppointmentDate," + "AppointmentTime, ConcernAndRequest, SpecialtyName) VALUES (@PatientID, @AppointmentDate, @AppointmentTime, @ConcernAndRequest, @SpecialtyName)";
+            string sqlQuery = "INSERT INTO [Appointment] (AppointmentDate," + "AppointmentTime, ConcernAndRequest, SpecialtyID) VALUES (@AppointmentDate, @AppointmentTime, @ConcernAndRequest, @SpecialtyID)";
             cmd = new SqlCommand(sqlQuery, con);
 
-            string PatientID = txt_PatientID.Text;
-            cmd.Parameters.AddWithValue("PatientID", PatientID);
+            //string PatientID = txt_PatientID.Text;
+            //cmd.Parameters.AddWithValue("PatientID", PatientID);
 
             string AppointmentDate = txt_Appointment.Text;
             cmd.Parameters.AddWithValue("AppointmentDate", AppointmentDate);
@@ -170,8 +170,8 @@ namespace Medical_System_WebApplication
             string ConcernAndRequest = MedicalConcernTextBox.Text;
             cmd.Parameters.AddWithValue("ConcernAndRequest", ConcernAndRequest);
 
-            string SpecialtyName = DropDownSelectSpeciality.Text;
-            cmd.Parameters.AddWithValue("SpecialtyName", SpecialtyName);
+            string SpecialtyID= DropDownSelectSpeciality.Text;
+            cmd.Parameters.AddWithValue("SpecialtyID", SpecialtyID);
 
             con.Open();
             cmd.ExecuteNonQuery();

@@ -1,13 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
 	<siteMapNode url="~/Homepage.aspx" title="Home"  description="Homepage">
-		<siteMapNode url="~/Products.aspx" title="Products"  description="Products"></siteMapNode>
-		<siteMapNode url="~/ContactUs.aspx" title="Contact Us"  description="Contact Us"></siteMapNode>
-		<siteMapNode url="~/Appointment.aspx" title="Appointment"  description="Appointment"></siteMapNode>
-		<siteMapNode url="~/Cart.aspx" title="Cart"  description="Cart"></siteMapNode>
-		<siteMapNode url="#" title="Account Login"  description="Account Icon">
-			<siteMapNode url="~/StaffLogin.aspx" title="Staff"  description="Staff"></siteMapNode>
-			<siteMapNode url="~/PatientLogin.aspx" title="Customer"  description="Customer"></siteMapNode>
+		<siteMapNode url="~/Products.aspx" title="Products"  description="Products"/>
+		<siteMapNode url="~/ContactUs.aspx" title="Contact Us"  description="Contact Us"/>
+		<siteMapNode url="~/Appointment.aspx" title="Appointment"  description="Appointment">
+			<siteMapNode url="~/Ahmad.aspx" title="Ahmad"  description="Ahmad"/>
+			<siteMapNode url="~/John.aspx" title="John"  description="John"/>
+			<siteMapNode url="~/Jason.aspx" title="Jason"  description="Jason"/>
+		</siteMapNode>
+		<siteMapNode url="~/Cart.aspx" title="Cart"  description="Cart">
+			<siteMapNode url="~/Checkout.aspx" title="Checkout"  description="Checkout"/>
+		</siteMapNode>
+		<siteMapNode url="" title="Account Login"  description="Account Login">
+			<siteMapNode url="~/StaffLogin.aspx" title="Staff Login"  description="Staff Login">
+				<siteMapNode url="~/StaffDashboard.aspx" title="Staff Dashboard"  description="Staff Dashboard"/>
+				<siteMapNode url="~/PatientSignUp.aspx" title="Patient Sign Up"  description="Patient Sign Up"/>
+			</siteMapNode>
+			<siteMapNode url="~/PatientLogin.aspx" title="Patient Login"  description="Patient Login">
+				<siteMapNode url="~/PatientDashboard.aspx" title="Patient Dashboard"  description="Patient Dashboard"/>
+			</siteMapNode>
 		</siteMapNode>
 	</siteMapNode>
 </siteMap>

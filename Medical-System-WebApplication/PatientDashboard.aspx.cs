@@ -44,28 +44,6 @@ namespace Medical_System_WebApplication
             }
         }
 
-        //protected void btnUpdate_Click(object sender, EventArgs e)
-        //{
-        //    //string CustomerID = CustomerIDLabel.Text;
-        //    //string CompanyName = CompanyNameTextBox.Text;
-
-        //    string sql = @"update Customers set CompanyName = @CompanyName where CustomerID = @CustomerID";
-
-
-        //    string strCon = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-        //    SqlConnection con = new SqlConnection(strCon);
-        //    SqlCommand cmd = new SqlCommand(sql, con);
-        //    //cmd.Parameters.AddWithValue("@CustomerID", CustomerID);
-        //    //cmd.Parameters.AddWithValue("@CompanyName", CompanyName);
-
-        //    con.Open();
-        //    cmd.ExecuteNonQuery();
-        //    con.Close();
-
-        //    Response.Redirect("Menu.aspx");
-
-        //}
-
 
         void PopulateGridView()
         {
