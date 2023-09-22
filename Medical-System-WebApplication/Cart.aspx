@@ -4,7 +4,7 @@
 
     <form id="form1" runat="server">
         <div class="container" id="CartItem" runat="server">
-            <asp:GridView class="card w-100 my-5 p-3" ID="GridView1" runat="server" AutoGenerateColumns="False">
+            <asp:GridView class="card w-100 my-5 p-3" ID="GridView1" runat="server" AutoGenerateColumns="False" ShowFooter="true">
                 <Columns>
                     <asp:ImageField DataImageUrlField="productImage" HeaderText="Image">
                         <ItemStyle Width="30%" HorizontalAlign="Center"></ItemStyle>
@@ -19,23 +19,25 @@
                     </asp:BoundField>
                     <asp:TemplateField HeaderText="Quantity">
                         <ItemStyle Width="10%" HorizontalAlign="Center"></ItemStyle>
-                        <ItemTemplate>                    
-                            <asp:TextBox type="number" ID="TextBox1" class="text-center" style="width: 7em" name="quantity" min="1" value="1" runat="server" OnTextChanged="txt_OnTextChanged" AutoPostBack="true"></asp:TextBox>                         
+                        <ItemTemplate>
+                            <asp:TextBox type="number" ID="TextBox1" class="text-center" Style="width: 7em" name="quantity" min="1" value="1" runat="server" OnTextChanged="txt_OnTextChanged" AutoPostBack="true"></asp:TextBox>
                         </ItemTemplate>
+                        <FooterTemplate>
+                            <asp:Label style="text-align:center; font-weight:bold" ID="Label1" runat="server" Text="Total Payment"></asp:Label>
+                        </FooterTemplate>
                     </asp:TemplateField>
                     <asp:BoundField DataField="productTotal" HeaderText="Total (RM)">
                         <ItemStyle Width="10%" HorizontalAlign="Center"></ItemStyle>
                     </asp:BoundField>
                     <asp:TemplateField HeaderText="">
                         <ItemTemplate>
-                            <asp:Button class="btn btn-sm btn-primary w-10" ID="Button1" runat="server" Text="Remove" CommandArgument='<%# Eval("ProductName") %>' CommandName="RemoveCartItem" OnClick="Button1_Click" />
+                            <asp:Button class="btn btn-sm btn-primary w-10" ID="Button1" runat="server" Text="Remove" CommandArgument='<%# Eval("ProductName") %>' CommandName="RemoveCartItem" OnClick="removeItem" />
                         </ItemTemplate>
-                    </asp:TemplateField>
+                    </asp:TemplateField>                    
                 </Columns>
                 <HeaderStyle HorizontalAlign="Center" />
-            </asp:GridView>        
+            </asp:GridView>
             <div class="text-center">
-                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                 <asp:Button class="btn btn-lg btn-primary" ID="Button2" runat="server" Text="Check Out" OnClick="Button2_Click" />
             </div>
         </div>

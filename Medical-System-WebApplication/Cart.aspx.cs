@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Web;
 using System.Web.DynamicData;
 using System.Web.UI;
@@ -31,7 +32,6 @@ namespace Medical_System_WebApplication
 
                     cart = cart.Where(x => !string.IsNullOrEmpty(x)).ToArray();
 
-                    System.Diagnostics.Debug.WriteLine(cart);
                     DataTable dt = new DataTable();
                     DataRow dr;
                     dt.Columns.Add("productName");
@@ -41,6 +41,7 @@ namespace Medical_System_WebApplication
 
                     dr = dt.NewRow();
 
+                    int sum = 0;
                     int count = 0;
                     foreach (string item in cart)
                     {
@@ -55,36 +56,80 @@ namespace Medical_System_WebApplication
 
                         if (Session["Total"] != null)
                         {
+                            string newTotal = Session["Total"].ToString();
                             String[] total = Session["Total"].ToString().Split(',');
                             total = total.Where(x => !string.IsNullOrEmpty(x)).ToArray();
 
 
-                            System.Diagnostics.Debug.WriteLine(count + "Hi am count");
-                            dt.Rows.Add(ds.Tables[0].Rows[0]["ProductName"].ToString(), ds.Tables[0].Rows[0]["ProductImage"].ToString(), ds.Tables[0].Rows[0]["ProductPrice"].ToString(), total[count]);
-                                                        
+                            if (count == total.Length)
+                            {
+                                dt.Rows.Add(ds.Tables[0].Rows[0]["ProductName"].ToString(), ds.Tables[0].Rows[0]["ProductImage"].ToString(), ds.Tables[0].Rows[0]["ProductPrice"].ToString(), ds.Tables[0].Rows[0]["ProductPrice"].ToString());
+
+                                newTotal = newTotal + "," + ds.Tables[0].Rows[0]["ProductPrice"].ToString();
+                                Session["Total"] = newTotal;
+                            }
+                            else
+                            {
+                                dt.Rows.Add(ds.Tables[0].Rows[0]["ProductName"].ToString(), ds.Tables[0].Rows[0]["ProductImage"].ToString(), ds.Tables[0].Rows[0]["ProductPrice"].ToString(), total[count]);
+
+                            }
                         }
                         else
                         {
                             dt.Rows.Add(ds.Tables[0].Rows[0]["ProductName"].ToString(), ds.Tables[0].Rows[0]["ProductImage"].ToString(), ds.Tables[0].Rows[0]["ProductPrice"].ToString(), ds.Tables[0].Rows[0]["ProductPrice"].ToString());
                         }
 
+                        sum = sum + Convert.ToInt32(ds.Tables[0].Rows[0]["ProductPrice"].ToString());
+
                         GridView1.DataSource = dt;
                         GridView1.DataBind();
+
+                        GridView1.FooterRow.Cells[4].Text = sum.ToString();
+                        GridView1.FooterRow.Cells[4].HorizontalAlign = HorizontalAlign.Center;
 
                         count++;
                     }
 
+
                     if (Session["Quantity"] != null)
                     {
+                        string newQuantity = Session["Quantity"].ToString();
                         String[] quantity = Session["Quantity"].ToString().Split(',');
                         quantity = quantity.Where(x => !string.IsNullOrEmpty(x)).ToArray();
                         int countQuantity = 0;
                         foreach (GridViewRow row in GridView1.Rows)
                         {
                             TextBox rowQuantity = (TextBox)row.FindControl("TextBox1");
-                            rowQuantity.Text = quantity[countQuantity++];
+
+                            if (countQuantity == quantity.Length)
+                            {
+                                rowQuantity.Text = "1";
+                                newQuantity = newQuantity + "," + 1;
+                            }
+                            else
+                            {
+                                rowQuantity.Text = quantity[countQuantity++];
+                            }
                         }
+
+                        Session["Quantity"] = newQuantity;
                     }
+
+                    if (Session["total"] != null)
+                    {
+                        String[] total = Session["Total"].ToString().Split(',');
+                        total = total.Where(x => !string.IsNullOrEmpty(x)).ToArray();
+
+                        sum = 0;
+                        for (int i = 0; i < total.Length; i++)
+                        {
+                            sum = sum + Convert.ToInt32(total[i]);
+                        }
+
+
+                        GridView1.FooterRow.Cells[4].Text = sum.ToString();
+                    }
+
 
                 }
 
@@ -97,7 +142,7 @@ namespace Medical_System_WebApplication
                 }
             }
         }
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void removeItem(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             string productName = btn.CommandArgument.ToString();
@@ -115,6 +160,120 @@ namespace Medical_System_WebApplication
             }
             con.Close();
             Session["Cart"] = Session["Cart"].ToString().Replace(productID, "");
+
+            if (Session["Cart"] != null)
+            {
+                String[] cart = Session["Cart"].ToString().Split(',');
+
+                string newCart = "";
+                cart = cart.Where(x => !string.IsNullOrEmpty(x)).ToArray();
+
+                Boolean checkFirst = true;
+                for (int i = 0; i < cart.Length; i++)
+                {
+                    if (cart[i] == null)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        if (checkFirst == true)
+                        {
+                            newCart = cart[i];
+                            checkFirst = false;
+                        }
+                        else
+                        {
+                            newCart = newCart + "," + cart[i];
+                        }
+                    }
+                }
+
+                Session["Cart"] = newCart;
+                System.Diagnostics.Debug.WriteLine(Session["Cart"]);
+            }
+            GridViewRow gridRow = (GridViewRow)((Button)sender).NamingContainer;
+            int rowIndex = gridRow.RowIndex;
+
+            System.Diagnostics.Debug.WriteLine(rowIndex + " Hi am row index");
+
+            if (Session["Quantity"] != null)
+            {
+                String[] quantity = Session["Quantity"].ToString().Split(',');
+
+
+                System.Diagnostics.Debug.WriteLine(quantity[rowIndex].ToString() + "Quantity row index");
+                quantity[rowIndex + 1] = null;
+
+
+                string newQuantity = "";
+                quantity = quantity.Where(x => !string.IsNullOrEmpty(x)).ToArray();
+
+                Boolean checkFirst = true;
+                for (int i = 0; i < quantity.Length; i++)
+                {
+                    if (quantity[i] == null)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        if (checkFirst == true)
+                        {
+                            newQuantity = quantity[i];
+                            checkFirst = false;
+                        }
+                        else
+                        {
+                            newQuantity = newQuantity + "," + quantity[i];
+                        }
+                    }
+                }
+
+                Session["Quantity"] = newQuantity;
+                System.Diagnostics.Debug.WriteLine(Session["Quantity"]);
+            }
+
+            if (Session["Total"] != null)
+            {
+                String[] total = Session["Total"].ToString().Split(',');
+
+
+                System.Diagnostics.Debug.WriteLine(total[rowIndex].ToString() + "Quantity row index");
+                total[rowIndex + 1] = null;
+
+
+                string newTotal = "";
+                total = total.Where(x => !string.IsNullOrEmpty(x)).ToArray();
+
+                Boolean checkFirst = true;
+                for (int i = 0; i < total.Length; i++)
+                {
+                    if (total[i] == null)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        if (checkFirst == true)
+                        {
+                            newTotal = total[i];
+                            checkFirst = false;
+                        }
+                        else
+                        {
+                            newTotal = newTotal + "," + total[i];
+                        }
+                    }
+                }
+
+                Session["Total"] = newTotal;
+                System.Diagnostics.Debug.WriteLine(Session["Total"]);
+            }
+            //GridViewRow gridRow = (GridViewRow)((Button)sender).NamingContainer;
+            //TextBox quantityTB = (TextBox)gridRow.FindControl("TextBox1");
+
+            //txt_OnTextChanged(quantityTB, e);
 
             Response.Redirect("Cart.aspx");
         }
@@ -149,19 +308,23 @@ namespace Medical_System_WebApplication
             string totalPriceList = "";
             string quantityList = "";
 
+            int sum = 0;
             foreach (GridViewRow row in GridView1.Rows)
             {
                 TextBox rowQuantity = (TextBox)row.FindControl("TextBox1");
 
                 quantityList = quantityList + "," + rowQuantity.Text;
                 totalPriceList = totalPriceList + "," + row.Cells[4].Text;
+
+                sum = sum + Convert.ToInt32(row.Cells[4].Text);
             }
 
             Session["Quantity"] = quantityList;
             Session["Total"] = totalPriceList;
 
-            System.Diagnostics.Debug.WriteLine(Session["Quantity"]);
-            System.Diagnostics.Debug.WriteLine(Session["Total"]);
+            System.Diagnostics.Debug.WriteLine(Session["Total"].ToString());
+
+            GridView1.FooterRow.Cells[4].Text = sum.ToString();
         }
 
     }
