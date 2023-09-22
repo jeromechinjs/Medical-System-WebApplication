@@ -83,8 +83,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <asp:ValidationSummary ID="ValidationSummary1" ShowMessageBox="true" ShowSummary="false" runat="server" />
-                <asp:Button class="btn btn-lg btn-primary" ID="Button1" runat="server" Text="Place Order" CausesValidation="true" OnClick="placeOrder"  />
+                <asp:Button class="btn btn-lg btn-primary" ID="Button1" runat="server" Text="Place Order" CausesValidation="true" OnClick="placeOrder" OnClientClick="if (Page_ClientValidate()) { alert('Order Placed, Thank you for your purchase')}"   />
             </div>
         </div>
         <br />

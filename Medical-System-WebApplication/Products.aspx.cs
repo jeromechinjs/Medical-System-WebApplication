@@ -67,12 +67,11 @@ namespace Medical_System_WebApplication
                 {
                     if (Session["Cart"].ToString().Contains(productID))
                     {
-                        btn.OnClientClick = "javascript:alert('Item already exist in cart')";
+                        Response.Write("<script>alert('Item already added in cart');</script>");
                     }
                     else
                     {
                         Session["Cart"] = Session["Cart"] + "," + productID;
-                        btn.OnClientClick = "javascript:alert('Item added to Cart')";
                     }
                 }
                 else
