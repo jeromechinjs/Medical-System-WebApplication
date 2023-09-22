@@ -138,6 +138,17 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="enquiry" runat="server">
     <div class="col-10 p-4 flex-column d-flex justify-content-center">
         <p class="my-3 fs-2 fw-bolder">Enquiries</p>
+        <asp:GridView class="table table-bordered table-condensed table-responsive table-hover " ID="gvFeedback" runat="server" DataSourceID="sqlFeedback" AutoGenerateColumns="False" DataKeyNames="FeedbackName" AllowPaging="True">
+            <Columns>
+                <asp:BoundField DataField="FeedbackNo" HeaderText="FeedbackNo" ReadOnly="True" InsertVisible="False" SortExpression="FeedbackNo"></asp:BoundField>
+                <asp:BoundField DataField="FeedbackName" HeaderText="FeedbackName" SortExpression="FeedbackName"></asp:BoundField>
+                <asp:BoundField DataField="FeedbackEmail" HeaderText="FeedbackEmail" SortExpression="FeedbackEmail"></asp:BoundField>
+                <asp:BoundField DataField="FeedbackPhone" HeaderText="FeedbackPhone" SortExpression="FeedbackPhone"></asp:BoundField>
+                <asp:BoundField DataField="FeedbackPatient" HeaderText="FeedbackPatient" SortExpression="FeedbackPatient"></asp:BoundField>
+                <asp:BoundField DataField="FeedbackTextBox" HeaderText="FeedbackTextBox" SortExpression="FeedbackTextBox"></asp:BoundField>
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource runat="server" ID="SqlFeedback" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Feedback]"></asp:SqlDataSource>
     </div>
 </asp:Content>
 
