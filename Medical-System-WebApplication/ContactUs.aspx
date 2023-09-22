@@ -82,7 +82,7 @@
                 <asp:TextBox ID="feedback_email" class="form-control" type="email" placeholder="name@example.com*" runat="server"></asp:TextBox>
                 <br />
                 <asp:Label for="feedback_phone" class="form-label" runat="server" Text="Your Phone Number: "></asp:Label>
-                <asp:TextBox ID="feedback_phone" class="form-control" type="phone" placeholder="+6012 345 6789*" runat="server"></asp:TextBox>
+                <asp:TextBox ID="feedback_phone" class="form-control" type="phone" placeholder="012 345 6789*" runat="server"></asp:TextBox>
                 <br />
                 <asp:Label for="feedback_patient" class="form-label" runat="server" Text="Are you an existing patient?"></asp:Label> <br />
                 <asp:RadioButtonList ID="feedback_patient" runat="server" RepeatDirection="Vertical" RepeatLayout="Flow">
