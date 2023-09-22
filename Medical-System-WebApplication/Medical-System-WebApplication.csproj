@@ -113,7 +113,9 @@
     <Content Include="src\our-mission.jpg" />
     <Content Include="src\PanadolOptizorb.jpg" />
     <Content Include="src\people.svg" />
+    <Content Include="src\Plasters.jpg" />
     <Content Include="src\profile-login.svg" />
+    <Content Include="src\smallBandage.jpg" />
     <Content Include="src\SurgicalMask.jpg" />
     <Content Include="Style.css" />
     <Content Include="Web.config" />
