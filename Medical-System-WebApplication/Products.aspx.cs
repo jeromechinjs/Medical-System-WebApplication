@@ -80,6 +80,11 @@ namespace Medical_System_WebApplication
                 }
             }
         }
+
+        protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

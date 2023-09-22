@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="col-md-9 p-3 m-0">
-                    <asp:DataList class="w-100" ID="DataList1" runat="server" DataSourceID="SqlDataSource1">
+                    <asp:DataList class="w-100" ID="DataList1" runat="server" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
                         <ItemTemplate>
                             <div class="card mb-3">
                                 <div class="row g-0">

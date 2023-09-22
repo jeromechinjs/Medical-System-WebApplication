@@ -36,6 +36,7 @@
                     <p class="my-3 text-center fs-3 fw-bolder text-success">Sign Up</p>
 
                     <form id="patientSignUpForm" runat="server" class="d-flex flex-column justify-content-center">
+                            <!-- Patient ID auto generate -->
 <%--		                <div class="my-3">
 			                <asp:Label for="txtPatientID_Content" ID="PatientID_Label" runat="server" Text="Patient ID"></asp:Label>
 			                <asp:TextBox ID="txtPatientID_Content" class="form-control" runat="server" ReadOnly="True" ></asp:TextBox>
@@ -54,7 +55,7 @@
                         </div>
 
 		                <div class="my-3">
-			                <asp:Label for="txt_Email" class="form-label" ID="Email_Label" runat="server" Text="Email Address"></asp:Label>
+			                <asp:Label for="txt_Email" class="form-label" ID="Email_Label" runat="server" Text=" Address"></asp:Label>
 			                <asp:RequiredFieldValidator ID="requiredEmailSignup" runat="server" ErrorMessage="Kindly enter an email" ControlToValidate="txt_Email" CssClass="text-danger d-inline" Display="Dynamic">*</asp:RequiredFieldValidator>
                             <asp:TextBox ID="txt_Email" class="form-control" placeholder="name@example.com" runat="server" ></asp:TextBox>
 		                </div>
