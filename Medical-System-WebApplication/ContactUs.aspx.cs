@@ -21,8 +21,7 @@ namespace Medical_System_WebApplication
 
         protected void feedback_submit_Click(object sender, EventArgs e)
         {
-            string sql = "INSERT INTO [Feedback] (FeedbackName, FeedbackEmail, FeedbackPhone, FeedbackPatient, FeedbackTextBox) " +
-                "VALUE (@FeedbackName, @FeedbackEmail, @FeedbackPhone, @FeedbackPatient, @FeedbackTextBox)";
+            string sql = "INSERT INTO [Feedback] (FeedbackName, FeedbackEmail, FeedbackPhone, FeedbackPatient, FeedbackTextBox) VALUE (@FeedbackName, @FeedbackEmail, @FeedbackPhone, @FeedbackPatient, @FeedbackTextBox)";
 
             string strCon = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             SqlConnection con = new SqlConnection(strCon);
@@ -43,7 +42,8 @@ namespace Medical_System_WebApplication
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
-            
+
+            Response.Write("<script>alert('Submit Successfully.\nWe will reply you as soon as posible');</script>");
             Response.Redirect("ContactUs.aspx");
         }
     }
