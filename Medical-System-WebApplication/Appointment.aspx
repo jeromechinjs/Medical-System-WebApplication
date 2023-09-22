@@ -26,8 +26,6 @@
 					<div class="col p-0 my-2 my-lg-0">
 						<h2>Patient&#39s Information</h2>
 						<div class="mb-3 mt-3">
-							<asp:Label for="txtPatientID_Content" ID="PatientID_Label" runat="server" Text="Patient ID"></asp:Label>
-							&nbsp;<asp:TextBox ID="txt_PatientID" class="form-control" runat="server" Width="320px"></asp:TextBox>
 						</div>
 
 						<div class="mb-3">
@@ -112,6 +110,11 @@
 								&nbsp;<asp:RequiredFieldValidator ID="RFAppointmentTime" runat="server" ErrorMessage="Please select Appointment Time" ControlToValidate="Appointment_Time_DropDown" Display="Dynamic" ForeColor="Red">Required*</asp:RequiredFieldValidator>
 								<asp:DropDownList ID="Appointment_Time_DropDown" class="form-select" runat="server" Width="320px">
 									<asp:ListItem>10:00AM - 11:00AM</asp:ListItem>
+									<asp:ListItem>11:00AM - 12:00PM</asp:ListItem>
+									<asp:ListItem>14:00PM - 15:00PM</asp:ListItem>
+									<asp:ListItem>15:00PM - 16:00PM</asp:ListItem>
+									<asp:ListItem>17:00PM - 18:00PM</asp:ListItem>
+									<asp:ListItem>20:00PM - 21:00PM</asp:ListItem>
 								</asp:DropDownList>
 							</div>
 

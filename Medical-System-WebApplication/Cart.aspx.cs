@@ -88,7 +88,6 @@ namespace Medical_System_WebApplication
                         GridView1.FooterRow.Cells[4].Text = sum.ToString();
                         Session["Sum"] = sum.ToString();
 
-                        System.Diagnostics.Debug.WriteLine(Session["Sum"].ToString());
                         GridView1.FooterRow.Cells[3].HorizontalAlign = HorizontalAlign.Center;
                         GridView1.FooterRow.Cells[4].HorizontalAlign = HorizontalAlign.Center;
 
@@ -131,8 +130,10 @@ namespace Medical_System_WebApplication
                             sum = sum + Convert.ToInt32(total[i]);
                         }
 
-
-                        GridView1.FooterRow.Cells[4].Text = sum.ToString();
+                        if (GridView1.DataSource != null)
+                        {
+                            GridView1.FooterRow.Cells[4].Text = sum.ToString();
+                        }
                     }
 
 
@@ -195,21 +196,24 @@ namespace Medical_System_WebApplication
                 }
 
                 Session["Cart"] = newCart;
-                System.Diagnostics.Debug.WriteLine(Session["Cart"]);
             }
             GridViewRow gridRow = (GridViewRow)((Button)sender).NamingContainer;
             int rowIndex = gridRow.RowIndex;
 
-            System.Diagnostics.Debug.WriteLine(rowIndex + " Hi am row index");
 
             if (Session["Quantity"] != null)
             {
                 String[] quantity = Session["Quantity"].ToString().Split(',');
+                System.Diagnostics.Debug.WriteLine(rowIndex + " row index");
 
-
-                System.Diagnostics.Debug.WriteLine(quantity[rowIndex].ToString() + "Quantity row index");
-                quantity[rowIndex + 1] = null;
-
+                if (GridView1.Rows.Count == 1 || rowIndex == 1)
+                {
+                    quantity[rowIndex] = null;
+                }
+                else
+                {
+                    quantity[rowIndex + 1] = null;
+                }
 
                 string newQuantity = "";
                 quantity = quantity.Where(x => !string.IsNullOrEmpty(x)).ToArray();
@@ -236,17 +240,21 @@ namespace Medical_System_WebApplication
                 }
 
                 Session["Quantity"] = newQuantity;
-                System.Diagnostics.Debug.WriteLine(Session["Quantity"]);
+                System.Diagnostics.Debug.WriteLine(Session["Quantity"].ToString() + " Total Session");
             }
 
             if (Session["Total"] != null)
             {
                 String[] total = Session["Total"].ToString().Split(',');
 
-
-                System.Diagnostics.Debug.WriteLine(total[rowIndex].ToString() + "Quantity row index");
-                total[rowIndex + 1] = null;
-
+                if (GridView1.Rows.Count == 1)
+                {
+                    total[rowIndex] = null;
+                }
+                else
+                {
+                    total[rowIndex + 1] = null;
+                }
 
                 string newTotal = "";
                 total = total.Where(x => !string.IsNullOrEmpty(x)).ToArray();
@@ -273,7 +281,8 @@ namespace Medical_System_WebApplication
                 }
 
                 Session["Total"] = newTotal;
-                System.Diagnostics.Debug.WriteLine(Session["Total"]);
+
+                System.Diagnostics.Debug.WriteLine(Session["Total"].ToString() + " Total Session");
             }
 
             Response.Redirect("Cart.aspx");
@@ -328,7 +337,6 @@ namespace Medical_System_WebApplication
 
             if (currentQuantity < quantity) {
 
-                System.Diagnostics.Debug.WriteLine("Overlimit");
                 quantityTB.Text = currentQuantity.ToString();
                 quantity = currentQuantity; 
             }
@@ -361,13 +369,11 @@ namespace Medical_System_WebApplication
             Session["Quantity"] = quantityList;
             Session["Total"] = totalPriceList;
 
-            System.Diagnostics.Debug.WriteLine(Session["Total"].ToString());
 
             GridView1.FooterRow.Cells[4].Text = sum.ToString();
 
             Session["Sum"] = sum.ToString();
 
-            System.Diagnostics.Debug.WriteLine(Session["Sum"].ToString());
         }
 
     }
