@@ -66,7 +66,9 @@
   <ItemGroup>
     <Content Include="Ahmad.aspx" />
     <Content Include="App_Data\Database.mdf" />
-    <Content Include="App_Data\Database_log.ldf" />
+    <Content Include="App_Data\Database_log.ldf">
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
     <Content Include="Cart.aspx" />
     <Content Include="Checkout.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
