@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.Drawing;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
@@ -17,7 +18,7 @@ using System.Xml.Linq;
 namespace Medical_System_WebApplication
 {
     public partial class WebForm4 : System.Web.UI.Page
-    {        
+    {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -43,23 +44,42 @@ namespace Medical_System_WebApplication
 
             string productID = btn.CommandArgument.ToString();
 
-            if (Session["Cart"] != null)
+            int currentQuantity = 0;
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            con.Open();
+            SqlCommand commandSelect = new SqlCommand("Select ProductQuantity FROM Product Where ProductID= '" + productID + "'", con);
+            SqlDataReader readQuantity = commandSelect.ExecuteReader();
+            if (readQuantity.Read())
             {
-                if (Session["Cart"].ToString().Contains(productID))
-                {
-                    btn.OnClientClick = "javascript:alert('Item already exist in cart')";                    
-                }
-                else
-                {
-                    Session["Cart"] = Session["Cart"] + "," + productID;
-                    btn.OnClientClick = "javascript:alert('Item added to Cart')";
-                }
+                currentQuantity = readQuantity.GetInt32(0);
+            }
+
+            con.Close();
+
+            if (currentQuantity == 0)
+            {
+                Response.Write("<script>alert('Item out of stock');</script>");
             }
             else
             {
-                Session["Cart"] = productID;
+
+                if (Session["Cart"] != null)
+                {
+                    if (Session["Cart"].ToString().Contains(productID))
+                    {
+                        btn.OnClientClick = "javascript:alert('Item already exist in cart')";
+                    }
+                    else
+                    {
+                        Session["Cart"] = Session["Cart"] + "," + productID;
+                        btn.OnClientClick = "javascript:alert('Item added to Cart')";
+                    }
+                }
+                else
+                {
+                    Session["Cart"] = productID;
+                }
             }
-            System.Diagnostics.Debug.WriteLine(Session["Cart"]);
         }
     }
 }

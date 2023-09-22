@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Web;
@@ -24,7 +25,7 @@ namespace Medical_System_WebApplication
         {
 
             if (!IsPostBack)
-            {
+            {                
 
                 if (Session["Cart"] != null)
                 {
@@ -284,8 +285,10 @@ namespace Medical_System_WebApplication
         }
 
         protected void txt_OnTextChanged(object sender, EventArgs e)
-        {
+        {           
+
             TextBox quantityTB = (TextBox)sender;
+
 
             GridViewRow gridRow = (GridViewRow)((TextBox)sender).NamingContainer;
             int rowIndex = gridRow.RowIndex;
@@ -295,6 +298,42 @@ namespace Medical_System_WebApplication
 
             GridViewRow rowTest = GridView1.Rows[rowIndex];
 
+            //Restrict if more than inventory number
+
+            string rowName = GridView1.Rows[rowIndex].Cells[1].Text;
+            string productID = "";
+            int currentQuantity = 0;
+
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+
+            SqlCommand command = new SqlCommand("SELECT ProductID from Product where ProductName= '" + rowName + "'", con);
+
+            con.Open();
+            SqlDataReader read = command.ExecuteReader();
+            if (read.Read())
+            {
+                productID = read.GetString(0);
+            }
+            con.Close();
+
+            con.Open();
+            SqlCommand commandSelect = new SqlCommand("Select ProductQuantity FROM Product Where ProductID= '" + productID + "'", con);
+            SqlDataReader readQuantity = commandSelect.ExecuteReader();
+            if (readQuantity.Read())
+            {
+                currentQuantity = readQuantity.GetInt32(0);
+            }
+
+            con.Close();
+
+            if (currentQuantity < quantity) {
+
+                System.Diagnostics.Debug.WriteLine("Overlimit");
+                quantityTB.Text = currentQuantity.ToString();
+                quantity = currentQuantity; 
+            }
+
+            //Change price when quantity change
             string rowPrice = GridView1.Rows[rowIndex].Cells[2].Text;
 
             int price = Convert.ToInt32(rowPrice);
