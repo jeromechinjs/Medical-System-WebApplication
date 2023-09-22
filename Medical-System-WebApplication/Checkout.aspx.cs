@@ -98,10 +98,57 @@ namespace Medical_System_WebApplication
         }
 
         protected void placeOrder(object sender, EventArgs e)
-        {            
+        {   
+            if (Session["Cart"] != null)
+            {
+                String[] cart = Session["Cart"].ToString().Split(',');
+
+                cart = cart.Where(x => !string.IsNullOrEmpty(x)).ToArray();
+
+                String[] quantity = Session["Quantity"].ToString().Split(',');
+
+                quantity = quantity.Where(x => !string.IsNullOrEmpty(x)).ToArray();
+
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+
+                
+
+
+                int currentQuantity = 0;
+                int count = 0;
+                foreach(GridViewRow row in GridView1.Rows)
+                {
+                    con.Open();
+                    SqlCommand commandSelect = new SqlCommand("Select ProductQuantity FROM Product Where ProductID= '" + cart[count] + "'", con);
+                    SqlDataReader read = commandSelect.ExecuteReader();
+                    if (read.Read())
+                    {
+                        currentQuantity = read.GetInt32(0);
+                    }
+
+                    con.Close();
+                    con.Open();
+                    SqlCommand command = new SqlCommand("Update Product SET ProductQuantity= @ProductQuantity WHERE ProductID= @ProductID", con);
+
+                    int newQuantity = currentQuantity - Convert.ToInt32(quantity[count]);
+
+                    command.Parameters.AddWithValue("@ProductQuantity", newQuantity);
+
+                    command.Parameters.AddWithValue("@ProductID", cart[count]);
+
+                    command.ExecuteNonQuery();
+                    con.Close();
+
+                    count++;
+                }
+
+
+            }
+
             Session["Cart"] = null;
             Session["Total"] = null;
             Session["Quantity"] = null;
+
 
             Response.Redirect("Homepage.aspx");
         }
