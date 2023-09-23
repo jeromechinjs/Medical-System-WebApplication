@@ -206,7 +206,7 @@ namespace Medical_System_WebApplication
                 String[] quantity = Session["Quantity"].ToString().Split(',');
                 System.Diagnostics.Debug.WriteLine(rowIndex + " row index");
 
-                if (GridView1.Rows.Count == 1)
+                if (GridView1.Rows.Count == 1 || rowIndex == 1)
                 {
                     quantity[rowIndex] = null;
                 }
@@ -240,6 +240,7 @@ namespace Medical_System_WebApplication
                 }
 
                 Session["Quantity"] = newQuantity;
+                System.Diagnostics.Debug.WriteLine(Session["Quantity"].ToString() + " Total Session");
             }
 
             if (Session["Total"] != null)
@@ -280,6 +281,8 @@ namespace Medical_System_WebApplication
                 }
 
                 Session["Total"] = newTotal;
+
+                System.Diagnostics.Debug.WriteLine(Session["Total"].ToString() + " Total Session");
             }
 
             Response.Redirect("Cart.aspx");
