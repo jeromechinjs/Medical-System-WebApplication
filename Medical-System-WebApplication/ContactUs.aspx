@@ -83,13 +83,13 @@
                 <asp:Label for="feedback_email" class="form-label" runat="server" Text="Your Email: "></asp:Label>
                 <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ErrorMessage="Please fill up your Email!" ControlToValidate="feedback_email" Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
                 <asp:TextBox ID="feedback_email" class="form-control" type="email" placeholder="name@example.com" runat="server"></asp:TextBox>
-                <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="feedback_email" Display="Dynamic" ErrorMessage="Please fill the correct email format!" ForeColor="Red" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">E.g. example@example.com</asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="feedback_email" Display="Dynamic" ErrorMessage="Please fill the correct email format!" ForeColor="Red" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">testing@email.com</asp:RegularExpressionValidator>
                 <br />
                 
                 <asp:Label for="feedback_phone" class="form-label" runat="server" Text="Your Phone Number: "></asp:Label>
                 <asp:RequiredFieldValidator ID="rfvPhone" runat="server" ErrorMessage="Please fill in your phone number!" ControlToValidate="feedback_phone" Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
                 <asp:TextBox ID="feedback_phone" class="form-control" type="phone" placeholder="012 345 6789" runat="server"></asp:TextBox>
-                <asp:RegularExpressionValidator ID="revPhone" runat="server" ControlToValidate="feedback_phone" Display="Dynamic" ErrorMessage="Please fill in your phone number with number only!" ForeColor="Red" ValidationExpression="^\d+">E.g. 012-1233210 or 0121233210</asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="revPhone" runat="server" ControlToValidate="feedback_phone" Display="Dynamic" ErrorMessage="Please fill in your phone number with number only!" ForeColor="Red" ValidationExpression="^\d+">Number Only!</asp:RegularExpressionValidator>
                 <br />
 
                 <asp:Label for="feedback_patient" class="form-label" runat="server" Text="Are you an existing patient?"></asp:Label>
