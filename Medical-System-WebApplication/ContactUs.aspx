@@ -76,24 +76,38 @@
         <form id="form1" runat="server">
             <div>
                 <asp:Label for="feedback_name" class="form-label" runat="server" Text="Your Name: "></asp:Label>
-                <asp:TextBox ID="feedback_name" class="form-control" type="name" placeholder="Full Name*" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="rfvName" runat="server" ErrorMessage="Please fill up your name!" ControlToValidate="feedback_name" Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
+                <asp:TextBox ID="feedback_name" class="form-control" type="name" placeholder="Full Name" runat="server"></asp:TextBox>
                 <br />
+
                 <asp:Label for="feedback_email" class="form-label" runat="server" Text="Your Email: "></asp:Label>
-                <asp:TextBox ID="feedback_email" class="form-control" type="email" placeholder="name@example.com*" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ErrorMessage="Please fill up your Email!" ControlToValidate="feedback_email" Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
+                <asp:TextBox ID="feedback_email" class="form-control" type="email" placeholder="name@example.com" runat="server"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="feedback_email" Display="Dynamic" ErrorMessage="Please fill the correct email format!" ForeColor="Red" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">E.g. example@example.com</asp:RegularExpressionValidator>
                 <br />
+                
                 <asp:Label for="feedback_phone" class="form-label" runat="server" Text="Your Phone Number: "></asp:Label>
-                <asp:TextBox ID="feedback_phone" class="form-control" type="phone" placeholder="012 345 6789*" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="rfvPhone" runat="server" ErrorMessage="Please fill in your phone number!" ControlToValidate="feedback_phone" Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
+                <asp:TextBox ID="feedback_phone" class="form-control" type="phone" placeholder="012 345 6789" runat="server"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="revPhone" runat="server" ControlToValidate="feedback_phone" Display="Dynamic" ErrorMessage="Please fill in your phone number with number only!" ForeColor="Red" ValidationExpression="^\d+">E.g. 012-1233210 or 0121233210</asp:RegularExpressionValidator>
                 <br />
-                <asp:Label for="feedback_patient" class="form-label" runat="server" Text="Are you an existing patient?"></asp:Label> <br />
+
+                <asp:Label for="feedback_patient" class="form-label" runat="server" Text="Are you an existing patient?"></asp:Label>
+                <asp:RequiredFieldValidator ID="rfvPatient" runat="server" ErrorMessage="Please choose you are a patient or not!" ControlToValidate="feedback_patient" Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
+                <br />
                 <asp:RadioButtonList ID="feedback_patient" runat="server" RepeatDirection="Vertical" RepeatLayout="Flow">
                     <asp:ListItem Value="Y">Yes</asp:ListItem>
                     <asp:ListItem Value="N">No</asp:ListItem>
                 </asp:RadioButtonList>
                 <br />
+
+                <asp:RequiredFieldValidator ID="rfvTextBox" runat="server" ErrorMessage="Please fill up your suggestion or feedback." ControlToValidate="feedback_textbox" Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>                
                 <asp:Label for="feedback_textbox" runat="server" Text="Inquiry / Feedback / Suggestion"></asp:Label>
                 <asp:TextBox ID="feedback_textbox" class="form-control" runat="server" AutoPostBack="True" Height="165px" MaxLength="1000" Width=100% TextMode="MultiLine"></asp:TextBox>
                 <br />
-                <asp:Button ID="feedback_submit" class="btn btn-sm btn-primary" runat="server" Text="Submit" OnClientClick="javascript:alert('Submit Successfully.\nWe will reply you as soon as posible')" OnClick="feedback_submit_Click" />
+                
+                <asp:Button ID="feedback_submit" class="btn btn-sm btn-primary" runat="server" Text="Submit" OnClick="feedback_submit_Click" />
+                <asp:ValidationSummary ID="vsFeedback" ShowMessageBox="true" ShowSummary="false" runat="server" />            
             </div>
         </form>
     </div>
