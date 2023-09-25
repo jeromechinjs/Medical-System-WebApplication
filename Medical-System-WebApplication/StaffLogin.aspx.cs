@@ -29,8 +29,7 @@ namespace Medical_System_WebApplication
             string StaffEmail = loginEmailInput.Text;
             string StaffPassword = loginPasswordInput.Text;
 
-            cmd.Parameters.AddWithValue("@PatientEmailAddress", StaffEmail);
-            cmd.Parameters.AddWithValue("@PatientPassword", StaffPassword);
+            cmd.Parameters.AddWithValue("@StaffEmailAddress", StaffEmail);
 
             con.Open();
             int existCount = Convert.ToInt32(cmd.ExecuteScalar()); // run sql statement and return single value

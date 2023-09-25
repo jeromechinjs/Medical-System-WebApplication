@@ -138,7 +138,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="enquiry" runat="server">
     <div class="col-10 p-4 flex-column d-flex justify-content-center">
         <p class="my-3 fs-2 fw-bolder">Enquiries</p>
-        <asp:GridView class="table table-bordered table-condensed table-responsive table-hover " ID="gvFeedback" runat="server" DataSourceID="sqlFeedback" AutoGenerateColumns="False" DataKeyNames="FeedbackName" AllowPaging="True">
+        <asp:GridView class="table table-bordered table-condensed table-responsive table-hover " ID="gvFeedback" runat="server" DataSourceID="sqlFeedback" AutoGenerateColumns="False" AutoPostBack="True" DataKeyNames="FeedbackName" AllowPaging="True">
             <Columns>
                 <asp:CommandField ShowDeleteButton="True"></asp:CommandField>
                 <asp:BoundField DataField="FeedbackNo" HeaderText="No" ReadOnly="True" InsertVisible="False" SortExpression="FeedbackNo"></asp:BoundField>
@@ -149,7 +149,7 @@
                 <asp:BoundField DataField="FeedbackTextBox" HeaderText="Feedback / Suggestion" SortExpression="FeedbackTextBox"></asp:BoundField>
             </Columns>
         </asp:GridView>
-        <asp:SqlDataSource runat="server" ID="SqlFeedback" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Feedback]" DeleteCommand="DELETE FROM [Feedback] WHERE [FeedbackNo] = @FeedbackNo" InsertCommand="INSERT INTO [Feedback] ([FeedbackName], [FeedbackEmail], [FeedbackPhone], [FeedbackPatient], [FeedbackTextBox]) VALUES (@FeedbackName, @FeedbackEmail, @FeedbackPhone, @FeedbackPatient, @FeedbackTextBox)" UpdateCommand="UPDATE [Feedback] SET [FeedbackName] = @FeedbackName, [FeedbackEmail] = @FeedbackEmail, [FeedbackPhone] = @FeedbackPhone, [FeedbackPatient] = @FeedbackPatient, [FeedbackTextBox] = @FeedbackTextBox WHERE [FeedbackNo] = @FeedbackNo">
+        &nbsp;<asp:SqlDataSource runat="server" ID="SqlFeedback" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Feedback]" DeleteCommand="DELETE FROM [Feedback] WHERE [FeedbackNo] = @FeedbackNo" InsertCommand="INSERT INTO [Feedback] ([FeedbackName], [FeedbackEmail], [FeedbackPhone], [FeedbackPatient], [FeedbackTextBox]) VALUES (@FeedbackName, @FeedbackEmail, @FeedbackPhone, @FeedbackPatient, @FeedbackTextBox)" UpdateCommand="UPDATE [Feedback] SET [FeedbackName] = @FeedbackName, [FeedbackEmail] = @FeedbackEmail, [FeedbackPhone] = @FeedbackPhone, [FeedbackPatient] = @FeedbackPatient, [FeedbackTextBox] = @FeedbackTextBox WHERE [FeedbackNo] = @FeedbackNo">
             <DeleteParameters>
                 <asp:Parameter Name="FeedbackNo" Type="Int32"></asp:Parameter>
             </DeleteParameters>

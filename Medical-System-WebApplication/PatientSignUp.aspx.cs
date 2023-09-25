@@ -64,7 +64,7 @@ namespace Medical_System_WebApplication
                 cmd2.Parameters.AddWithValue("@PatientPassword", PatientPassword);
                 cmd2.Parameters.AddWithValue("@PatientAddress", PatientAddress);
                 cmd2.Parameters.AddWithValue("@PatientCity", PatientCity);
-                cmd.Parameters.AddWithValue("@PatientState", PatientState);
+                cmd2.Parameters.AddWithValue("@PatientState", PatientState);
                 cmd2.Parameters.AddWithValue("@PatientZipcode", PatientZipcode);
                 cmd2.Parameters.AddWithValue("@PatientPhoneNum", PatientPhone);
                 cmd2.Parameters.AddWithValue("@Gender", PatientGender);

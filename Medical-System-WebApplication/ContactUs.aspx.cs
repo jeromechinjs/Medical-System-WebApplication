@@ -21,7 +21,7 @@ namespace Medical_System_WebApplication
 
         protected void feedback_submit_Click(object sender, EventArgs e)
         {
-            string sql = "INSERT INTO [Feedback] (FeedbackName, FeedbackEmail, FeedbackPhone, FeedbackPatient, FeedbackTextBox) VALUE (@FeedbackName, @FeedbackEmail, @FeedbackPhone, @FeedbackPatient, @FeedbackTextBox)";
+            string sql = "INSERT INTO Feedback (FeedbackName, FeedbackEmail, FeedbackPhone, FeedbackPatient, FeedbackTextBox) VALUES (@FeedbackName, @FeedbackEmail, @FeedbackPhone, @FeedbackPatient, @FeedbackTextBox)";
 
             string strCon = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             SqlConnection con = new SqlConnection(strCon);
