@@ -79,10 +79,6 @@ namespace Medical_System_WebApplication
                     }
                     
                 }
-                else
-                {
-                    Response.Redirect("PatientLogin.aspx");
-                }
             }
                 
                 //cmd.Parameters.AddWithValue("@P." + Session["PatientEmailAddress"] + "", !string.IsNullOrEmpty(this.Page.User.Identity.Name) ? this.Page.User.Identity.Name : (object)DBNull.Value);
